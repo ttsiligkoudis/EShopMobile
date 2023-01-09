@@ -1,0 +1,1 @@
+C:\github\EShopMobile\EShopMobile\EShopMobile.csproj;x64
