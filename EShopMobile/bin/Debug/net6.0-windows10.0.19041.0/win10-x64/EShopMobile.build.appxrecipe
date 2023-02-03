@@ -724,6 +724,15 @@
     <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.27\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\communitytoolkit.maui\2.0.0\lib\net6.0-windows10.0.19041\CommunityToolkit.Maui.dll">
+      <PackagePath>CommunityToolkit.Maui.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\communitytoolkit.maui.core\2.0.0\lib\net6.0-windows10.0.19041\CommunityToolkit.Maui.Core.dll">
+      <PackagePath>CommunityToolkit.Maui.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\communitytoolkit.mvvm\8.0.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\microsoft.aspnetcore.cryptography.internal\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll">
       <PackagePath>Microsoft.AspNetCore.Cryptography.Internal.dll</PackagePath>
     </AppxPackagedFile>
@@ -877,6 +886,9 @@
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\about_us.scale-100.png">
+      <PackagePath>about_us.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
     </AppxPackagedFile>
@@ -1015,6 +1027,15 @@
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\company_logo.scale-100.jpg">
+      <PackagePath>company_logo.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\contact_us.scale-100.png">
+      <PackagePath>contact_us.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dashboard.scale-100.png">
+      <PackagePath>dashboard.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -1029,6 +1050,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\lock.scale-100.png">
+      <PackagePath>lock.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\more_icon.scale-100.png">
+      <PackagePath>more_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\team.scale-100.png">
+      <PackagePath>team.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png">
+      <PackagePath>user.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

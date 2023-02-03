@@ -1,31 +1,49 @@
 ﻿using EShopMobile.Models;
-using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using static Newtonsoft.Json.JsonConvert;
 
 namespace EShopMobile.Helpers
 {
-    public class Session : ISession
+    public class Session
     {
-        public User User { get; set; }
-        public Customer Customer { get; set; }
-        public IHttpContextAccessor HttpContextAccessor;
-
-        public Session(IHttpContextAccessor httpContextAccessor)
-        {
-            HttpContextAccessor = httpContextAccessor;
-        }
-
         public Customer GetCustomer()
         {
-            string customerStr = string.Empty;
-            //var customerStr = HttpContextAccessor.HttpContext.Session.GetString("Customer");
-
+            var customerStr = Preferences.Get(nameof(Customer), null);
             if (!string.IsNullOrEmpty(customerStr))
             {
-                Customer = DeserializeObject<Customer>(customerStr);
+                return DeserializeObject<Customer>(customerStr);
             }
+            return null;
 
-            return Customer;
+        }
+
+        public void SetCustomer(Customer customer)
+        {
+            if (Preferences.ContainsKey(nameof(Customer)))
+            {
+                Preferences.Remove(nameof(Customer));
+            }
+            Preferences.Set(nameof(Customer), SerializeObject(customer));
+        }
+
+        public User GetUser()
+        {
+            var userStr = Preferences.Get(nameof(User), null);
+
+            if (!string.IsNullOrEmpty(userStr))
+            {
+                return DeserializeObject<User>(userStr);
+            }
+            return null;
+        }
+
+        public void SetUser(User user)
+        {
+            if (Preferences.ContainsKey(nameof(User)))
+            {
+                Preferences.Remove(nameof(User));
+            }
+            Preferences.Set(nameof(User), SerializeObject(user));
         }
     }
 }

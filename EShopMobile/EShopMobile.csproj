@@ -51,18 +51,64 @@
 	<ItemGroup>
 	  <Compile Remove="Helpers\ISession.cs" />
 	  <Compile Remove="Helpers\IUserAccess.cs" />
-	  <Compile Remove="Helpers\Session.cs" />
 	  <Compile Remove="Helpers\UserAccess.cs" />
-	  <Compile Remove="Models\Customer.cs" />
-	  <Compile Remove="Models\Order.cs" />
-	  <Compile Remove="Models\OrderProducts.cs" />
-	  <Compile Remove="Models\Product.cs" />
-	  <Compile Remove="Models\User.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\about_us.png" />
+	  <None Remove="Resources\Images\company_logo.jpg" />
+	  <None Remove="Resources\Images\contact_us.png" />
+	  <None Remove="Resources\Images\dashboard.png" />
+	  <None Remove="Resources\Images\lock.png" />
+	  <None Remove="Resources\Images\more_icon.png" />
+	  <None Remove="Resources\Images\team.png" />
+	  <None Remove="Resources\Images\user.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\LoginPage.xaml.cs">
+	    <DependentUpon>LoginPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Customers\CustomerFormPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Customers\CustomersIndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Orders\OrderCreationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Orders\OrderFormPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Orders\OrdersIndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Products\ProductFormPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Products\ProductsIndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Users\UserFormPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Users\UsersIndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IStbqKtrsqMApw6nBxhlK4vejZJC056MESCLzqdZ3ldN6v2VaM7i3LMgYP2oUvo8BWw+ohn/FWqX3x4Yt/CEtw==",
+  "dgSpecHash": "9ZmUNcdPfg540jygJQRIDWa2oag47oBDMVFNU+GOjIGovDeWYYvcMcRXbqDDeWPS8XUXAv6xsg+Bz30alabs9g==",
   "success": true,
   "projectFilePath": "C:\\github\\EShopMobile\\EShopMobile\\EShopMobile.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\communitytoolkit.maui\\2.0.0\\communitytoolkit.maui.2.0.0.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\communitytoolkit.maui.core\\2.0.0\\communitytoolkit.maui.core.2.0.0.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",

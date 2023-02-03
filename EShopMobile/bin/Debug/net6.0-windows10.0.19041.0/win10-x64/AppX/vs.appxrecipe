@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\github\EShopMobile\EShopMobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-01-09T20:29:19.179</Modified>
+      <Modified>2023-01-17T14:34:45.566</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-01-09T20:29:18.801</Modified>
+      <Modified>2023-01-17T14:34:45.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\EShopMobile.runtimeconfig.json">
       <PackagePath>EShopMobile.runtimeconfig.json</PackagePath>
-      <Modified>2023-01-09T20:22:21.919</Modified>
+      <Modified>2023-01-16T22:15:36.903</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\EShopMobile.dll">
       <PackagePath>EShopMobile.dll</PackagePath>
-      <Modified>2023-01-09T20:29:18.018</Modified>
+      <Modified>2023-01-17T14:33:57.254</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>EShopMobile.exe</PackagePath>
-      <Modified>2023-01-09T20:29:18.026</Modified>
+      <Modified>2023-01-17T14:33:57.273</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.11\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -965,6 +965,18 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2022-08-17T03:26:26.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\communitytoolkit.maui\2.0.0\lib\net6.0-windows10.0.19041\CommunityToolkit.Maui.dll">
+      <PackagePath>CommunityToolkit.Maui.dll</PackagePath>
+      <Modified>2022-11-08T23:34:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\communitytoolkit.maui.core\2.0.0\lib\net6.0-windows10.0.19041\CommunityToolkit.Maui.Core.dll">
+      <PackagePath>CommunityToolkit.Maui.Core.dll</PackagePath>
+      <Modified>2022-11-08T23:34:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\communitytoolkit.mvvm\8.0.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+      <Modified>2022-08-03T23:09:22.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\microsoft.aspnetcore.cryptography.internal\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll">
       <PackagePath>Microsoft.AspNetCore.Cryptography.Internal.dll</PackagePath>
       <Modified>2018-11-12T17:32:50.000</Modified>
@@ -1123,7 +1135,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\EShopMobile.deps.json">
       <PackagePath>EShopMobile.deps.json</PackagePath>
-      <Modified>2023-01-09T20:29:19.057</Modified>
+      <Modified>2023-01-17T14:34:45.436</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ThemisTsiligkoudis\.nuget\packages\microsoft.maui.controls.ref.win\6.0.547\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1169,209 +1181,241 @@
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
       <Modified>2023-01-09T19:09:39.793</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\about_us.scale-100.png">
+      <PackagePath>about_us.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.342</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-01-09T20:22:20.070</Modified>
+      <Modified>2023-01-17T14:30:37.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.279</Modified>
+      <Modified>2023-01-17T14:30:37.424</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.290</Modified>
+      <Modified>2023-01-17T14:30:37.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.298</Modified>
+      <Modified>2023-01-17T14:30:37.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.313</Modified>
+      <Modified>2023-01-17T14:30:37.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.368</Modified>
+      <Modified>2023-01-17T14:30:37.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.128</Modified>
+      <Modified>2023-01-17T14:30:37.263</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.131</Modified>
+      <Modified>2023-01-17T14:30:37.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.144</Modified>
+      <Modified>2023-01-17T14:30:37.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.134</Modified>
+      <Modified>2023-01-17T14:30:37.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.138</Modified>
+      <Modified>2023-01-17T14:30:37.271</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.110</Modified>
+      <Modified>2023-01-17T14:30:37.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.113</Modified>
+      <Modified>2023-01-17T14:30:37.242</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.124</Modified>
+      <Modified>2023-01-17T14:30:37.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.115</Modified>
+      <Modified>2023-01-17T14:30:37.246</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.118</Modified>
+      <Modified>2023-01-17T14:30:37.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.077</Modified>
+      <Modified>2023-01-17T14:30:37.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.080</Modified>
+      <Modified>2023-01-17T14:30:37.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.083</Modified>
+      <Modified>2023-01-17T14:30:37.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.086</Modified>
+      <Modified>2023-01-17T14:30:37.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.090</Modified>
+      <Modified>2023-01-17T14:30:37.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.092</Modified>
+      <Modified>2023-01-17T14:30:37.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.096</Modified>
+      <Modified>2023-01-17T14:30:37.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.107</Modified>
+      <Modified>2023-01-17T14:30:37.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.098</Modified>
+      <Modified>2023-01-17T14:30:37.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.101</Modified>
+      <Modified>2023-01-17T14:30:37.229</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.184</Modified>
+      <Modified>2023-01-17T14:30:37.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.189</Modified>
+      <Modified>2023-01-17T14:30:37.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.194</Modified>
+      <Modified>2023-01-17T14:30:37.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.202</Modified>
+      <Modified>2023-01-17T14:30:37.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.216</Modified>
+      <Modified>2023-01-17T14:30:37.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.164</Modified>
+      <Modified>2023-01-17T14:30:37.299</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.167</Modified>
+      <Modified>2023-01-17T14:30:37.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.170</Modified>
+      <Modified>2023-01-17T14:30:37.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.174</Modified>
+      <Modified>2023-01-17T14:30:37.313</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.181</Modified>
+      <Modified>2023-01-17T14:30:37.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.147</Modified>
+      <Modified>2023-01-17T14:30:37.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.150</Modified>
+      <Modified>2023-01-17T14:30:37.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.152</Modified>
+      <Modified>2023-01-17T14:30:37.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.156</Modified>
+      <Modified>2023-01-17T14:30:37.291</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.161</Modified>
+      <Modified>2023-01-17T14:30:37.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.221</Modified>
+      <Modified>2023-01-17T14:30:37.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.227</Modified>
+      <Modified>2023-01-17T14:30:37.370</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.235</Modified>
+      <Modified>2023-01-17T14:30:37.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.246</Modified>
+      <Modified>2023-01-17T14:30:37.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.272</Modified>
+      <Modified>2023-01-17T14:30:37.415</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\company_logo.scale-100.jpg">
+      <PackagePath>company_logo.scale-100.jpg</PackagePath>
+      <Modified>2023-01-17T12:35:16.360</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\contact_us.scale-100.png">
+      <PackagePath>contact_us.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.378</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dashboard.scale-100.png">
+      <PackagePath>dashboard.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.396</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.100</Modified>
+      <Modified>2023-01-17T14:30:37.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.108</Modified>
+      <Modified>2023-01-17T14:30:37.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.119</Modified>
+      <Modified>2023-01-17T14:30:37.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.142</Modified>
+      <Modified>2023-01-17T14:30:37.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-01-09T20:22:20.181</Modified>
+      <Modified>2023-01-17T14:30:37.260</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\lock.scale-100.png">
+      <PackagePath>lock.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.436</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\more_icon.scale-100.png">
+      <PackagePath>more_icon.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.457</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\team.scale-100.png">
+      <PackagePath>team.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.481</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png">
+      <PackagePath>user.scale-100.png</PackagePath>
+      <Modified>2023-01-17T12:35:16.502</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

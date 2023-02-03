@@ -1,24 +1,40 @@
-﻿namespace EShopMobile.Models
+﻿using EShopMobile.ViewModels;
+
+namespace EShopMobile.Models
 {
+    /// <summary>
+    /// The products that an order is connected to
+    /// </summary>
     public class OrderProducts
     {
+        /// <summary>
+        /// The id of the orderProduct instance
+        /// </summary>
         public int Id { get; set; }
-        public Order Order { get; set; }
+
+        /// <summary>
+        /// The id of the order
+        /// </summary>
         public int OrderId { get; set; }
-        public Product Product { get; set; }
+
+        /// <summary>
+        /// The product's name
+        /// </summary>
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// The product's category
+        /// </summary>
+        public  Category ProductCategory { get; set; }
+
+        /// <summary>
+        /// The product's id
+        /// </summary>
         public int ProductId { get; set; }
+
+        /// <summary>
+        /// the product's price
+        /// </summary>
         public float ProductPrice { get; set; }
-
-        public OrderProducts()
-        {
-            
-        }
-
-        public OrderProducts(int orderId, int productId, float productPrice)
-        {
-            OrderId = orderId;
-            ProductId = productId;
-            ProductPrice = productPrice;
-        }
     }
 }

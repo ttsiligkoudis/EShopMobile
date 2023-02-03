@@ -4,19 +4,19 @@ namespace EShopMobile.Helpers
 {
     public class ClientHelper
     {
-        public Client<CustomerDto> CustomerClient { get; set; }
-        public Client<OrderDto> OrderClient { get; set; }
-        public Client<ProductDto> ProductClient { get; set; }
-        public Client<UserDto> UserClient { get; set; }
-        public Client<OrderProductsDto> OrderProductClient { get; set; }
+        public Client<Customer> CustomerClient { get; set; }
+        public Client<Order> OrderClient { get; set; }
+        public Client<Product> ProductClient { get; set; }
+        public Client<User> UserClient { get; set; }
+        public Client<OrderProducts> OrderProductClient { get; set; }
 
         public ClientHelper()
         {
-            CustomerClient = new Client<CustomerDto>();
-            OrderClient = new Client<OrderDto>();
-            ProductClient = new Client<ProductDto>();
-            UserClient = new Client<UserDto>();
-            OrderProductClient = new Client<OrderProductsDto>();
+            CustomerClient = new Client<Customer>();
+            OrderClient = new Client<Order>();
+            ProductClient = new Client<Product>();
+            UserClient = new Client<User>();
+            OrderProductClient = new Client<OrderProducts>();
         }
 
         public void Dispose()

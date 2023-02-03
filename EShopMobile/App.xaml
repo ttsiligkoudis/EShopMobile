@@ -5,10 +5,15 @@
              x:Class="EShopMobile.App">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="PrimaryColor">#02425A</Color>
+            <Color x:Key="SecondaryColor">White</Color>
+
+            <Style x:Key="welcome" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
+                <Setter Property="FontFamily" Value="Sitka" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

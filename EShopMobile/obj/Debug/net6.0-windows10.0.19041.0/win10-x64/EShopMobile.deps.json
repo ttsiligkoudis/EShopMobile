@@ -9,6 +9,8 @@
     ".NETCoreApp,Version=v6.0/win10-x64": {
       "EShopMobile/1.0": {
         "dependencies": {
+          "CommunityToolkit.Maui": "2.0.0",
+          "CommunityToolkit.Mvvm": "8.0.0",
           "Microsoft.AspNetCore.Session": "2.2.0",
           "Microsoft.Maui.Dependencies": "6.0.547",
           "Microsoft.Maui.Extensions": "6.0.547",
@@ -905,6 +907,33 @@
           }
         }
       },
+      "CommunityToolkit.Maui/2.0.0": {
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "2.0.0"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/2.0.0": {
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.0.0": {
+        "runtime": {
+          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.1"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/2.2.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -1338,6 +1367,27 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.Maui/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-imxE+wbX0Ss0rM1z1Jh/W2giVqm6E+FEcgcz0j0Sgh99rTzi39PGaw03RNUgxHXBVbjn+tMX5skvo6uo8N+r8Q==",
+      "path": "communitytoolkit.maui/2.0.0",
+      "hashPath": "communitytoolkit.maui.2.0.0.nupkg.sha512"
+    },
+    "CommunityToolkit.Maui.Core/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XE2VIw9LgUmrc8XHD5zp0HJ20NWwzIuZeT3qixHDxi5jvRjfeQY8Pje6nKHZ4EpFZQF1GNmiKVd+b46BOHdggw==",
+      "path": "communitytoolkit.maui.core/2.0.0",
+      "hashPath": "communitytoolkit.maui.core.2.0.0.nupkg.sha512"
+    },
+    "CommunityToolkit.Mvvm/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jiu2g5WUdXRwzhJkHB+B4JBKP5A5+fp8xKiW/ZQo5PI+DruI7MbPEcK9K/Aw0YzTiWRuG6CBluzYIWN5Eo7BkQ==",
+      "path": "communitytoolkit.mvvm/8.0.0",
+      "hashPath": "communitytoolkit.mvvm.8.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/2.2.0": {
       "type": "package",
