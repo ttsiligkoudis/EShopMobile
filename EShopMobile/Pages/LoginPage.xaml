@@ -1,13 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
             xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels"
-            xmlns:handlers="clr-namespace:EShopMobile.Handlers"
             x:Class="EShopMobile.LoginPage"
             x:Name="ContentPage"
             x:DataType="viewmodel:LoginViewModel"
             BackgroundColor="{StaticResource PrimaryColor}"
             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <Style x:Key="InvalidEntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+        <Style x:Key="ValidEntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="Green" />
+        </Style>
+    </ContentPage.Resources>
+    
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False" IsEnabled="False" />
     </Shell.BackButtonBehavior>
@@ -28,7 +38,7 @@
                 <Image Source="user.png" HeightRequest="20" WidthRequest="20" />
             </Frame>
             <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White"  HorizontalOptions="FillAndExpand">
-                <handlers:BorderlessEntry Text="{Binding Email}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="User Name" Keyboard="Email" />
+                <Entry x:Name="UserName" Text="{Binding Email}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="User Name" Keyboard="Email" />
             </Frame>
         </StackLayout>
 
@@ -42,7 +52,7 @@
                 <Image Source="lock.png" HeightRequest="20" WidthRequest="20" />
             </Frame>
             <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White"  HorizontalOptions="FillAndExpand">
-                <handlers:BorderlessEntry Text="{Binding Password}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" />
+                <Entry x:Name="Password" Text="{Binding Password}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" />
             </Frame>
         </StackLayout>
 

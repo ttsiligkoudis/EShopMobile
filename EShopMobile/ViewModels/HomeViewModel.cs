@@ -3,6 +3,8 @@ using EShopMobile.Models;
 using EShopMobile.Helpers;
 using CommunityToolkit.Mvvm.Input;
 using EShopMobile.Pages.Customers;
+using EShopMobile.Pages.Products;
+using EShopMobile.Pages.Orders;
 
 namespace EShopMobile.ViewModels
 {
@@ -23,6 +25,8 @@ namespace EShopMobile.ViewModels
             _client = new ClientHelper();
             _session = new Session();
             _alert = alert;
+            Customer = _session.GetCustomer();
+            User = _session.GetUser();
         }
 
         [RelayCommand]
@@ -37,6 +41,18 @@ namespace EShopMobile.ViewModels
         async void CustomersNavigation()
         {
             await Shell.Current.GoToAsync(nameof(CustomersIndexPage));
+        }
+
+        [RelayCommand]
+        async void OrdersNavigation()
+        {
+            await Shell.Current.GoToAsync(nameof(OrdersIndexPage));
+        }
+
+        [RelayCommand]
+        async void ProductsNavigation()
+        {
+            await Shell.Current.GoToAsync(nameof(ProductsIndexPage));
         }
     }
 }

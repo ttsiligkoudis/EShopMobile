@@ -11,13 +11,16 @@ namespace EShopMobile.Helpers
     public class Client<T>
     {
         private readonly HttpClient _client;
-        private string baseUrl = DeviceInfo.Current.Platform == DevicePlatform.Android ? "https://9d7d-85-72-60-202.eu.ngrok.io/api/" : "https://localhost:44384/api/";
+        private string baseUrl = "https://eshop.myportofolio.eu/";
 
         public Client()
         {
             var handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
             _client = new HttpClient(handler);
+            #if DEBUG
+                baseUrl = DeviceInfo.Current.Platform == DevicePlatform.Android ? "http://10.0.2.2:5010/api/" : "https://localhost:5011/api/";
+            #endif
         }
 
         public async Task<T> GetAsync(string api)

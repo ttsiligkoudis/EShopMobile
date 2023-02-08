@@ -27,11 +27,24 @@
                    HorizontalOptions="EndAndExpand" />
         </StackLayout>
 
-        <Button x:Name="Login"
-                Margin="0,15" 
+        <Button Margin="0,15" 
                 BackgroundColor="{StaticResource SecondaryColor}"
                 Command="{Binding CustomersNavigationCommand}"
                 Text="Customers" 
+                TextColor="{StaticResource PrimaryColor}" 
+                FontFamily="OpenSansBold" />
+
+        <Button Margin="0,15" 
+                BackgroundColor="{StaticResource SecondaryColor}"
+                Command="{Binding OrdersNavigationCommand}"
+                Text="Orders" 
+                TextColor="{StaticResource PrimaryColor}" 
+                FontFamily="OpenSansBold" />
+
+        <Button Margin="0,15" 
+                BackgroundColor="{StaticResource SecondaryColor}"
+                Command="{Binding ProductsNavigationCommand}"
+                Text="Products" 
                 TextColor="{StaticResource PrimaryColor}" 
                 FontFamily="OpenSansBold" />
 

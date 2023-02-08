@@ -55,6 +55,13 @@ namespace EShopMobile.ViewModels
                     await Shell.Current.GoToAsync(nameof(HomePage));
                 }
             }
+            else
+            {
+                var message = string.IsNullOrEmpty(Email) && string.IsNullOrEmpty(Password) ?
+                    "Email and Password are required" 
+                    : $"{(string.IsNullOrEmpty(Email) ? "Email" : "Password")} is required";
+                await _alert.DisplayAlert("Login failed", message, "Ok", "Cancel");
+            }
         }
     }
 }

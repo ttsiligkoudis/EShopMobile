@@ -968,14 +968,6 @@ C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\lp\143\jl\files.cache
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\lp\144\jl\files.cache
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\lp\156\jl\files.cache
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\lp\157\jl\files.cache
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\mscorlib.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Data.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Net.NetworkInformation.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
-C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Xml.dll
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawable\about_us.png
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawable\company_logo.jpg
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawable\contact_us.png
@@ -984,3 +976,11 @@ C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawabl
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawable\more_icon.png
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawable\team.png
 C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\resizetizer\r\drawable\user.png
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\mscorlib.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Data.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Net.NetworkInformation.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net6.0-android\android\assets\System.Xml.dll
