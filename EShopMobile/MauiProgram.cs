@@ -1,51 +1,96 @@
-﻿using CommunityToolkit.Maui;
+﻿//using CommunityToolkit.Maui;
 using EShopMobile.Helpers;
+using EShopMobile.Pages;
 using EShopMobile.Pages.Customers;
 using EShopMobile.Pages.Orders;
 using EShopMobile.Pages.Products;
-using EShopMobile.Pages.Users;
 using EShopMobile.ViewModels;
 using EShopMobile.ViewModels.Customers;
+using EShopMobile.ViewModels.Orders;
+using EShopMobile.ViewModels.Products;
+using Maui.GoogleMaps.Hosting;
+using Newtonsoft.Json;
 
 namespace EShopMobile;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+    public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-            .UseMauiCommunityToolkit()
+#if ANDROID
+            .UseGoogleMaps()
+#elif IOS
+            .UseGoogleMaps("AIzaSyBVFIHfFViJdjlWHxnds2M8de8DFbK0Zjg")
+#endif
+            //.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+                fonts.AddFont("FontAwesomeRegular.otf", "FontRegular");
+                fonts.AddFont("FontAwesomeBrands.otf", "FontBrands");
+                fonts.AddFont("FontAwesomeSolid.otf", "FontSolid");
+            });
 
-		builder.Services.AddTransient<LoginPage>();
+        builder.Services.AddTransient<AppShell>();
+        builder.Services.AddTransient<LoginPage>();
 		builder.Services.AddTransient<HomePage>();
 		builder.Services.AddTransient<CustomersIndexPage>();
-        builder.Services.AddTransient<CustomerFormPage>();
-        builder.Services.AddTransient<OrderCreationPage>();
         builder.Services.AddTransient<OrdersIndexPage>();
         builder.Services.AddTransient<OrderFormPage>();
         builder.Services.AddTransient<ProductsIndexPage>();
         builder.Services.AddTransient<ProductFormPage>();
-        builder.Services.AddTransient<UsersIndexPage>();
-        builder.Services.AddTransient<UserFormPage>();
+        builder.Services.AddTransient<AboutPage>();
+        builder.Services.AddTransient<ContactPage>();
+        builder.Services.AddTransient<MyProfilePage>();
+        builder.Services.AddTransient<CartPage>();
+        builder.Services.AddTransient<SavedPage>();
+        builder.Services.AddTransient<SignUpPage>();
 
         builder.Services.AddTransient<LoginViewModel>();
 		builder.Services.AddTransient<HomeViewModel>();
         builder.Services.AddTransient<CustomersViewModel>();
+        builder.Services.AddTransient<ProductsViewModel>();
+        builder.Services.AddTransient<OrderViewModel>();
 
         builder.Services.AddSingleton<IAlertService, AlertService>();
 
-        //#if ANDROID && DEBUG
-        //    MyApp.Platforms.Android.DangerousAndroidMessageHandlerEmitter.Register();
-        //    MyApp.Platforms.Android.DangerousTrustProvider.Register();
-        //#endif
-
         return builder.Build();
 	}
+
+    public static async Task<bool> GetLocationPermission()
+    {
+        var LocationAlwaysPermission = await Permissions.CheckStatusAsync<Permissions.LocationAlways>();
+        var LocationWhenInUsePermission = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+        return LocationAlwaysPermission.HasFlag(PermissionStatus.Granted) || LocationWhenInUsePermission.HasFlag(PermissionStatus.Granted);
+    }
+
+    public static void RequestLocationPermission()
+    {
+        MainThread.BeginInvokeOnMainThread(async () =>
+        {
+            await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+        });
+    }
+
+    public static async Task<bool> CheckLocationPermission()
+    {
+        var hasPermission = await GetLocationPermission();
+
+        if (!hasPermission)
+        {
+            RequestLocationPermission();
+            hasPermission = await GetLocationPermission();
+        }
+        return hasPermission;
+    }
+
+    public static T Clone<T>(this T source)
+    {
+        var serialized = JsonConvert.SerializeObject(source);
+        return JsonConvert.DeserializeObject<T>(serialized);
+    }
 }

@@ -1,9 +1,17 @@
+using EShopMobile.ViewModels.Orders;
+
 namespace EShopMobile.Pages.Orders;
 
-public partial class OrderFormPage : ContentPage
+public partial class OrderFormPage : BasePage
 {
-	public OrderFormPage()
+	public OrderFormPage(OrderViewModel vm)
 	{
 		InitializeComponent();
+        BindingContext = vm;
 	}
+
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+    }
 }

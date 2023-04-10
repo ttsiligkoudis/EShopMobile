@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels.Products"
+             xmlns:models="clr-namespace:DataModels.Dtos;assembly=DataModels"
+             xmlns:pages="clr-namespace:EShopMobile.Pages"
+             x:DataType="viewmodel:ProductsViewModel"
              x:Class="EShopMobile.Pages.Products.ProductsIndexPage"
-             Title="ProductsIndexPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+             Title="Products">
+    <ScrollView>
+        <StackLayout>
+            <ActivityIndicator Color="{StaticResource SecondaryColor}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+            <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" Margin="10">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ProductDto">
+                        <Border Padding="5" HeightRequest="150" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15" />
+                            </Border.StrokeShape>
+                            <Grid Padding="10" ColumnSpacing="10" ColumnDefinitions="*,*" RowDefinitions="*">
+                                <Image Grid.Column="0" Source="{Binding Image}" Aspect="AspectFit" MaximumWidthRequest="200" />
+                                <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="5">
+                                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                    <Label Text="{Binding Price, StringFormat='Price: {0:N2}€'}" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                    <Label Text="{Binding Rate, StringFormat='Rating: {0:N1}'}" FontSize="Small" TextColor="{StaticResource PrimaryColor}" />
+                                </StackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</pages:BasePage>

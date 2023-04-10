@@ -2,49 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0-android33.0": {
-      "CommunityToolkit.Maui/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "CommunityToolkit.Maui.Core": "4.0.0"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Core/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Markup/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "CommunityToolkit.Mvvm/8.1.0": {
+      "CommunityToolkit.Mvvm/8.2.0-preview1": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -458,7 +416,7 @@
           }
         }
       },
-      "Newtonsoft.Json/13.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -469,6 +427,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Onion.Maui.GoogleMaps/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -2117,6 +2087,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.3": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.6.1.1": {
         "type": "package",
         "dependencies": {
@@ -2180,6 +2157,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Base": "118.1.0",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/23.0.0.4": {
@@ -2311,53 +2376,50 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.3-beta1"
+        },
+        "compile": {
+          "bin/placeholder/Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.dll": {}
+        }
+      },
+      "DataModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Enums": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/DataModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModels.dll": {}
+        }
+      },
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
         }
       }
     },
     "net7.0-android33.0/android-arm": {
-      "CommunityToolkit.Maui/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "CommunityToolkit.Maui.Core": "4.0.0"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Core/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Markup/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "CommunityToolkit.Mvvm/8.1.0": {
+      "CommunityToolkit.Mvvm/8.2.0-preview1": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -2761,7 +2823,7 @@
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/13.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -2772,6 +2834,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Onion.Maui.GoogleMaps/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -4398,6 +4472,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.3": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.6.1.1": {
         "type": "package",
         "dependencies": {
@@ -4461,6 +4542,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Base": "118.1.0",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/23.0.0.4": {
@@ -4592,53 +4761,50 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.3-beta1"
+        },
+        "compile": {
+          "bin/placeholder/Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.dll": {}
+        }
+      },
+      "DataModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Enums": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/DataModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModels.dll": {}
+        }
+      },
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
         }
       }
     },
     "net7.0-android33.0/android-arm64": {
-      "CommunityToolkit.Maui/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "CommunityToolkit.Maui.Core": "4.0.0"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Core/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Markup/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "CommunityToolkit.Mvvm/8.1.0": {
+      "CommunityToolkit.Mvvm/8.2.0-preview1": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -5042,7 +5208,7 @@
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/13.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -5053,6 +5219,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Onion.Maui.GoogleMaps/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -6679,6 +6857,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.3": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.6.1.1": {
         "type": "package",
         "dependencies": {
@@ -6742,6 +6927,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Base": "118.1.0",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/23.0.0.4": {
@@ -6873,53 +7146,50 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.3-beta1"
+        },
+        "compile": {
+          "bin/placeholder/Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.dll": {}
+        }
+      },
+      "DataModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Enums": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/DataModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModels.dll": {}
+        }
+      },
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
         }
       }
     },
     "net7.0-android33.0/android-x64": {
-      "CommunityToolkit.Maui/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "CommunityToolkit.Maui.Core": "4.0.0"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Core/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Markup/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "CommunityToolkit.Mvvm/8.1.0": {
+      "CommunityToolkit.Mvvm/8.2.0-preview1": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -7323,7 +7593,7 @@
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/13.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -7334,6 +7604,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Onion.Maui.GoogleMaps/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -8960,6 +9242,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.3": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.6.1.1": {
         "type": "package",
         "dependencies": {
@@ -9023,6 +9312,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Base": "118.1.0",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/23.0.0.4": {
@@ -9154,53 +9531,50 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.3-beta1"
+        },
+        "compile": {
+          "bin/placeholder/Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.dll": {}
+        }
+      },
+      "DataModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Enums": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/DataModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModels.dll": {}
+        }
+      },
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
         }
       }
     },
     "net7.0-android33.0/android-x86": {
-      "CommunityToolkit.Maui/4.0.0": {
-        "type": "package",
-        "dependencies": {
-          "CommunityToolkit.Maui.Core": "4.0.0"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Core/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
-      "CommunityToolkit.Maui.Markup/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/CommunityToolkit.Maui.Markup.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "CommunityToolkit.Mvvm/8.1.0": {
+      "CommunityToolkit.Mvvm/8.2.0-preview1": {
         "type": "package",
         "compile": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -9604,7 +9978,7 @@
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/13.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -9615,6 +9989,18 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Onion.Maui.GoogleMaps/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Maps": "118.1.0"
+        },
+        "compile": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-android/Maui.GoogleMaps.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -11241,6 +11627,13 @@
           "buildTransitive/net6.0-android31.0/Xamarin.AndroidX.Window.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.3": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.6.1.1": {
         "type": "package",
         "dependencies": {
@@ -11304,6 +11697,94 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0",
+          "Xamarin.GooglePlayServices.Tasks": "118.0.2"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.2.0.3",
+          "Xamarin.AndroidX.Core": "1.7.0.2",
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Maps/118.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Fragment": "1.4.1.1",
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Base": "118.1.0",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.3",
+          "Xamarin.GooglePlayServices.Basement": "118.1.0"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/23.0.0.4": {
@@ -11435,99 +11916,69 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataModels": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.3-beta1"
+        },
+        "compile": {
+          "bin/placeholder/Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.dll": {}
+        }
+      },
+      "DataModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Enums": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/DataModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataModels.dll": {}
+        }
+      },
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "CommunityToolkit.Maui/4.0.0": {
-      "sha512": "76XJVmDRXoKooARQK7tuwvjAnOwF39nmNoRhHGU1cpElJuKZ4v5Y1QlkSJjxaNaubY4JyplZiDPXK60dsEoPRg==",
+    "CommunityToolkit.Mvvm/8.2.0-preview1": {
+      "sha512": "f0MRwQY95S6RB5iAe0wuDniY9duLuICr/wxS/vjKi+ZrUYlY3Tm7dAeJxhR6bn72Wd325dz29+mAgymRAdSbXw==",
       "type": "package",
-      "path": "communitytoolkit.maui/4.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ReadMe.txt",
-        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
-        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
-        "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
-        "communitytoolkit.maui.4.0.0.nupkg.sha512",
-        "communitytoolkit.maui.nuspec",
-        "icon.png",
-        "lib/net7.0-android33.0/CommunityToolkit.Maui.aar",
-        "lib/net7.0-android33.0/CommunityToolkit.Maui.dll",
-        "lib/net7.0-android33.0/CommunityToolkit.Maui.xml",
-        "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll",
-        "lib/net7.0-ios16.1/CommunityToolkit.Maui.xml",
-        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll",
-        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.xml",
-        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.dll",
-        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.xml",
-        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll",
-        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.xml",
-        "lib/net7.0/CommunityToolkit.Maui.dll",
-        "lib/net7.0/CommunityToolkit.Maui.xml"
-      ]
-    },
-    "CommunityToolkit.Maui.Core/4.0.0": {
-      "sha512": "UBlKxyJisLvbZJvi9o125erFl1bMDSBDvkfgdUFiCt6nTVLA+c3y22LMz1poY7s+zmE2A5iphmqT1SWnkTNWAg==",
-      "type": "package",
-      "path": "communitytoolkit.maui.core/4.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ReadMe.txt",
-        "communitytoolkit.maui.core.4.0.0.nupkg.sha512",
-        "communitytoolkit.maui.core.nuspec",
-        "icon.png",
-        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.aar",
-        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll",
-        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.xml",
-        "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll",
-        "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.xml",
-        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll",
-        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.xml",
-        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.Core.dll",
-        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.Core.xml",
-        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll",
-        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
-        "lib/net7.0/CommunityToolkit.Maui.Core.dll",
-        "lib/net7.0/CommunityToolkit.Maui.Core.xml"
-      ]
-    },
-    "CommunityToolkit.Maui.Markup/3.0.0": {
-      "sha512": "48KtgF6fb+8ayaKuogNAiJrOhU+xUXIwu9J0GD9D0Z2zSQRtk7tAM7CyRnWHDVFlK4/8p7PYs3w4HHQNN+/b6A==",
-      "type": "package",
-      "path": "communitytoolkit.maui.markup/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ReadMe.txt",
-        "analyzers/dotnet/cs/CommunityToolkit.Maui.Markup.SourceGenerators.dll",
-        "communitytoolkit.maui.markup.3.0.0.nupkg.sha512",
-        "communitytoolkit.maui.markup.nuspec",
-        "lib/net7.0/CommunityToolkit.Maui.Markup.dll",
-        "lib/net7.0/CommunityToolkit.Maui.Markup.xml",
-        "nuget.png"
-      ]
-    },
-    "CommunityToolkit.Mvvm/8.1.0": {
-      "sha512": "xxOt7lu9a5kB5Fs9RfcxzVlKnhuuPe+w7AXHtmCFtS3oldrsUhEMxHfNulluXSscUUoGxZ0jh55Om12ZP6abHA==",
-      "type": "package",
-      "path": "communitytoolkit.mvvm/8.1.0",
+      "path": "communitytoolkit.mvvm/8.2.0-preview1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "License.md",
         "ThirdPartyNotices.txt",
+        "analyzers/dotnet/roslyn4.0/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
         "analyzers/dotnet/roslyn4.0/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "analyzers/dotnet/roslyn4.3/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
         "analyzers/dotnet/roslyn4.3/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
         "build/netstandard2.0/CommunityToolkit.Mvvm.targets",
         "build/netstandard2.1/CommunityToolkit.Mvvm.targets",
         "buildTransitive/netstandard2.0/CommunityToolkit.Mvvm.targets",
         "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets",
-        "communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+        "communitytoolkit.mvvm.8.2.0-preview1.nupkg.sha512",
         "communitytoolkit.mvvm.nuspec",
         "lib/net6.0/CommunityToolkit.Mvvm.dll",
         "lib/net6.0/CommunityToolkit.Mvvm.pdb",
@@ -12066,10 +12517,10 @@
         "version.txt"
       ]
     },
-    "Newtonsoft.Json/13.0.2": {
-      "sha512": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.2",
+      "path": "newtonsoft.json/13.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -12091,9 +12542,24 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.2.nupkg.sha512",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Onion.Maui.GoogleMaps/5.0.0": {
+      "sha512": "328pPjpQjyFy/bwj2Ew/BjlQmz9igU02P0xPYuw0kAUvkhPlnQ3BU+S9sjvPJdAt+tOwoXhxR/OtpbWW8u9OKA==",
+      "type": "package",
+      "path": "onion.maui.googlemaps/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net7.0-android/Maui.GoogleMaps.dll",
+        "lib/net7.0-ios/Maui.GoogleMaps.dll",
+        "lib/net7.0/Maui.GoogleMaps.dll",
+        "onion.maui.googlemaps.5.0.0.nupkg.sha512",
+        "onion.maui.googlemaps.nuspec"
       ]
     },
     "System.Buffers/4.4.0": {
@@ -14077,6 +14543,28 @@
         "xamarin.androidx.window.nuspec"
       ]
     },
+    "Xamarin.Build.Download/0.11.3": {
+      "sha512": "tOtZAnORAmBs5USiEVRzNrISh0qwXzthj+8lGVNGHlAZNdAN0SD7h4h1yxzEQjiUCKULe/VMIazqZ0dGwLm1xQ==",
+      "type": "package",
+      "path": "xamarin.build.download/0.11.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.11.3.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
     "Xamarin.Google.Android.Material/1.6.1.1": {
       "sha512": "5wifmv4hwtyv8FPzOS67cewikmZdiecvkqd6g8eCt86uC0weoBbGtaAbu6v+j/j7xVon9b5yfCB7E8OTWmwgOw==",
       "type": "package",
@@ -14141,6 +14629,101 @@
         "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.xml",
         "xamarin.google.guava.listenablefuture.1.0.0.9.nupkg.sha512",
         "xamarin.google.guava.listenablefuture.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Base/118.1.0": {
+      "sha512": "UeCLNGDQMd1Br24Jjtk5ApthoerOSSIglzJZQa6yXdtxIUy7kVIa/4L8y6FzYPwU2q5h5WJsp/Hrf2+FYD5Xjw==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.base/118.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid12.0/Xamarin.GooglePlayServices.Base.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets",
+        "buildTransitive/MonoAndroid12.0/Xamarin.GooglePlayServices.Base.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Base.targets",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Base.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Base.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Base.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Base.xml",
+        "lib/net6.0-android31.0/play-services-base.aar",
+        "proguard/proguard.txt",
+        "xamarin.googleplayservices.base.118.1.0.nupkg.sha512",
+        "xamarin.googleplayservices.base.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Basement/118.1.0": {
+      "sha512": "73G+/t6BwOJLH/G9xxsGxQ6t9PQseNMkHBpZqObb5kMV7ZmJUUTWxRhGn1IGFMY03gDomgjhGYLiBMcG6C3b4g==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.basement/118.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid12.0/Xamarin.GooglePlayServices.Basement.targets",
+        "build/MonoAndroid12.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "buildTransitive/MonoAndroid12.0/Xamarin.GooglePlayServices.Basement.targets",
+        "buildTransitive/MonoAndroid12.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Basement.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Basement.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Basement.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Basement.xml",
+        "lib/net6.0-android31.0/play-services-basement.aar",
+        "proguard/proguard.txt",
+        "xamarin.googleplayservices.basement.118.1.0.nupkg.sha512",
+        "xamarin.googleplayservices.basement.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Maps/118.1.0": {
+      "sha512": "xs7r/HfCdMOGARstJwV3Sdea+fXZnaNZZmtSRAGyXVhUXh8JyyKYpuS1ZHexUruYSU48aIAqSvoDkBNmQ2fBbQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.maps/118.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid12.0/Xamarin.GooglePlayServices.Maps.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets",
+        "buildTransitive/MonoAndroid12.0/Xamarin.GooglePlayServices.Maps.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.targets",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Maps.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Maps.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Maps.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Maps.xml",
+        "lib/net6.0-android31.0/play-services-maps.aar",
+        "xamarin.googleplayservices.maps.118.1.0.nupkg.sha512",
+        "xamarin.googleplayservices.maps.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Tasks/118.0.2": {
+      "sha512": "Et4KHnRz7B13Tvqpuk0sUGD000mMNkXXPNdN1osTKGfMy5b/AVG19eJlDYsV7K4eaCvQ/VJLx7LRcWUL4ExWtA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.tasks/118.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid12.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "build/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "buildTransitive/MonoAndroid12.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "buildTransitive/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.pdb",
+        "lib/monoandroid12.0/Xamarin.GooglePlayServices.Tasks.xml",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.pdb",
+        "lib/net6.0-android31.0/Xamarin.GooglePlayServices.Tasks.xml",
+        "lib/net6.0-android31.0/play-services-tasks.aar",
+        "proguard/proguard.txt",
+        "xamarin.googleplayservices.tasks.118.0.2.nupkg.sha512",
+        "xamarin.googleplayservices.tasks.nuspec"
       ]
     },
     "Xamarin.Jetbrains.Annotations/23.0.0.4": {
@@ -14296,20 +14879,37 @@
         "xamarin.kotlinx.coroutines.core.jvm.1.6.4.nupkg.sha512",
         "xamarin.kotlinx.coroutines.core.jvm.nuspec"
       ]
+    },
+    "Client/1.0.0": {
+      "type": "project",
+      "path": "../../EShop-Core/Helpers/Client.csproj",
+      "msbuildProject": "../../EShop-Core/Helpers/Client.csproj"
+    },
+    "DataModels/1.0.0": {
+      "type": "project",
+      "path": "../../EShopAPI/DataModels/DataModels.csproj",
+      "msbuildProject": "../../EShopAPI/DataModels/DataModels.csproj"
+    },
+    "Enums/1.0.0": {
+      "type": "project",
+      "path": "../../EShopAPI/Enums/Enums.csproj",
+      "msbuildProject": "../../EShopAPI/Enums/Enums.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
-      "CommunityToolkit.Maui >= 4.0.0",
-      "CommunityToolkit.Maui.Markup >= 3.0.0",
-      "CommunityToolkit.Mvvm >= 8.1.0",
+      "Client >= 1.0.0",
+      "CommunityToolkit.Mvvm >= 8.2.0-preview1",
+      "DataModels >= 1.0.0",
+      "Enums >= 1.0.0",
       "Microsoft.AspNetCore.Session >= 2.2.0",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.49",
-      "Newtonsoft.Json >= 13.0.2",
+      "Newtonsoft.Json >= 13.0.3",
+      "Onion.Maui.GoogleMaps >= 5.0.0",
       "Xamarin.Android.Glide >= 4.13.2.2",
       "Xamarin.AndroidX.Browser >= 1.4.0.2",
       "Xamarin.AndroidX.Legacy.Support.V4 >= 1.0.0.14",
@@ -14361,7 +14961,17 @@
       "frameworks": {
         "net7.0-android33.0": {
           "targetAlias": "net7.0-android",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\github\\EShop-Core\\Helpers\\Client.csproj": {
+              "projectPath": "C:\\github\\EShop-Core\\Helpers\\Client.csproj"
+            },
+            "C:\\github\\EShopAPI\\DataModels\\DataModels.csproj": {
+              "projectPath": "C:\\github\\EShopAPI\\DataModels\\DataModels.csproj"
+            },
+            "C:\\github\\EShopAPI\\Enums\\Enums.csproj": {
+              "projectPath": "C:\\github\\EShopAPI\\Enums\\Enums.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -14374,17 +14984,9 @@
       "net7.0-android33.0": {
         "targetAlias": "net7.0-android",
         "dependencies": {
-          "CommunityToolkit.Maui": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          },
-          "CommunityToolkit.Maui.Markup": {
-            "target": "Package",
-            "version": "[3.0.0, )"
-          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
-            "version": "[8.1.0, )"
+            "version": "[8.2.0-preview1, )"
           },
           "Microsoft.AspNetCore.Session": {
             "target": "Package",
@@ -14417,7 +15019,11 @@
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[13.0.2, )"
+            "version": "[13.0.3, )"
+          },
+          "Onion.Maui.GoogleMaps": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "Xamarin.Android.Glide": {
             "target": "Package",

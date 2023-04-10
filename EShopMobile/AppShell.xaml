@@ -3,22 +3,113 @@
     x:Class="EShopMobile.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:EShopMobile"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:pages="clr-namespace:EShopMobile.Pages"
+    xmlns:customers="clr-namespace:EShopMobile.Pages.Customers"
+    xmlns:orders="clr-namespace:EShopMobile.Pages.Orders"
+    xmlns:products="clr-namespace:EShopMobile.Pages.Products"
+    FlyoutWidth="200" FlyoutBackgroundColor="#3C3C3C" 
+    Shell.BackgroundColor="#212529" 
+    Shell.TabBarBackgroundColor="#212529" Shell.TabBarTitleColor="White" Shell.TabBarUnselectedColor="Grey">
 
-    <ShellContent
-        FlyoutItemIsVisible="False"
-        Shell.FlyoutBehavior="Disabled"
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage" />
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="50,*" Padding="10">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#3C3C3C" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#2B2B2B" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Image Source="{Binding Icon}" />
+                <Label Grid.Column="1" Text="{Binding Title}" FontFamily="OpenSansRegular" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
 
-    <ShellContent 
-        Title="Profile"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage"/>
-    
-    <ShellContent 
-        Title="Logout"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage"/>
+    <Shell.FlyoutHeader>
+        <Border BackgroundColor="Transparent" Padding="0" HeightRequest="150" WidthRequest="200">
+            <StackLayout>
+                <Image Source="eshop.png" HeightRequest="100" WidthRequest="200" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </Border>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FontSolid" Glyph="&#xf015;" Size="Small" />
+        </FlyoutItem.Icon>
+        <Tab Title="Home" Route="Home">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontSolid" Glyph="&#xf015;" Size="Small" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:HomePage}" />
+        </Tab>
+        <Tab Title="Wishlist" Route="Wishlist">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontSolid" Glyph="&#xf004;" Size="Small" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:SavedPage}" />
+        </Tab>
+        <Tab Title="Profile" Route="MyProfile">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontSolid" Glyph="&#xf007;" Size="Small" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:MyProfilePage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem x:Name="Customers" Title="Customers" Route="Customers">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FontSolid" Glyph="&#xf0c0;" Size="Small" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate customers:CustomersIndexPage}" />
+    </FlyoutItem>
+    <FlyoutItem x:Name="Orders" Title="Orders" Route="Orders">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FontSolid" Glyph="&#xf1b2;" Size="Small" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate orders:OrdersIndexPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Products" Route="Products">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FontSolid" Glyph="&#xf02c;" Size="Small" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate products:ProductsIndexPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="About" Route="About">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FontSolid" Glyph="&#xf05a;" Size="Small" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate pages:AboutPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Contact" Route="Contact">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" Size="Small" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate pages:ContactPage}" />
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <StackLayout>
+            <Button x:Name="LogoutBtn" IsVisible="False" FontFamily="OpenSansRegular" Text="Logout" TextColor="White" BackgroundColor="#2B2B2B" FontAttributes="Bold" FontSize="Medium" Clicked="LogBtn_Clicked">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="FontSolid" Glyph="&#xf08b;" Color="White" Size="Medium"/>
+                </Button.ImageSource>
+            </Button>
+            <Button x:Name="LoginBtn" IsVisible="False" FontFamily="OpenSansRegular" Text="Login" TextColor="White" BackgroundColor="#2B2B2B" FontAttributes="Bold" FontSize="Medium" Clicked="LogBtn_Clicked">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="FontSolid" Glyph="&#xf2f6;" Color="White" Size="Medium"/>
+                </Button.ImageSource>
+            </Button>
+        </StackLayout>
+    </Shell.FlyoutFooter>
 </Shell>

@@ -8,9 +8,6 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.Xaml.dll",
 		"Microsoft.Maui.Controls.dll",
 		"Microsoft.Maui.Essentials.dll",
-		"CommunityToolkit.Maui.dll",
-		"CommunityToolkit.Maui.Core.dll",
-		"CommunityToolkit.Maui.Markup.dll",
 		"CommunityToolkit.Mvvm.dll",
 		"GoogleGson.dll",
 		"Microsoft.AspNetCore.Cryptography.Internal.dll",
@@ -34,6 +31,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Primitives.dll",
 		"Microsoft.Maui.Graphics.dll",
 		"Newtonsoft.Json.dll",
+		"Maui.GoogleMaps.dll",
 		"System.Security.Cryptography.Pkcs.dll",
 		"System.Security.Cryptography.Xml.dll",
 		"System.Security.Permissions.dll",
@@ -111,6 +109,10 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Google.Android.Material.dll",
 		"Xamarin.Google.Crypto.Tink.Android.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"Xamarin.GooglePlayServices.Base.dll",
+		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Maps.dll",
+		"Xamarin.GooglePlayServices.Tasks.dll",
 		"Xamarin.Jetbrains.Annotations.dll",
 		"Xamarin.Kotlin.StdLib.dll",
 		"Xamarin.Kotlin.StdLib.Common.dll",
@@ -118,6 +120,9 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Kotlin.StdLib.Jdk8.dll",
 		"Xamarin.KotlinX.Coroutines.Android.dll",
 		"Xamarin.KotlinX.Coroutines.Core.Jvm.dll",
+		"Client.dll",
+		"DataModels.dll",
+		"Enums.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

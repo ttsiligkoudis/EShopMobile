@@ -1,11 +1,15 @@
-﻿namespace EShopMobile;
+﻿using EShopMobile.Pages.Orders;
+using EShopMobile.ViewModels.Products;
+
+namespace EShopMobile;
 
 public partial class App : Application
 {
-	public App()
+	public App(AppShell appShell)
 	{
-		InitializeComponent();
+        //Current.UserAppTheme = AppTheme.Light;
+        InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = appShell;
 	}
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels"
+             xmlns:pages="clr-namespace:EShopMobile.Pages"
+             x:Class="EShopMobile.Pages.MyProfilePage"
+             x:DataType="viewmodel:HomeViewModel"
+             Title="My Profile">
+    <StackLayout>
+        <Border BackgroundColor="{StaticResource SecondaryColor}" Margin="10" Padding="10" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Grid ColumnDefinitions="*,*">
+                <StackLayout Grid.Column="0" Spacing="5">
+                    <Label Text="Name:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="City:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="Address:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="Email:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="Registration Date:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="Last Login Date:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                </StackLayout>
+                <StackLayout Grid.Column="1" Spacing="5">
+                    <Label Text="{Binding Customer.Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="{Binding Customer.City}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="{Binding Customer.Address}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="{Binding Customer.Email}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="{Binding Customer.RegDate, StringFormat='{0:dd/MM/yyy}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="{Binding User.LoginDate, StringFormat='{0:dd/MM/yyy}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                </StackLayout>
+            </Grid>
+        </Border>
+
+        <Button x:Name="LogoutBtn" IsVisible="False" FontFamily="OpenSansRegular" Text="Logout" TextColor="White" BackgroundColor="#2B2B2B" FontAttributes="Bold" FontSize="Medium" CornerRadius="0" Clicked="LoginBtn_Clicked" VerticalOptions="EndAndExpand">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="FontSolid" Glyph="&#xf08b;" Color="White" Size="Medium"/>
+            </Button.ImageSource>
+        </Button>
+    </StackLayout>
+</pages:BasePage>

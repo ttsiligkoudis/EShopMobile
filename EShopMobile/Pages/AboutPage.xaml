@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:EShopMobile.Pages"
+             x:Class="EShopMobile.Pages.AboutPage"
+             Title="About Us">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20" Spacing="20">
+                <Border Padding="20">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <StackLayout Spacing="10">
+                        <Label Text="Our Story" FontFamily="OpenSansRegular" FontSize="Title" Margin="0, 10" FontAttributes="Bold" />
+                        <Label Text="My E-commerce Website was founded in 2022 by Themis, a passionate entrepreneur who wanted to create an online shopping platform that offered a wide range of products at affordable prices. With a team of experienced developers and designers, Themis spent months building the website from scratch, ensuring that it was easy to use and provided a great user experience." FontFamily="OpenSansRegular" FontSize="Medium" />
+                        <Label Text="Since launching, My E-commerce Website has become a trusted name in the e-commerce industry, with customers all over the world enjoying the convenience and variety of our products. We continue to expand our range and improve our service, always striving to provide the best possible shopping experience for our customers." FontFamily="OpenSansRegular" FontSize="Medium" />
+                        <Label Text="At My E-commerce Website, we believe that online shopping should be simple, affordable, and enjoyable. We're committed to providing the highest quality products at the best possible prices, and we're always looking for ways to improve and grow our business. Thank you for choosing My E-commerce Website for your online shopping needs!" FontFamily="OpenSansRegular" FontSize="Medium" />
+                        <Image Source="about_us.jpeg" />
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</pages:BasePage>

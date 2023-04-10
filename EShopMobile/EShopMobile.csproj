@@ -39,14 +39,12 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#3C3C3C" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -62,32 +60,36 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\about_us.png" />
+	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\Fonts\FontAwesomeBrands.otf" />
+	  <None Remove="Resources\Fonts\FontAwesomeRegular.otf" />
+	  <None Remove="Resources\Fonts\FontAwesomeSolid.otf" />
+	  <None Remove="Resources\Images\about_us.jpeg" />
 	  <None Remove="Resources\Images\company_logo.jpg" />
-	  <None Remove="Resources\Images\contact_us.png" />
-	  <None Remove="Resources\Images\dashboard.png" />
-	  <None Remove="Resources\Images\lock.png" />
-	  <None Remove="Resources\Images\more_icon.png" />
-	  <None Remove="Resources\Images\team.png" />
-	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Images\eshop.png" />
+	  <None Remove="Resources\Images\laptop_icon.webp" />
+	  <None Remove="Resources\Images\real_laptop_icon.png" />
+	  <None Remove="Resources\Images\real_smartphone_icon.png" />
+	  <None Remove="Resources\Images\real_tablet_icon.png" />
+	  <None Remove="Resources\Images\smartphone_icon.png" />
+	  <None Remove="Resources\Images\tablet_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="4.0.0" />
-	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.0.0" />
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview1" />
 	  <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="Onion.Maui.GoogleMaps" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\LoginPage.xaml.cs">
-	    <DependentUpon>LoginPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Pages\Customers\CustomerFormPage.xaml">
+	  <MauiXaml Update="Pages\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Orders\CartPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ContactPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Customers\CustomersIndexPage.xaml">
@@ -96,7 +98,10 @@
 	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Orders\OrderCreationPage.xaml">
+	  <MauiXaml Update="Pages\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MyProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Orders\OrderFormPage.xaml">
@@ -111,25 +116,38 @@
 	  <MauiXaml Update="Pages\Products\ProductsIndexPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Users\UserFormPage.xaml">
+	  <MauiXaml Update="Pages\SavedPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Users\UsersIndexPage.xaml">
+	  <MauiXaml Update="Pages\SignUpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModels\Products\" />
-	  <Folder Include="ViewModels\Orders\" />
+	  <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Include="..\.editorconfig" Link=".editorconfig" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\EShop-Core\Helpers\Client.csproj" />
+	  <ProjectReference Include="..\..\EShopAPI\DataModels\DataModels.csproj" />
+	  <ProjectReference Include="..\..\EShopAPI\Enums\Enums.csproj" />
+	</ItemGroup>
+
 	<PropertyGroup>
 		<AndroidHttpClientHandlerType>DangerousAndroidMessageHandler, DangerousAndroidMessageHandler</AndroidHttpClientHandlerType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
+	  <ApplicationTitle>EShop</ApplicationTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+	  <ApplicationTitle>EShop</ApplicationTitle>
 	</PropertyGroup>
 
 </Project>

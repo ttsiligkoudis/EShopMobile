@@ -1,10 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using EShopMobile.Models;
+﻿using Client;
+using CommunityToolkit.Mvvm.ComponentModel;
+using DataModels.Dtos;
 using EShopMobile.Helpers;
-using CommunityToolkit.Mvvm.Input;
-using EShopMobile.Pages.Customers;
 using EShopMobile.Pages.Products;
-using EShopMobile.Pages.Orders;
 
 namespace EShopMobile.ViewModels
 {
@@ -12,47 +10,54 @@ namespace EShopMobile.ViewModels
     {
         private readonly ClientHelper _client;
         private readonly Session _session;
-        private readonly IAlertService _alert;
 
         [ObservableProperty]
-        private Customer customer;
+        private CustomerDto customer;
 
         [ObservableProperty]
-        private User user;
+        private UserDto user;
 
-        public HomeViewModel(IAlertService alert)
+        [ObservableProperty]
+        private List<ProductDto> products;
+
+        [ObservableProperty]
+        private ProductDto product;
+
+        [ObservableProperty]
+        private string category;
+
+        [ObservableProperty]
+        private List<ProductDto> savedProducts;
+
+        public HomeViewModel()
         {
             _client = new ClientHelper();
             _session = new Session();
-            _alert = alert;
             Customer = _session.GetCustomer();
             User = _session.GetUser();
         }
 
-        [RelayCommand]
-        async void Logout()
+        public async void GetRandomProducts()
         {
-            Preferences.Remove(nameof(Customer));
-            Preferences.Remove(nameof(User));
-            await Shell.Current.GoToAsync("///" + nameof(LoginPage));
+            Products = (await _client.ProductClient.GetListAsync("Products/Random/?length=4")).ToList();
         }
 
-        [RelayCommand]
-        async void CustomersNavigation()
+        public async void ProductsNavigation()
         {
-            await Shell.Current.GoToAsync(nameof(CustomersIndexPage));
+            await Shell.Current.GoToAsync(nameof(ProductsIndexPage),
+                new Dictionary<string, object>
+                {
+                    [nameof(Category)] = Category
+                });
         }
 
-        [RelayCommand]
-        async void OrdersNavigation()
+        public async void ProductNavigation()
         {
-            await Shell.Current.GoToAsync(nameof(OrdersIndexPage));
-        }
-
-        [RelayCommand]
-        async void ProductsNavigation()
-        {
-            await Shell.Current.GoToAsync(nameof(ProductsIndexPage));
+            await Shell.Current.GoToAsync(nameof(ProductFormPage),
+                new Dictionary<string, object>
+                {
+                    [nameof(Product)] = Product
+                });
         }
     }
 }

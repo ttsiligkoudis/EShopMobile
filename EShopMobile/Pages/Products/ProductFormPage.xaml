@@ -1,12 +1,79 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EShopMobile.Pages.Products.ProductFormPage"
-             Title="ProductFormPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels.Products"
+                xmlns:pages="clr-namespace:EShopMobile.Pages"
+                xmlns:models="clr-namespace:DataModels.Dtos;assembly=DataModels"
+                x:DataType="viewmodel:ProductsViewModel"
+                x:Class="EShopMobile.Pages.Products.ProductFormPage"
+                Title="Product">
+    <ScrollView>
+        <StackLayout Margin="20" Spacing="10">
+            <Border Padding="20" Stroke="{StaticResource LightGrey}" StrokeThickness="2" Margin="0,0,0,10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <StackLayout Spacing="10">
+                    <Button x:Name="Saved" IsVisible="False" HorizontalOptions="End" VerticalOptions="Start" BackgroundColor="Transparent" FontSize="Medium" Clicked="HeartBtn_Clicked" Margin="0,-10,-10,-25">
+                        <Button.ImageSource>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf004;" Color="Red" />
+                        </Button.ImageSource>
+                    </Button>
+                    <Button x:Name="NotSaved" HorizontalOptions="End" VerticalOptions="Start" BackgroundColor="Transparent" FontSize="Medium" Clicked="HeartBtn_Clicked" Margin="0,-10,-10,-25">
+                        <Button.ImageSource>
+                            <FontImageSource FontFamily="FontRegular" Glyph="&#xf004;" Color="{StaticResource PrimaryColor}" />
+                        </Button.ImageSource>
+                    </Button>
+                    <Label Text="{Binding Product.Name}" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                        
+                    <Image Source="{Binding Product.Image}"/>
+                    <Label FontSize="Medium" Text="{Binding Product.Price, StringFormat='Price: {0:N2}'}" TextColor="{StaticResource PrimaryColor}" />
+                    <Label FontSize="Small" Text="{Binding Product.Quantity, StringFormat='Quantity: {0:N0}'}" TextColor="{StaticResource PrimaryColor}" />
+                    <Label FontSize="Small" Text="{Binding Product.Rate, StringFormat='Rating: {0:N1}'}" TextColor="{StaticResource PrimaryColor}" />
+                    <Label FontSize="Medium" Text="{Binding Product.Description}" TextColor="{StaticResource PrimaryColor}" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button x:Name="minus" BackgroundColor="Transparent" FontSize="Medium" Clicked="QuantityBtn_Clicked">
+                            <Button.ImageSource>
+                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf056;" Color="{StaticResource PrimaryColor}" />
+                            </Button.ImageSource>
+                        </Button>
+                        <Border Padding="0" Margin="1" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <Entry Style="{StaticResource EntryIsEnabled}" x:Name="Quantity" Margin="0" Text="{Binding Quantity}" TextColor="{StaticResource PrimaryColor}" BackgroundColor="Transparent" PlaceholderColor="Transparent" Keyboard="Numeric" WidthRequest="50" HorizontalTextAlignment="Center" FontSize="Medium" />
+                        </Border>
+                        <Button x:Name="plus" BackgroundColor="Transparent" FontSize="Medium" Clicked="QuantityBtn_Clicked">
+                            <Button.ImageSource>
+                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf055;" Color="{StaticResource PrimaryColor}" />
+                            </Button.ImageSource>
+                        </Button>
+                    </StackLayout>
+                    <Button x:Name="ProductCartBtn" Text="Add to Cart" TextColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource BtnBackground}" HorizontalOptions="Center" WidthRequest="170" CornerRadius="10" Clicked="ProductCartBtn_Clicked" />
+                </StackLayout>
+            </Border>
+
+            <Line BackgroundColor="LightGrey" />
+            <Label Text="Products Reviews" TextColor="{StaticResource PrimaryColor}" FontSize="Subtitle" FontAttributes="Bold" Margin="0,10,0,0" HorizontalOptions="Center" />
+
+            <CollectionView ItemsSource="{Binding Rates}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ProductRatesDto">
+                        <Border Padding="20" Margin="1" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15" />
+                            </Border.StrokeShape>
+                            <StackLayout Spacing="10">
+                                <Label FontSize="Medium" Text="{Binding CustomerName}" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                <Label FontSize="Small" Text="{Binding Rate, StringFormat='Rating: {0:N1}'}" TextColor="{StaticResource PrimaryColor}" />
+                            </StackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</pages:BasePage>

@@ -1,49 +1,88 @@
-﻿using EShopMobile.Models;
-using Newtonsoft.Json;
+﻿using DataModels.Dtos;
 using static Newtonsoft.Json.JsonConvert;
 
 namespace EShopMobile.Helpers
 {
     public class Session
     {
-        public Customer GetCustomer()
+        public CustomerDto GetCustomer()
         {
-            var customerStr = Preferences.Get(nameof(Customer), null);
+            var customerStr = Preferences.Get(nameof(CustomerDto), null);
             if (!string.IsNullOrEmpty(customerStr))
             {
-                return DeserializeObject<Customer>(customerStr);
+                return DeserializeObject<CustomerDto>(customerStr);
             }
             return null;
 
         }
 
-        public void SetCustomer(Customer customer)
+        public void SetCustomer(CustomerDto customer)
         {
-            if (Preferences.ContainsKey(nameof(Customer)))
+            if (Preferences.ContainsKey(nameof(CustomerDto)))
             {
-                Preferences.Remove(nameof(Customer));
+                Preferences.Remove(nameof(CustomerDto));
             }
-            Preferences.Set(nameof(Customer), SerializeObject(customer));
+            Preferences.Set(nameof(CustomerDto), SerializeObject(customer));
         }
 
-        public User GetUser()
+        public UserDto GetUser()
         {
-            var userStr = Preferences.Get(nameof(User), null);
+            var userStr = Preferences.Get(nameof(UserDto), null);
 
             if (!string.IsNullOrEmpty(userStr))
             {
-                return DeserializeObject<User>(userStr);
+                return DeserializeObject<UserDto>(userStr);
             }
             return null;
         }
 
-        public void SetUser(User user)
+        public void SetUser(UserDto user)
         {
-            if (Preferences.ContainsKey(nameof(User)))
+            if (Preferences.ContainsKey(nameof(UserDto)))
             {
-                Preferences.Remove(nameof(User));
+                Preferences.Remove(nameof(UserDto));
             }
-            Preferences.Set(nameof(User), SerializeObject(user));
+            Preferences.Set(nameof(UserDto), SerializeObject(user));
+        }
+
+        public List<ProductDto> GetCartProducts()
+        {
+            var productsStr = Preferences.Get("CartProducts", null);
+
+            if (!string.IsNullOrEmpty(productsStr))
+            {
+                return DeserializeObject<List<ProductDto>>(productsStr);
+            }
+            return null;
+        }
+
+        public void SetCartProducts(List<ProductDto> products)
+        {
+            if (Preferences.ContainsKey("CartProducts"))
+            {
+                Preferences.Remove("CartProducts");
+            }
+            Preferences.Set("CartProducts", SerializeObject(products));
+        }
+
+        public List<ProductDto> GetSavedProducts()
+        {
+            var productsStr = Preferences.Get("SavedProducts", null);
+
+            if (!string.IsNullOrEmpty(productsStr))
+            {
+                return DeserializeObject<List<ProductDto>>(productsStr);
+            }
+            return null;
+        }
+
+        public void SetSavedProducts(List<ProductDto> products)
+        {
+            if (Preferences.ContainsKey("SavedProducts"))
+            {
+                Preferences.Remove("SavedProducts");
+            }
+            Preferences.Set("SavedProducts", SerializeObject(products));
         }
     }
 }
