@@ -125,5 +125,6 @@ obj\Release\net7.0-android\android-arm64\aot\Microsoft.Maui.Essentials.dll.so
 obj\Release\net7.0-android\android-arm64\aot\Client.dll.so
 obj\Release\net7.0-android\android-arm64\aot\DataModels.dll.so
 obj\Release\net7.0-android\android-arm64\aot\Enums.dll.so
+obj\Release\net7.0-android\android-arm64\aot\Helpers.dll.so
 obj\Release\net7.0-android\android-arm64\aot\EShopMobile.dll.so
 obj\Release\net7.0-android\android-arm64\aot\System.Private.CoreLib.dll.so

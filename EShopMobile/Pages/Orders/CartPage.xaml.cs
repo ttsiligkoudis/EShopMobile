@@ -6,20 +6,17 @@ namespace EShopMobile.Pages.Orders;
 
 public partial class CartPage : ContentPage
 {
-    private readonly Session _session;
-
     public CartPage(ProductsViewModel vm)
     {
         BindingContext = vm;
         InitializeComponent();
-        _session = new Session();
     }
 
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
         var vm = (ProductsViewModel)BindingContext;
-        vm.Customer = _session.GetCustomer();
+        vm.Customer = Session.GetCustomer();
         vm.Navigation = Navigation;
         if (vm.Customer != null)
         {
@@ -34,7 +31,7 @@ public partial class CartPage : ContentPage
             CreateAccountSwitch.IsVisible = false;
         }
         vm.Customer ??= new();
-        vm.Products = _session.GetCartProducts();
+        vm.Products = Session.GetCartProducts();
         if (vm.Products?.Any() ?? false)
             vm.FinalPrice = vm.Products.Select(s => s.Price * s.Quantity ?? 0).Sum();
         else
@@ -57,7 +54,7 @@ public partial class CartPage : ContentPage
         if (product != null)
         {
             vm.Products.Remove(product);
-            _session.SetCartProducts(vm.Products);
+            Session.SetCartProducts(vm.Products);
             var page = Navigation.NavigationStack.LastOrDefault();
             await Shell.Current.GoToAsync(nameof(CartPage));
             Navigation.RemovePage(page);

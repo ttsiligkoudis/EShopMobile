@@ -15,9 +15,9 @@ public partial class CustomersIndexPage : BasePage
     {
         base.OnNavigatedTo(args);
         var vm = (CustomersViewModel)BindingContext;
+        vm.PageNumberStack = PageNumberStack;
+        vm.ScrollView = ScrollView;
         if (!(vm.Customers?.Any() ?? false))
-        {
-            Task.Run(vm.GetCustomers);
-        }
+            vm.GetCustomers();
     }
 }

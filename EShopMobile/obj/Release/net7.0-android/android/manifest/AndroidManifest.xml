@@ -22,10 +22,30 @@
   <application android:name="crc64e3f57c980cf75190.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:forceDarkAllowed="false" android:icon="@mipmap/appicon" android:label="EShop" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true" android:usesCleartextTraffic="true">
     <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBVFIHfFViJdjlWHxnds2M8de8DFbK0Zjg" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
-    <activity android:name="crc64e3f57c980cf75190.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:theme="@style/Maui.SplashTheme">
+    <activity android:name="crc64e3f57c980cf75190.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:theme="@style/Maui.SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:host="eshop.myportofolio.eu" />
+        <data android:path="/Users/Login" />
+        <data android:path="/Users/ResetPassword" />
+        <data android:scheme="EShopMobile" />
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="*/*" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="ACTION_XE_APP_ACTION" />
+        <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <receiver android:name="crc640a8d9a12ddbf2cf2.EnergySaverBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" />

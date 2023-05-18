@@ -15,6 +15,25 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:ProductDto">
                     <Border Padding="5" HeightRequest="170" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="Stroke" Value="#2B2B2B" />
+                                            <Setter Property="StrokeThickness" Value="4" />
+                                            <Setter Property="BackgroundColor" Value="#FFF" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                            <Setter Property="StrokeThickness" Value="2" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="15" />
                         </Border.StrokeShape>
@@ -33,7 +52,7 @@
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
-                                <Label Text="{Binding Description}" FontSize="Small" TextColor="{StaticResource PrimaryColor}" />
+                                <Button Text="Review" BackgroundColor="{StaticResource BtnBackground}" TextColor="White" FontAttributes="Bold" Clicked="BtnReview_Clicked" WidthRequest="100" Margin="0,5,0,0" HorizontalOptions="Center"/>
                             </StackLayout>
                         </Grid>
                     </Border>

@@ -9,7 +9,6 @@ namespace EShopMobile.ViewModels
     public partial class HomeViewModel : ObservableObject
     {
         private readonly ClientHelper _client;
-        private readonly Session _session;
 
         [ObservableProperty]
         private CustomerDto customer;
@@ -32,14 +31,13 @@ namespace EShopMobile.ViewModels
         public HomeViewModel()
         {
             _client = new ClientHelper();
-            _session = new Session();
-            Customer = _session.GetCustomer();
-            User = _session.GetUser();
+            Customer = Session.GetCustomer();
+            User = Session.GetUser();
         }
 
-        public async void GetRandomProducts()
+        public async Task GetRandomProducts()
         {
-            Products = (await _client.ProductClient.GetListAsync("Products/Random/?length=4")).ToList();
+            Products = await _client.ProductClient.GetListAsync("Products/Random/?length=4");
         }
 
         public async void ProductsNavigation()

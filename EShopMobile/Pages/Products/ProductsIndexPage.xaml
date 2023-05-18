@@ -4,19 +4,59 @@
              xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels.Products"
              xmlns:models="clr-namespace:DataModels.Dtos;assembly=DataModels"
              xmlns:pages="clr-namespace:EShopMobile.Pages"
+             xmlns:rating="clr-namespace:EShopMobile.Controls.Rating"
              x:DataType="viewmodel:ProductsViewModel"
              x:Class="EShopMobile.Pages.Products.ProductsIndexPage"
              Title="Products">
-    <ScrollView>
+    <ScrollView x:Name="ScrollView">
         <StackLayout>
-            <ActivityIndicator Color="{StaticResource SecondaryColor}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
-            <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" Margin="10">
+            <Border Padding="20" Margin="10" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <StackLayout>
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto, *" RowSpacing="10" ColumnSpacing="10">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Category" TextColor="{StaticResource PrimaryColor}" FontSize="Small" VerticalOptions="Center" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="Page Size" TextColor="{StaticResource PrimaryColor}" FontSize="Small" VerticalOptions="Center" />
+                        <Label Grid.Row="2" Grid.Column="0" Text="Order By" TextColor="{StaticResource PrimaryColor}" FontSize="Small" VerticalOptions="Center" />
+                        <Label Grid.Row="3" Grid.Column="0" Text="Order Type" TextColor="{StaticResource PrimaryColor}" FontSize="Small" VerticalOptions="Center" />
+                        <Label Grid.Row="4" Grid.Column="0" Text="Free Text" TextColor="{StaticResource PrimaryColor}" FontSize="Small" VerticalOptions="Center" />
+                        <Picker Grid.Row="0" Grid.Column="1" x:Name="CategoryPicker"/>
+                        <Picker Grid.Row="1" Grid.Column="1" x:Name="PageSizePicker"/>
+                        <Picker Grid.Row="2" Grid.Column="1" x:Name="OrderByPicker" />
+                        <Picker Grid.Row="3" Grid.Column="1" x:Name="OrderTypePicker" />
+                        <Entry Grid.Row="4" Grid.Column="1"  Text="{Binding FreeText}" Placeholder="Enter keyword" />
+                    </Grid>
+                    <Button Text="Search" BackgroundColor="{StaticResource BtnBackground}" VerticalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" Margin="0,10,0,0" Command="{Binding SearchCommand}"/>
+                </StackLayout>
+            </Border>
+            <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+            <CollectionView ItemsSource="{Binding FilteredProducts}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" Margin="10">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:ProductDto">
                         <Border Padding="5" HeightRequest="150" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroupList>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="#2B2B2B" />
+                                                <Setter Property="StrokeThickness" Value="4" />
+                                                <Setter Property="BackgroundColor" Value="#FFF" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                                <Setter Property="StrokeThickness" Value="2" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateGroupList>
+                            </VisualStateManager.VisualStateGroups>
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="15" />
                             </Border.StrokeShape>
@@ -25,13 +65,14 @@
                                 <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="5">
                                     <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
                                     <Label Text="{Binding Price, StringFormat='Price: {0:N2}€'}" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding Rate, StringFormat='Rating: {0:N1}'}" FontSize="Small" TextColor="{StaticResource PrimaryColor}" />
+                                    <rating:RatingView Value="{Binding Rate}" RatedFillColor="#e8a41f" ItemSize="20" HorizontalOptions="Start" />
                                 </StackLayout>
                             </Grid>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <StackLayout x:Name="PageNumberStack" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" Margin="10" Spacing="10"></StackLayout>
         </StackLayout>
     </ScrollView>
 </pages:BasePage>

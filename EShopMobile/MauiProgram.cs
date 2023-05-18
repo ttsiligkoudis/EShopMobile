@@ -4,6 +4,7 @@ using EShopMobile.Pages;
 using EShopMobile.Pages.Customers;
 using EShopMobile.Pages.Orders;
 using EShopMobile.Pages.Products;
+using EShopMobile.Pages.Users;
 using EShopMobile.ViewModels;
 using EShopMobile.ViewModels.Customers;
 using EShopMobile.ViewModels.Orders;
@@ -18,21 +19,28 @@ public static class MauiProgram
     public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
-			.UseMauiApp<App>()
+        builder
+            .UseMauiApp<App>()
 #if ANDROID
             .UseGoogleMaps()
 #elif IOS
             .UseGoogleMaps("AIzaSyBVFIHfFViJdjlWHxnds2M8de8DFbK0Zjg")
 #endif
             //.UseMauiCommunityToolkit()
-			.ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("FontAwesomeRegular.otf", "FontRegular");
                 fonts.AddFont("FontAwesomeBrands.otf", "FontBrands");
                 fonts.AddFont("FontAwesomeSolid.otf", "FontSolid");
+            })
+            .ConfigureEssentials(essentials =>
+            {
+                essentials
+                    .AddAppAction("cart", "Cart")
+                    .AddAppAction("login", "Login")
+                    .OnAppAction(App.HandleAppActions);
             });
 
         builder.Services.AddTransient<AppShell>();
@@ -49,14 +57,16 @@ public static class MauiProgram
         builder.Services.AddTransient<CartPage>();
         builder.Services.AddTransient<SavedPage>();
         builder.Services.AddTransient<SignUpPage>();
+        builder.Services.AddTransient<ForgotPasswordPage>();
+        builder.Services.AddTransient<ResetPasswordPage>();
+        builder.Services.AddTransient<RatePage>();
+        builder.Services.AddTransient<AuthenticationPage>();
 
         builder.Services.AddTransient<LoginViewModel>();
 		builder.Services.AddTransient<HomeViewModel>();
         builder.Services.AddTransient<CustomersViewModel>();
         builder.Services.AddTransient<ProductsViewModel>();
         builder.Services.AddTransient<OrderViewModel>();
-
-        builder.Services.AddSingleton<IAlertService, AlertService>();
 
         return builder.Build();
 	}

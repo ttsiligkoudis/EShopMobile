@@ -1,9 +1,21 @@
+EShopMobile.WebAuthenticationCallbackActivity, EShopMobile;crc64e3f57c980cf75190.WebAuthenticationCallbackActivity
+EShopMobile.WebAuthenticationCallbackActivity;crc64e3f57c980cf75190.WebAuthenticationCallbackActivity
+eshopmobile.WebAuthenticationCallbackActivity;crc64e3f57c980cf75190.WebAuthenticationCallbackActivity
 EShopMobile.MainActivity, EShopMobile;crc64e3f57c980cf75190.MainActivity
 EShopMobile.MainActivity;crc64e3f57c980cf75190.MainActivity
 eshopmobile.MainActivity;crc64e3f57c980cf75190.MainActivity
 EShopMobile.MainApplication, EShopMobile;crc64e3f57c980cf75190.MainApplication
 EShopMobile.MainApplication;crc64e3f57c980cf75190.MainApplication
 eshopmobile.MainApplication;crc64e3f57c980cf75190.MainApplication
+EShopMobile.Helpers.MyConnectionCallbacks, EShopMobile;crc641f85f965c1e0b3ac.MyConnectionCallbacks
+EShopMobile.Helpers.MyConnectionCallbacks;crc641f85f965c1e0b3ac.MyConnectionCallbacks
+eshopmobile.helpers.MyConnectionCallbacks;crc641f85f965c1e0b3ac.MyConnectionCallbacks
+EShopMobile.Helpers.MyConnectionFailedListener, EShopMobile;crc641f85f965c1e0b3ac.MyConnectionFailedListener
+EShopMobile.Helpers.MyConnectionFailedListener;crc641f85f965c1e0b3ac.MyConnectionFailedListener
+eshopmobile.helpers.MyConnectionFailedListener;crc641f85f965c1e0b3ac.MyConnectionFailedListener
+EShopMobile.Controls.CustomWebViewRenderer, EShopMobile;crc64681127e6b84e2abf.CustomWebViewRenderer
+EShopMobile.Controls.CustomWebViewRenderer;crc64681127e6b84e2abf.CustomWebViewRenderer
+eshopmobile.controls.CustomWebViewRenderer;crc64681127e6b84e2abf.CustomWebViewRenderer
 Microsoft.Maui.ImageLoaderResultCallback, Microsoft.Maui;crc6488302ad6e9e4df1a.ImageLoaderResultCallback
 Microsoft.Maui.ImageLoaderResultCallback;crc6488302ad6e9e4df1a.ImageLoaderResultCallback
 microsoft.maui.ImageLoaderResultCallback;crc6488302ad6e9e4df1a.ImageLoaderResultCallback
@@ -652,6 +664,9 @@ microsoft.maui.controls.platform.GenericAnimatorListener;crc64338477404e88479c.G
 Microsoft.Maui.Controls.Platform.GenericGlobalLayoutListener, Microsoft.Maui.Controls;crc64338477404e88479c.GenericGlobalLayoutListener
 Microsoft.Maui.Controls.Platform.GenericGlobalLayoutListener;crc64338477404e88479c.GenericGlobalLayoutListener
 microsoft.maui.controls.platform.GenericGlobalLayoutListener;crc64338477404e88479c.GenericGlobalLayoutListener
+Microsoft.Maui.Controls.Platform.GenericGlobalLayoutListenerImproved, Microsoft.Maui.Controls;crc64338477404e88479c.GenericGlobalLayoutListenerImproved
+Microsoft.Maui.Controls.Platform.GenericGlobalLayoutListenerImproved;crc64338477404e88479c.GenericGlobalLayoutListenerImproved
+microsoft.maui.controls.platform.GenericGlobalLayoutListenerImproved;crc64338477404e88479c.GenericGlobalLayoutListenerImproved
 Microsoft.Maui.Controls.Platform.GenericMenuClickListener, Microsoft.Maui.Controls;crc64338477404e88479c.GenericMenuClickListener
 Microsoft.Maui.Controls.Platform.GenericMenuClickListener;crc64338477404e88479c.GenericMenuClickListener
 microsoft.maui.controls.platform.GenericMenuClickListener;crc64338477404e88479c.GenericMenuClickListener
@@ -1315,6 +1330,9 @@ androidx.activity.result.ActivityResultCaller;androidx.activity.result.ActivityR
 AndroidX.Activity.Result.IActivityResultRegistryOwner, Xamarin.AndroidX.Activity;androidx.activity.result.ActivityResultRegistryOwner
 AndroidX.Activity.Result.IActivityResultRegistryOwner;androidx.activity.result.ActivityResultRegistryOwner
 androidx.activity.result.ActivityResultRegistryOwner;androidx.activity.result.ActivityResultRegistryOwner
+AndroidX.Activity.Result.Contract.ActivityResultContracts+PickVisualMedia+IVisualMediaType, Xamarin.AndroidX.Activity;androidx.activity.result.contract.ActivityResultContracts$PickVisualMedia$VisualMediaType
+AndroidX.Activity.Result.Contract.ActivityResultContracts.PickVisualMedia.IVisualMediaType;androidx.activity.result.contract.ActivityResultContracts$PickVisualMedia$VisualMediaType
+androidx.activity.result.contract.ActivityResultContracts$PickVisualMedia$VisualMediaType;androidx.activity.result.contract.ActivityResultContracts$PickVisualMedia$VisualMediaType
 AndroidX.Annotations.IAnimatorRes, Xamarin.AndroidX.Annotation;androidx.annotation.AnimatorRes
 AndroidX.Annotations.IAnimatorRes;androidx.annotation.AnimatorRes
 androidx.annotation.AnimatorRes;androidx.annotation.AnimatorRes
@@ -2830,6 +2848,21 @@ com.google.android.material.chip.ChipGroup$OnCheckedStateChangeListener;com.goog
 Google.Android.Material.Chip.ChipGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material;mono.com.google.android.material.chip.ChipGroup_OnCheckedStateChangeListenerImplementor
 Google.Android.Material.Chip.ChipGroup.IOnCheckedStateChangeListenerImplementor;mono.com.google.android.material.chip.ChipGroup_OnCheckedStateChangeListenerImplementor
 mono.com.google.android.material.chip.ChipGroup_OnCheckedStateChangeListenerImplementor;mono.com.google.android.material.chip.ChipGroup_OnCheckedStateChangeListenerImplementor
+Google.Android.Material.CheckBox.MaterialCheckBox+ICheckedState, Xamarin.Google.Android.Material;com.google.android.material.checkbox.MaterialCheckBox$CheckedState
+Google.Android.Material.CheckBox.MaterialCheckBox.ICheckedState;com.google.android.material.checkbox.MaterialCheckBox$CheckedState
+com.google.android.material.checkbox.MaterialCheckBox$CheckedState;com.google.android.material.checkbox.MaterialCheckBox$CheckedState
+Google.Android.Material.CheckBox.MaterialCheckBox+IOnCheckedStateChangedListener, Xamarin.Google.Android.Material;com.google.android.material.checkbox.MaterialCheckBox$OnCheckedStateChangedListener
+Google.Android.Material.CheckBox.MaterialCheckBox.IOnCheckedStateChangedListener;com.google.android.material.checkbox.MaterialCheckBox$OnCheckedStateChangedListener
+com.google.android.material.checkbox.MaterialCheckBox$OnCheckedStateChangedListener;com.google.android.material.checkbox.MaterialCheckBox$OnCheckedStateChangedListener
+Google.Android.Material.CheckBox.MaterialCheckBox+IOnCheckedStateChangedListenerImplementor, Xamarin.Google.Android.Material;mono.com.google.android.material.checkbox.MaterialCheckBox_OnCheckedStateChangedListenerImplementor
+Google.Android.Material.CheckBox.MaterialCheckBox.IOnCheckedStateChangedListenerImplementor;mono.com.google.android.material.checkbox.MaterialCheckBox_OnCheckedStateChangedListenerImplementor
+mono.com.google.android.material.checkbox.MaterialCheckBox_OnCheckedStateChangedListenerImplementor;mono.com.google.android.material.checkbox.MaterialCheckBox_OnCheckedStateChangedListenerImplementor
+Google.Android.Material.CheckBox.MaterialCheckBox+IOnErrorChangedListener, Xamarin.Google.Android.Material;com.google.android.material.checkbox.MaterialCheckBox$OnErrorChangedListener
+Google.Android.Material.CheckBox.MaterialCheckBox.IOnErrorChangedListener;com.google.android.material.checkbox.MaterialCheckBox$OnErrorChangedListener
+com.google.android.material.checkbox.MaterialCheckBox$OnErrorChangedListener;com.google.android.material.checkbox.MaterialCheckBox$OnErrorChangedListener
+Google.Android.Material.CheckBox.MaterialCheckBox+IOnErrorChangedListenerImplementor, Xamarin.Google.Android.Material;mono.com.google.android.material.checkbox.MaterialCheckBox_OnErrorChangedListenerImplementor
+Google.Android.Material.CheckBox.MaterialCheckBox.IOnErrorChangedListenerImplementor;mono.com.google.android.material.checkbox.MaterialCheckBox_OnErrorChangedListenerImplementor
+mono.com.google.android.material.checkbox.MaterialCheckBox_OnErrorChangedListenerImplementor;mono.com.google.android.material.checkbox.MaterialCheckBox_OnErrorChangedListenerImplementor
 Google.Android.Material.Card.MaterialCardView+ICheckedIconGravity, Xamarin.Google.Android.Material;com.google.android.material.card.MaterialCardView$CheckedIconGravity
 Google.Android.Material.Card.MaterialCardView.ICheckedIconGravity;com.google.android.material.card.MaterialCardView$CheckedIconGravity
 com.google.android.material.card.MaterialCardView$CheckedIconGravity;com.google.android.material.card.MaterialCardView$CheckedIconGravity
@@ -2866,9 +2899,24 @@ com.google.android.material.bottomsheet.BottomSheetBehavior$State;com.google.and
 Google.Android.Material.BottomAppBar.BottomAppBar+IFabAlignmentMode, Xamarin.Google.Android.Material;com.google.android.material.bottomappbar.BottomAppBar$FabAlignmentMode
 Google.Android.Material.BottomAppBar.BottomAppBar.IFabAlignmentMode;com.google.android.material.bottomappbar.BottomAppBar$FabAlignmentMode
 com.google.android.material.bottomappbar.BottomAppBar$FabAlignmentMode;com.google.android.material.bottomappbar.BottomAppBar$FabAlignmentMode
+Google.Android.Material.BottomAppBar.BottomAppBar+IFabAnchorMode, Xamarin.Google.Android.Material;com.google.android.material.bottomappbar.BottomAppBar$FabAnchorMode
+Google.Android.Material.BottomAppBar.BottomAppBar.IFabAnchorMode;com.google.android.material.bottomappbar.BottomAppBar$FabAnchorMode
+com.google.android.material.bottomappbar.BottomAppBar$FabAnchorMode;com.google.android.material.bottomappbar.BottomAppBar$FabAnchorMode
 Google.Android.Material.BottomAppBar.BottomAppBar+IFabAnimationMode, Xamarin.Google.Android.Material;com.google.android.material.bottomappbar.BottomAppBar$FabAnimationMode
 Google.Android.Material.BottomAppBar.BottomAppBar.IFabAnimationMode;com.google.android.material.bottomappbar.BottomAppBar$FabAnimationMode
 com.google.android.material.bottomappbar.BottomAppBar$FabAnimationMode;com.google.android.material.bottomappbar.BottomAppBar$FabAnimationMode
+Google.Android.Material.BottomAppBar.BottomAppBar+IMenuAlignmentMode, Xamarin.Google.Android.Material;com.google.android.material.bottomappbar.BottomAppBar$MenuAlignmentMode
+Google.Android.Material.BottomAppBar.BottomAppBar.IMenuAlignmentMode;com.google.android.material.bottomappbar.BottomAppBar$MenuAlignmentMode
+com.google.android.material.bottomappbar.BottomAppBar$MenuAlignmentMode;com.google.android.material.bottomappbar.BottomAppBar$MenuAlignmentMode
+Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior+IOnScrollStateChangedListener, Xamarin.Google.Android.Material;com.google.android.material.behavior.HideBottomViewOnScrollBehavior$OnScrollStateChangedListener
+Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior.IOnScrollStateChangedListener;com.google.android.material.behavior.HideBottomViewOnScrollBehavior$OnScrollStateChangedListener
+com.google.android.material.behavior.HideBottomViewOnScrollBehavior$OnScrollStateChangedListener;com.google.android.material.behavior.HideBottomViewOnScrollBehavior$OnScrollStateChangedListener
+Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior+IOnScrollStateChangedListenerImplementor, Xamarin.Google.Android.Material;mono.com.google.android.material.behavior.HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor
+Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior.IOnScrollStateChangedListenerImplementor;mono.com.google.android.material.behavior.HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor
+mono.com.google.android.material.behavior.HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor;mono.com.google.android.material.behavior.HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor
+Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior+IScrollState, Xamarin.Google.Android.Material;com.google.android.material.behavior.HideBottomViewOnScrollBehavior$ScrollState
+Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior.IScrollState;com.google.android.material.behavior.HideBottomViewOnScrollBehavior$ScrollState
+com.google.android.material.behavior.HideBottomViewOnScrollBehavior$ScrollState;com.google.android.material.behavior.HideBottomViewOnScrollBehavior$ScrollState
 Google.Android.Material.Behavior.SwipeDismissBehavior+IOnDismissListener, Xamarin.Google.Android.Material;com.google.android.material.behavior.SwipeDismissBehavior$OnDismissListener
 Google.Android.Material.Behavior.SwipeDismissBehavior.IOnDismissListener;com.google.android.material.behavior.SwipeDismissBehavior$OnDismissListener
 com.google.android.material.behavior.SwipeDismissBehavior$OnDismissListener;com.google.android.material.behavior.SwipeDismissBehavior$OnDismissListener
@@ -2923,6 +2971,9 @@ com.google.android.material.textfield.TextInputLayout$BoxBackgroundMode;com.goog
 Google.Android.Material.TextField.TextInputLayout+IEndIconMode, Xamarin.Google.Android.Material;com.google.android.material.textfield.TextInputLayout$EndIconMode
 Google.Android.Material.TextField.TextInputLayout.IEndIconMode;com.google.android.material.textfield.TextInputLayout$EndIconMode
 com.google.android.material.textfield.TextInputLayout$EndIconMode;com.google.android.material.textfield.TextInputLayout$EndIconMode
+Google.Android.Material.TextField.TextInputLayout+ILengthCounter, Xamarin.Google.Android.Material;com.google.android.material.textfield.TextInputLayout$LengthCounter
+Google.Android.Material.TextField.TextInputLayout.ILengthCounter;com.google.android.material.textfield.TextInputLayout$LengthCounter
+com.google.android.material.textfield.TextInputLayout$LengthCounter;com.google.android.material.textfield.TextInputLayout$LengthCounter
 Google.Android.Material.TextField.TextInputLayout+IOnEditTextAttachedListener, Xamarin.Google.Android.Material;com.google.android.material.textfield.TextInputLayout$OnEditTextAttachedListener
 Google.Android.Material.TextField.TextInputLayout.IOnEditTextAttachedListener;com.google.android.material.textfield.TextInputLayout$OnEditTextAttachedListener
 com.google.android.material.textfield.TextInputLayout$OnEditTextAttachedListener;com.google.android.material.textfield.TextInputLayout$OnEditTextAttachedListener
@@ -2998,6 +3049,9 @@ mono.com.google.android.material.internal.MaterialCheckable_OnCheckedChangeListe
 Google.Android.Material.Internal.IMaterialCheckable, Xamarin.Google.Android.Material;com.google.android.material.internal.MaterialCheckable
 Google.Android.Material.Internal.IMaterialCheckable;com.google.android.material.internal.MaterialCheckable
 com.google.android.material.internal.MaterialCheckable;com.google.android.material.internal.MaterialCheckable
+Google.Android.Material.Internal.IStaticLayoutBuilderConfigurer, Xamarin.Google.Android.Material;com.google.android.material.internal.StaticLayoutBuilderConfigurer
+Google.Android.Material.Internal.IStaticLayoutBuilderConfigurer;com.google.android.material.internal.StaticLayoutBuilderConfigurer
+com.google.android.material.internal.StaticLayoutBuilderConfigurer;com.google.android.material.internal.StaticLayoutBuilderConfigurer
 Google.Android.Material.Internal.IViewOverlayImpl, Xamarin.Google.Android.Material;com.google.android.material.internal.ViewOverlayImpl
 Google.Android.Material.Internal.IViewOverlayImpl;com.google.android.material.internal.ViewOverlayImpl
 com.google.android.material.internal.ViewOverlayImpl;com.google.android.material.internal.ViewOverlayImpl
@@ -3028,6 +3082,9 @@ com.google.android.material.bottomnavigation.BottomNavigationView$OnNavigationIt
 Google.Android.Material.BottomNavigation.ILabelVisibilityMode, Xamarin.Google.Android.Material;com.google.android.material.bottomnavigation.LabelVisibilityMode
 Google.Android.Material.BottomNavigation.ILabelVisibilityMode;com.google.android.material.bottomnavigation.LabelVisibilityMode
 com.google.android.material.bottomnavigation.LabelVisibilityMode;com.google.android.material.bottomnavigation.LabelVisibilityMode
+Google.Android.Material.AppBar.CollapsingToolbarLayout+IStaticLayoutBuilderConfigurer, Xamarin.Google.Android.Material;com.google.android.material.appbar.CollapsingToolbarLayout$StaticLayoutBuilderConfigurer
+Google.Android.Material.AppBar.CollapsingToolbarLayout.IStaticLayoutBuilderConfigurer;com.google.android.material.appbar.CollapsingToolbarLayout$StaticLayoutBuilderConfigurer
+com.google.android.material.appbar.CollapsingToolbarLayout$StaticLayoutBuilderConfigurer;com.google.android.material.appbar.CollapsingToolbarLayout$StaticLayoutBuilderConfigurer
 Google.Android.Material.AppBar.CollapsingToolbarLayout+ITitleCollapseMode, Xamarin.Google.Android.Material;com.google.android.material.appbar.CollapsingToolbarLayout$TitleCollapseMode
 Google.Android.Material.AppBar.CollapsingToolbarLayout.ITitleCollapseMode;com.google.android.material.appbar.CollapsingToolbarLayout$TitleCollapseMode
 com.google.android.material.appbar.CollapsingToolbarLayout$TitleCollapseMode;com.google.android.material.appbar.CollapsingToolbarLayout$TitleCollapseMode
@@ -3589,6 +3646,63 @@ com.google.crypto.tink.shaded.protobuf.ValueOrBuilder;com.google.crypto.tink.sha
 Google.Common.Util.Concurrent.IListenableFuture, Xamarin.Google.Guava.ListenableFuture;com.google.common.util.concurrent.ListenableFuture
 Google.Common.Util.Concurrent.IListenableFuture;com.google.common.util.concurrent.ListenableFuture
 com.google.common.util.concurrent.ListenableFuture;com.google.common.util.concurrent.ListenableFuture
+Android.Gms.Auth.Api.Identity.ICredentialSavingClient, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.identity.CredentialSavingClient
+Android.Gms.Auth.Api.Identity.ICredentialSavingClient;com.google.android.gms.auth.api.identity.CredentialSavingClient
+com.google.android.gms.auth.api.identity.CredentialSavingClient;com.google.android.gms.auth.api.identity.CredentialSavingClient
+Android.Gms.Auth.Api.Identity.ISignInClient, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.identity.SignInClient
+Android.Gms.Auth.Api.Identity.ISignInClient;com.google.android.gms.auth.api.identity.SignInClient
+com.google.android.gms.auth.api.identity.SignInClient;com.google.android.gms.auth.api.identity.SignInClient
+Android.Gms.Auth.Api.SignIn.IGoogleSignInApi, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.signin.GoogleSignInApi
+Android.Gms.Auth.Api.SignIn.IGoogleSignInApi;com.google.android.gms.auth.api.signin.GoogleSignInApi
+com.google.android.gms.auth.api.signin.GoogleSignInApi;com.google.android.gms.auth.api.signin.GoogleSignInApi
+Android.Gms.Auth.Api.SignIn.Internal.IZbp, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.signin.internal.zbp
+Android.Gms.Auth.Api.SignIn.Internal.IZbp;com.google.android.gms.auth.api.signin.internal.zbp
+com.google.android.gms.auth.api.signin.internal.zbp;com.google.android.gms.auth.api.signin.internal.zbp
+Android.Gms.Auth.Api.SignIn.Internal.IZbr, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.signin.internal.zbr
+Android.Gms.Auth.Api.SignIn.Internal.IZbr;com.google.android.gms.auth.api.signin.internal.zbr
+com.google.android.gms.auth.api.signin.internal.zbr;com.google.android.gms.auth.api.signin.internal.zbr
+Android.Gms.Auth.Api.Credentials.CredentialPickerConfig+IPrompt, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Prompt
+Android.Gms.Auth.Api.Credentials.CredentialPickerConfig.IPrompt;com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Prompt
+com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Prompt;com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Prompt
+Android.Gms.Auth.Api.Credentials.ICredentialRequestResult, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.credentials.CredentialRequestResult
+Android.Gms.Auth.Api.Credentials.ICredentialRequestResult;com.google.android.gms.auth.api.credentials.CredentialRequestResult
+com.google.android.gms.auth.api.credentials.CredentialRequestResult;com.google.android.gms.auth.api.credentials.CredentialRequestResult
+Android.Gms.Auth.Api.Credentials.ICredentialsApi, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.credentials.CredentialsApi
+Android.Gms.Auth.Api.Credentials.ICredentialsApi;com.google.android.gms.auth.api.credentials.CredentialsApi
+com.google.android.gms.auth.api.credentials.CredentialsApi;com.google.android.gms.auth.api.credentials.CredentialsApi
+Android.Gms.Auth.Api.Phone.ISmsCodeAutofillClientPermissionState, Xamarin.GooglePlayServices.Auth.Api.Phone;com.google.android.gms.auth.api.phone.SmsCodeAutofillClient$PermissionState
+Android.Gms.Auth.Api.Phone.ISmsCodeAutofillClientPermissionState;com.google.android.gms.auth.api.phone.SmsCodeAutofillClient$PermissionState
+com.google.android.gms.auth.api.phone.SmsCodeAutofillClient$PermissionState;com.google.android.gms.auth.api.phone.SmsCodeAutofillClient$PermissionState
+Android.Gms.Auth.Api.Phone.ISmsCodeAutofillClient, Xamarin.GooglePlayServices.Auth.Api.Phone;com.google.android.gms.auth.api.phone.SmsCodeAutofillClient
+Android.Gms.Auth.Api.Phone.ISmsCodeAutofillClient;com.google.android.gms.auth.api.phone.SmsCodeAutofillClient
+com.google.android.gms.auth.api.phone.SmsCodeAutofillClient;com.google.android.gms.auth.api.phone.SmsCodeAutofillClient
+Android.Gms.Auth.Api.Phone.ISmsCodeBrowserClient, Xamarin.GooglePlayServices.Auth.Api.Phone;com.google.android.gms.auth.api.phone.SmsCodeBrowserClient
+Android.Gms.Auth.Api.Phone.ISmsCodeBrowserClient;com.google.android.gms.auth.api.phone.SmsCodeBrowserClient
+com.google.android.gms.auth.api.phone.SmsCodeBrowserClient;com.google.android.gms.auth.api.phone.SmsCodeBrowserClient
+Android.Gms.Auth.Api.Phone.ISmsRetrieverApi, Xamarin.GooglePlayServices.Auth.Api.Phone;com.google.android.gms.auth.api.phone.SmsRetrieverApi
+Android.Gms.Auth.Api.Phone.ISmsRetrieverApi;com.google.android.gms.auth.api.phone.SmsRetrieverApi
+com.google.android.gms.auth.api.phone.SmsRetrieverApi;com.google.android.gms.auth.api.phone.SmsRetrieverApi
+Android.Gms.Auth.Account.IWorkAccountApiAddAccountResult, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.account.WorkAccountApi$AddAccountResult
+Android.Gms.Auth.Account.IWorkAccountApiAddAccountResult;com.google.android.gms.auth.account.WorkAccountApi$AddAccountResult
+com.google.android.gms.auth.account.WorkAccountApi$AddAccountResult;com.google.android.gms.auth.account.WorkAccountApi$AddAccountResult
+Android.Gms.Auth.Account.IWorkAccountApi, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.account.WorkAccountApi
+Android.Gms.Auth.Account.IWorkAccountApi;com.google.android.gms.auth.account.WorkAccountApi
+com.google.android.gms.auth.account.WorkAccountApi;com.google.android.gms.auth.account.WorkAccountApi
+Android.Gms.Auth.Api.AccountTransfer.IAuthenticatorTransferCompletionStatus, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.api.accounttransfer.AuthenticatorTransferCompletionStatus
+Android.Gms.Auth.Api.AccountTransfer.IAuthenticatorTransferCompletionStatus;com.google.android.gms.auth.api.accounttransfer.AuthenticatorTransferCompletionStatus
+com.google.android.gms.auth.api.accounttransfer.AuthenticatorTransferCompletionStatus;com.google.android.gms.auth.api.accounttransfer.AuthenticatorTransferCompletionStatus
+Android.Gms.Auth.Api.Proxy.IProxyApiProxyResult, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.api.proxy.ProxyApi$ProxyResult
+Android.Gms.Auth.Api.Proxy.IProxyApiProxyResult;com.google.android.gms.auth.api.proxy.ProxyApi$ProxyResult
+com.google.android.gms.auth.api.proxy.ProxyApi$ProxyResult;com.google.android.gms.auth.api.proxy.ProxyApi$ProxyResult
+Android.Gms.Auth.Api.Proxy.IProxyApiSpatulaHeaderResult, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.api.proxy.ProxyApi$SpatulaHeaderResult
+Android.Gms.Auth.Api.Proxy.IProxyApiSpatulaHeaderResult;com.google.android.gms.auth.api.proxy.ProxyApi$SpatulaHeaderResult
+com.google.android.gms.auth.api.proxy.ProxyApi$SpatulaHeaderResult;com.google.android.gms.auth.api.proxy.ProxyApi$SpatulaHeaderResult
+Android.Gms.Auth.Api.Proxy.IProxyApi, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.api.proxy.ProxyApi
+Android.Gms.Auth.Api.Proxy.IProxyApi;com.google.android.gms.auth.api.proxy.ProxyApi
+com.google.android.gms.auth.api.proxy.ProxyApi;com.google.android.gms.auth.api.proxy.ProxyApi
+Android.Gms.Auth.Api.Proxy.IProxyClient, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.api.proxy.ProxyClient
+Android.Gms.Auth.Api.Proxy.IProxyClient;com.google.android.gms.auth.api.proxy.ProxyClient
+com.google.android.gms.auth.api.proxy.ProxyClient;com.google.android.gms.auth.api.proxy.ProxyClient
 Android.Gms.Auth.Api.SignIn.IGoogleSignInOptionsExtension, Xamarin.GooglePlayServices.Base;com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
 Android.Gms.Auth.Api.SignIn.IGoogleSignInOptionsExtension;com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
 com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension;com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
@@ -3871,6 +3985,36 @@ com.google.android.gms.common.api.internal.LifecycleFragment;com.google.android.
 Android.Gms.Common.Apis.Internal.IStatusExceptionMapper, Xamarin.GooglePlayServices.Basement;com.google.android.gms.common.api.internal.StatusExceptionMapper
 Android.Gms.Common.Apis.Internal.IStatusExceptionMapper;com.google.android.gms.common.api.internal.StatusExceptionMapper
 com.google.android.gms.common.api.internal.StatusExceptionMapper;com.google.android.gms.common.api.internal.StatusExceptionMapper
+Android.Gms.Fido.SourceDevice.ISourceDirectTransferClient, Xamarin.GooglePlayServices.Fido;com.google.android.gms.fido.sourcedevice.SourceDirectTransferClient
+Android.Gms.Fido.SourceDevice.ISourceDirectTransferClient;com.google.android.gms.fido.sourcedevice.SourceDirectTransferClient
+com.google.android.gms.fido.sourcedevice.SourceDirectTransferClient;com.google.android.gms.fido.sourcedevice.SourceDirectTransferClient
+Android.Gms.Fido.Fido2.IFido2PendingIntent, Xamarin.GooglePlayServices.Fido;com.google.android.gms.fido.fido2.Fido2PendingIntent
+Android.Gms.Fido.Fido2.IFido2PendingIntent;com.google.android.gms.fido.fido2.Fido2PendingIntent
+com.google.android.gms.fido.fido2.Fido2PendingIntent;com.google.android.gms.fido.fido2.Fido2PendingIntent
+Android.Gms.Fido.Fido2.Api.Common.IAlgorithm, Xamarin.GooglePlayServices.Fido;com.google.android.gms.fido.fido2.api.common.Algorithm
+Android.Gms.Fido.Fido2.Api.Common.IAlgorithm;com.google.android.gms.fido.fido2.api.common.Algorithm
+com.google.android.gms.fido.fido2.api.common.Algorithm;com.google.android.gms.fido.fido2.api.common.Algorithm
+Android.Gms.Fido.Fido2.Api.Common.IDevicePublicKeyStringDef, Xamarin.GooglePlayServices.Fido;com.google.android.gms.fido.fido2.api.common.DevicePublicKeyStringDef
+Android.Gms.Fido.Fido2.Api.Common.IDevicePublicKeyStringDef;com.google.android.gms.fido.fido2.api.common.DevicePublicKeyStringDef
+com.google.android.gms.fido.fido2.api.common.DevicePublicKeyStringDef;com.google.android.gms.fido.fido2.api.common.DevicePublicKeyStringDef
+Android.Gms.Fido.U2F.IU2fPendingIntent, Xamarin.GooglePlayServices.Fido;com.google.android.gms.fido.u2f.U2fPendingIntent
+Android.Gms.Fido.U2F.IU2fPendingIntent;com.google.android.gms.fido.u2f.U2fPendingIntent
+com.google.android.gms.fido.u2f.U2fPendingIntent;com.google.android.gms.fido.u2f.U2fPendingIntent
+Android.Gms.Identity.Intents.IAddressConstantsErrorCodes, Xamarin.GooglePlayServices.Identity;com.google.android.gms.identity.intents.AddressConstants$ErrorCodes
+Android.Gms.Identity.Intents.IAddressConstantsErrorCodes;com.google.android.gms.identity.intents.AddressConstants$ErrorCodes
+com.google.android.gms.identity.intents.AddressConstants$ErrorCodes;com.google.android.gms.identity.intents.AddressConstants$ErrorCodes
+Android.Gms.Identity.Intents.IAddressConstantsExtras, Xamarin.GooglePlayServices.Identity;com.google.android.gms.identity.intents.AddressConstants$Extras
+Android.Gms.Identity.Intents.IAddressConstantsExtras;com.google.android.gms.identity.intents.AddressConstants$Extras
+com.google.android.gms.identity.intents.AddressConstants$Extras;com.google.android.gms.identity.intents.AddressConstants$Extras
+Android.Gms.Identity.Intents.IAddressConstantsResultCodes, Xamarin.GooglePlayServices.Identity;com.google.android.gms.identity.intents.AddressConstants$ResultCodes
+Android.Gms.Identity.Intents.IAddressConstantsResultCodes;com.google.android.gms.identity.intents.AddressConstants$ResultCodes
+com.google.android.gms.identity.intents.AddressConstants$ResultCodes;com.google.android.gms.identity.intents.AddressConstants$ResultCodes
+Android.Gms.Identity.Intents.IAddressConstantsThemes, Xamarin.GooglePlayServices.Identity;com.google.android.gms.identity.intents.AddressConstants$Themes
+Android.Gms.Identity.Intents.IAddressConstantsThemes;com.google.android.gms.identity.intents.AddressConstants$Themes
+com.google.android.gms.identity.intents.AddressConstants$Themes;com.google.android.gms.identity.intents.AddressConstants$Themes
+Android.Gms.Identity.Intents.IAddressConstants, Xamarin.GooglePlayServices.Identity;com.google.android.gms.identity.intents.AddressConstants
+Android.Gms.Identity.Intents.IAddressConstants;com.google.android.gms.identity.intents.AddressConstants
+com.google.android.gms.identity.intents.AddressConstants;com.google.android.gms.identity.intents.AddressConstants
 Android.Gms.Maps.GoogleMap+ICancelableCallback, Xamarin.GooglePlayServices.Maps;com.google.android.gms.maps.GoogleMap$CancelableCallback
 Android.Gms.Maps.GoogleMap.ICancelableCallback;com.google.android.gms.maps.GoogleMap$CancelableCallback
 com.google.android.gms.maps.GoogleMap$CancelableCallback;com.google.android.gms.maps.GoogleMap$CancelableCallback
@@ -4105,6 +4249,9 @@ org.jetbrains.annotations.ApiStatus$Internal;org.jetbrains.annotations.ApiStatus
 JetBrains.Annotations.ApiStatus+INonExtendable, Xamarin.Jetbrains.Annotations;org.jetbrains.annotations.ApiStatus$NonExtendable
 JetBrains.Annotations.ApiStatus.INonExtendable;org.jetbrains.annotations.ApiStatus$NonExtendable
 org.jetbrains.annotations.ApiStatus$NonExtendable;org.jetbrains.annotations.ApiStatus$NonExtendable
+JetBrains.Annotations.ApiStatus+IObsolete, Xamarin.Jetbrains.Annotations;org.jetbrains.annotations.ApiStatus$Obsolete
+JetBrains.Annotations.ApiStatus.IObsolete;org.jetbrains.annotations.ApiStatus$Obsolete
+org.jetbrains.annotations.ApiStatus$Obsolete;org.jetbrains.annotations.ApiStatus$Obsolete
 JetBrains.Annotations.ApiStatus+IOverrideOnly, Xamarin.Jetbrains.Annotations;org.jetbrains.annotations.ApiStatus$OverrideOnly
 JetBrains.Annotations.ApiStatus.IOverrideOnly;org.jetbrains.annotations.ApiStatus$OverrideOnly
 org.jetbrains.annotations.ApiStatus$OverrideOnly;org.jetbrains.annotations.ApiStatus$OverrideOnly
@@ -4126,6 +4273,9 @@ org.jetbrains.annotations.Blocking;org.jetbrains.annotations.Blocking
 JetBrains.Annotations.IBlockingExecutor, Xamarin.Jetbrains.Annotations;org.jetbrains.annotations.BlockingExecutor
 JetBrains.Annotations.IBlockingExecutor;org.jetbrains.annotations.BlockingExecutor
 org.jetbrains.annotations.BlockingExecutor;org.jetbrains.annotations.BlockingExecutor
+JetBrains.Annotations.ICheckReturnValue, Xamarin.Jetbrains.Annotations;org.jetbrains.annotations.CheckReturnValue
+JetBrains.Annotations.ICheckReturnValue;org.jetbrains.annotations.CheckReturnValue
+org.jetbrains.annotations.CheckReturnValue;org.jetbrains.annotations.CheckReturnValue
 JetBrains.Annotations.IContract, Xamarin.Jetbrains.Annotations;org.jetbrains.annotations.Contract
 JetBrains.Annotations.IContract;org.jetbrains.annotations.Contract
 org.jetbrains.annotations.Contract;org.jetbrains.annotations.Contract
@@ -4261,15 +4411,15 @@ kotlin.DeprecatedSinceKotlin;kotlin.DeprecatedSinceKotlin
 Kotlin.IDslMarker, Xamarin.Kotlin.StdLib;kotlin.DslMarker
 Kotlin.IDslMarker;kotlin.DslMarker
 kotlin.DslMarker;kotlin.DslMarker
-Kotlin.IExperimental, Xamarin.Kotlin.StdLib;kotlin.Experimental
-Kotlin.IExperimental;kotlin.Experimental
-kotlin.Experimental;kotlin.Experimental
 Kotlin.IExperimentalMultiplatform, Xamarin.Kotlin.StdLib;kotlin.ExperimentalMultiplatform
 Kotlin.IExperimentalMultiplatform;kotlin.ExperimentalMultiplatform
 kotlin.ExperimentalMultiplatform;kotlin.ExperimentalMultiplatform
 Kotlin.IExperimentalStdlibApi, Xamarin.Kotlin.StdLib;kotlin.ExperimentalStdlibApi
 Kotlin.IExperimentalStdlibApi;kotlin.ExperimentalStdlibApi
 kotlin.ExperimentalStdlibApi;kotlin.ExperimentalStdlibApi
+Kotlin.IExperimentalSubclassOptIn, Xamarin.Kotlin.StdLib;kotlin.ExperimentalSubclassOptIn
+Kotlin.IExperimentalSubclassOptIn;kotlin.ExperimentalSubclassOptIn
+kotlin.ExperimentalSubclassOptIn;kotlin.ExperimentalSubclassOptIn
 Kotlin.IExperimentalUnsignedTypes, Xamarin.Kotlin.StdLib;kotlin.ExperimentalUnsignedTypes
 Kotlin.IExperimentalUnsignedTypes;kotlin.ExperimentalUnsignedTypes
 kotlin.ExperimentalUnsignedTypes;kotlin.ExperimentalUnsignedTypes
@@ -4309,21 +4459,27 @@ kotlin.RequiresOptIn;kotlin.RequiresOptIn
 Kotlin.ISinceKotlin, Xamarin.Kotlin.StdLib;kotlin.SinceKotlin
 Kotlin.ISinceKotlin;kotlin.SinceKotlin
 kotlin.SinceKotlin;kotlin.SinceKotlin
+Kotlin.ISubclassOptInRequired, Xamarin.Kotlin.StdLib;kotlin.SubclassOptInRequired
+Kotlin.ISubclassOptInRequired;kotlin.SubclassOptInRequired
+kotlin.SubclassOptInRequired;kotlin.SubclassOptInRequired
 Kotlin.ISuppress, Xamarin.Kotlin.StdLib;kotlin.Suppress
 Kotlin.ISuppress;kotlin.Suppress
 kotlin.Suppress;kotlin.Suppress
 Kotlin.IUnsafeVariance, Xamarin.Kotlin.StdLib;kotlin.UnsafeVariance
 Kotlin.IUnsafeVariance;kotlin.UnsafeVariance
 kotlin.UnsafeVariance;kotlin.UnsafeVariance
-Kotlin.IUseExperimental, Xamarin.Kotlin.StdLib;kotlin.UseExperimental
-Kotlin.IUseExperimental;kotlin.UseExperimental
-kotlin.UseExperimental;kotlin.UseExperimental
+Kotlin.Time.IComparableTimeMark, Xamarin.Kotlin.StdLib;kotlin.time.ComparableTimeMark
+Kotlin.Time.IComparableTimeMark;kotlin.time.ComparableTimeMark
+kotlin.time.ComparableTimeMark;kotlin.time.ComparableTimeMark
 Kotlin.Time.IExperimentalTime, Xamarin.Kotlin.StdLib;kotlin.time.ExperimentalTime
 Kotlin.Time.IExperimentalTime;kotlin.time.ExperimentalTime
 kotlin.time.ExperimentalTime;kotlin.time.ExperimentalTime
 Kotlin.Time.ITimeMark, Xamarin.Kotlin.StdLib;kotlin.time.TimeMark
 Kotlin.Time.ITimeMark;kotlin.time.TimeMark
 kotlin.time.TimeMark;kotlin.time.TimeMark
+Kotlin.Time.ITimeSourceWithComparableMarks, Xamarin.Kotlin.StdLib;kotlin.time.TimeSource$WithComparableMarks
+Kotlin.Time.ITimeSourceWithComparableMarks;kotlin.time.TimeSource$WithComparableMarks
+kotlin.time.TimeSource$WithComparableMarks;kotlin.time.TimeSource$WithComparableMarks
 Kotlin.Time.ITimeSource, Xamarin.Kotlin.StdLib;kotlin.time.TimeSource
 Kotlin.Time.ITimeSource;kotlin.time.TimeSource
 kotlin.time.TimeSource;kotlin.time.TimeSource
@@ -4453,6 +4609,9 @@ kotlin.jvm.JvmOverloads;kotlin.jvm.JvmOverloads
 Kotlin.Jvm.IJvmRecord, Xamarin.Kotlin.StdLib;kotlin.jvm.JvmRecord
 Kotlin.Jvm.IJvmRecord;kotlin.jvm.JvmRecord
 kotlin.jvm.JvmRecord;kotlin.jvm.JvmRecord
+Kotlin.Jvm.IJvmSerializableLambda, Xamarin.Kotlin.StdLib;kotlin.jvm.JvmSerializableLambda
+Kotlin.Jvm.IJvmSerializableLambda;kotlin.jvm.JvmSerializableLambda
+kotlin.jvm.JvmSerializableLambda;kotlin.jvm.JvmSerializableLambda
 Kotlin.Jvm.IJvmStatic, Xamarin.Kotlin.StdLib;kotlin.jvm.JvmStatic
 Kotlin.Jvm.IJvmStatic;kotlin.jvm.JvmStatic
 kotlin.jvm.JvmStatic;kotlin.jvm.JvmStatic
@@ -4501,6 +4660,9 @@ kotlin.jvm.internal.RepeatableContainer;kotlin.jvm.internal.RepeatableContainer
 Kotlin.Jvm.Internal.ISerializedIr, Xamarin.Kotlin.StdLib;kotlin.jvm.internal.SerializedIr
 Kotlin.Jvm.Internal.ISerializedIr;kotlin.jvm.internal.SerializedIr
 kotlin.jvm.internal.SerializedIr;kotlin.jvm.internal.SerializedIr
+Kotlin.Jvm.Internal.ISourceDebugExtension, Xamarin.Kotlin.StdLib;kotlin.jvm.internal.SourceDebugExtension
+Kotlin.Jvm.Internal.ISourceDebugExtension;kotlin.jvm.internal.SourceDebugExtension
+kotlin.jvm.internal.SourceDebugExtension;kotlin.jvm.internal.SourceDebugExtension
 Kotlin.Jvm.Internal.Markers.IKMappedMarker, Xamarin.Kotlin.StdLib;kotlin.jvm.internal.markers.KMappedMarker
 Kotlin.Jvm.Internal.Markers.IKMappedMarker;kotlin.jvm.internal.markers.KMappedMarker
 kotlin.jvm.internal.markers.KMappedMarker;kotlin.jvm.internal.markers.KMappedMarker
@@ -4603,9 +4765,27 @@ kotlin.jvm.functions.FunctionN;kotlin.jvm.functions.FunctionN
 Kotlin.JS.IExperimentalJsExport, Xamarin.Kotlin.StdLib;kotlin.js.ExperimentalJsExport
 Kotlin.JS.IExperimentalJsExport;kotlin.js.ExperimentalJsExport
 kotlin.js.ExperimentalJsExport;kotlin.js.ExperimentalJsExport
+Kotlin.IO.Path.ICopyActionContext, Xamarin.Kotlin.StdLib;kotlin.io.path.CopyActionContext
+Kotlin.IO.Path.ICopyActionContext;kotlin.io.path.CopyActionContext
+kotlin.io.path.CopyActionContext;kotlin.io.path.CopyActionContext
+Kotlin.IO.Path.IExperimentalPathApi, Xamarin.Kotlin.StdLib;kotlin.io.path.ExperimentalPathApi
+Kotlin.IO.Path.IExperimentalPathApi;kotlin.io.path.ExperimentalPathApi
+kotlin.io.path.ExperimentalPathApi;kotlin.io.path.ExperimentalPathApi
+Kotlin.IO.Path.IFileVisitorBuilder, Xamarin.Kotlin.StdLib;kotlin.io.path.FileVisitorBuilder
+Kotlin.IO.Path.IFileVisitorBuilder;kotlin.io.path.FileVisitorBuilder
+kotlin.io.path.FileVisitorBuilder;kotlin.io.path.FileVisitorBuilder
+Kotlin.Experimental.IExperimentalObjCName, Xamarin.Kotlin.StdLib;kotlin.experimental.ExperimentalObjCName
+Kotlin.Experimental.IExperimentalObjCName;kotlin.experimental.ExperimentalObjCName
+kotlin.experimental.ExperimentalObjCName;kotlin.experimental.ExperimentalObjCName
+Kotlin.Experimental.IExperimentalObjCRefinement, Xamarin.Kotlin.StdLib;kotlin.experimental.ExperimentalObjCRefinement
+Kotlin.Experimental.IExperimentalObjCRefinement;kotlin.experimental.ExperimentalObjCRefinement
+kotlin.experimental.ExperimentalObjCRefinement;kotlin.experimental.ExperimentalObjCRefinement
 Kotlin.Experimental.IExperimentalTypeInference, Xamarin.Kotlin.StdLib;kotlin.experimental.ExperimentalTypeInference
 Kotlin.Experimental.IExperimentalTypeInference;kotlin.experimental.ExperimentalTypeInference
 kotlin.experimental.ExperimentalTypeInference;kotlin.experimental.ExperimentalTypeInference
+Kotlin.Enums.IEnumEntries, Xamarin.Kotlin.StdLib;kotlin.enums.EnumEntries
+Kotlin.Enums.IEnumEntries;kotlin.enums.EnumEntries
+kotlin.enums.EnumEntries;kotlin.enums.EnumEntries
 Kotlin.Coroutines.IContinuation, Xamarin.Kotlin.StdLib;kotlin.coroutines.Continuation
 Kotlin.Coroutines.IContinuation;kotlin.coroutines.Continuation
 kotlin.coroutines.Continuation;kotlin.coroutines.Continuation
@@ -4669,12 +4849,12 @@ kotlin.ranges.ClosedFloatingPointRange;kotlin.ranges.ClosedFloatingPointRange
 Kotlin.Ranges.IClosedRange, Xamarin.Kotlin.StdLib;kotlin.ranges.ClosedRange
 Kotlin.Ranges.IClosedRange;kotlin.ranges.ClosedRange
 kotlin.ranges.ClosedRange;kotlin.ranges.ClosedRange
+Kotlin.Ranges.IOpenEndRange, Xamarin.Kotlin.StdLib;kotlin.ranges.OpenEndRange
+Kotlin.Ranges.IOpenEndRange;kotlin.ranges.OpenEndRange
+kotlin.ranges.OpenEndRange;kotlin.ranges.OpenEndRange
 Kotlin.Collections.IGrouping, Xamarin.Kotlin.StdLib;kotlin.collections.Grouping
 Kotlin.Collections.IGrouping;kotlin.collections.Grouping
 kotlin.collections.Grouping;kotlin.collections.Grouping
-Kotlin.IO.Path.IExperimentalPathApi, Xamarin.Kotlin.StdLib.Jdk7;kotlin.io.path.ExperimentalPathApi
-Kotlin.IO.Path.IExperimentalPathApi;kotlin.io.path.ExperimentalPathApi
-kotlin.io.path.ExperimentalPathApi;kotlin.io.path.ExperimentalPathApi
 Xamarin.KotlinX.Coroutines.ICancellableContinuation, Xamarin.KotlinX.Coroutines.Core.Jvm;kotlinx.coroutines.CancellableContinuation
 Xamarin.KotlinX.Coroutines.ICancellableContinuation;kotlinx.coroutines.CancellableContinuation
 kotlinx.coroutines.CancellableContinuation;kotlinx.coroutines.CancellableContinuation

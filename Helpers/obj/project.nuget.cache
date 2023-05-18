@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "8habzF1jhSD58R9I0oxfefMQHu4broCUmAIDF9EStV/Ccwid9OfrGApYYCnfQBEDcGobCK+aPU+fMZioUYmufw==",
+  "success": true,
+  "projectFilePath": "C:\\github\\EShopMobile\\Helpers\\Helpers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

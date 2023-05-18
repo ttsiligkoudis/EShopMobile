@@ -7,9 +7,9 @@
              x:Class="EShopMobile.Pages.Customers.CustomersIndexPage"
              x:DataType="viewmodel:CustomersViewModel" 
              Title="Customers">
-    <ScrollView>
+    <ScrollView x:Name="ScrollView">
         <StackLayout>
-            <ActivityIndicator Color="{StaticResource SecondaryColor}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+            <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
 
             <CollectionView ItemsSource="{Binding Customers}">
                 <CollectionView.ItemsLayout>
@@ -18,6 +18,25 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:CustomerDto">
                         <Border Margin="10" Padding="20" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroupList>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="#2B2B2B" />
+                                                <Setter Property="StrokeThickness" Value="4" />
+                                                <Setter Property="BackgroundColor" Value="#FFF" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                                <Setter Property="StrokeThickness" Value="2" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateGroupList>
+                            </VisualStateManager.VisualStateGroups>
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="15" />
                             </Border.StrokeShape>
@@ -41,6 +60,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <StackLayout x:Name="PageNumberStack" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" Margin="10" Spacing="10"></StackLayout>
         </StackLayout>
     </ScrollView>
 </pages:BasePage>

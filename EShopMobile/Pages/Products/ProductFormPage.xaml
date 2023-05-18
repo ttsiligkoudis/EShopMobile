@@ -4,6 +4,7 @@
                 xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels.Products"
                 xmlns:pages="clr-namespace:EShopMobile.Pages"
                 xmlns:models="clr-namespace:DataModels.Dtos;assembly=DataModels"
+                xmlns:rating="clr-namespace:EShopMobile.Controls.Rating"
                 x:DataType="viewmodel:ProductsViewModel"
                 x:Class="EShopMobile.Pages.Products.ProductFormPage"
                 Title="Product">
@@ -28,8 +29,14 @@
                         
                     <Image Source="{Binding Product.Image}"/>
                     <Label FontSize="Medium" Text="{Binding Product.Price, StringFormat='Price: {0:N2}'}" TextColor="{StaticResource PrimaryColor}" />
-                    <Label FontSize="Small" Text="{Binding Product.Quantity, StringFormat='Quantity: {0:N0}'}" TextColor="{StaticResource PrimaryColor}" />
-                    <Label FontSize="Small" Text="{Binding Product.Rate, StringFormat='Rating: {0:N1}'}" TextColor="{StaticResource PrimaryColor}" />
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label FontSize="Small" Text="{Binding Product.Quantity, StringFormat='Quantity: {0:N0}'}" TextColor="{StaticResource PrimaryColor}" />
+                        <Label x:Name="StockText" FontSize="Small" IsVisible="false" TextColor="darkred" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <rating:RatingView Value="{Binding Product.Rate}" RatedFillColor="#e8a41f" HorizontalOptions="Start" />
+                        <Label FontSize="Small" Text="{Binding Product.Rate, StringFormat='({0:N1})'}" TextColor="{StaticResource PrimaryColor}" />
+                    </StackLayout>
                     <Label FontSize="Medium" Text="{Binding Product.Description}" TextColor="{StaticResource PrimaryColor}" />
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Button x:Name="minus" BackgroundColor="Transparent" FontSize="Medium" Clicked="QuantityBtn_Clicked">
@@ -37,7 +44,7 @@
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf056;" Color="{StaticResource PrimaryColor}" />
                             </Button.ImageSource>
                         </Button>
-                        <Border Padding="0" Margin="1" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                        <Border x:Name="QuantityBorder" Padding="0" Margin="1" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10" />
                             </Border.StrokeShape>
@@ -69,6 +76,7 @@
                             <StackLayout Spacing="10">
                                 <Label FontSize="Medium" Text="{Binding CustomerName}" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
                                 <Label FontSize="Small" Text="{Binding Rate, StringFormat='Rating: {0:N1}'}" TextColor="{StaticResource PrimaryColor}" />
+                                <rating:RatingView Value="{Binding Rate}" RatedFillColor="#e8a41f" HorizontalOptions="Start" />
                             </StackLayout>
                         </Border>
                     </DataTemplate>

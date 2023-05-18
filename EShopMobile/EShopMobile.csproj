@@ -54,6 +54,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Helpers\IAlertService.cs" />
 	  <Compile Remove="Helpers\ISession.cs" />
 	  <Compile Remove="Helpers\IUserAccess.cs" />
 	  <Compile Remove="Helpers\UserAccess.cs" />
@@ -76,14 +77,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview1" />
-	  <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	  <PackageReference Include="Onion.Maui.GoogleMaps" Version="5.0.0" />
+	  <PackageReference Include="Onion.Maui.GoogleMaps" Version="5.0.1" />
+	  <PackageReference Include="Xamarin.Google.iOS.SignIn" Version="5.0.2.4" />
+	  <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="120.4.0.1" />
+	  <PackageReference Include="Xamarin.GooglePlayServices.Identity" Version="118.0.1.3" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Orders\RatePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Users\ForgotPasswordPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Orders\CartPage.xaml">
@@ -98,10 +107,10 @@
 	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\LoginPage.xaml">
+	  <MauiXaml Update="Pages\Users\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\MyProfilePage.xaml">
+	  <MauiXaml Update="Pages\Users\MyProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Orders\OrderFormPage.xaml">
@@ -119,7 +128,13 @@
 	  <MauiXaml Update="Pages\SavedPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\SignUpPage.xaml">
+	  <MauiXaml Update="Pages\Users\AuthenticationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Users\ResetPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Users\SignUpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -136,6 +151,16 @@
 	  <ProjectReference Include="..\..\EShop-Core\Helpers\Client.csproj" />
 	  <ProjectReference Include="..\..\EShopAPI\DataModels\DataModels.csproj" />
 	  <ProjectReference Include="..\..\EShopAPI\Enums\Enums.csproj" />
+	  <ProjectReference Include="..\Helpers\Helpers.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Orders\RatePage.xaml.cs">
+	    <DependentUpon>RatePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Users\AuthenticationPage.xaml.cs">
+	    <DependentUpon>AuthenticationPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<PropertyGroup>
@@ -149,5 +174,9 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
 	  <ApplicationTitle>EShop</ApplicationTitle>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.5.0.1" />
+	</ItemGroup>
 
 </Project>

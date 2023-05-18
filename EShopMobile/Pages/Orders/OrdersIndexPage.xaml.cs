@@ -1,6 +1,5 @@
 using DataModels.Dtos;
 using EShopMobile.ViewModels.Orders;
-using EShopMobile.ViewModels.Products;
 
 namespace EShopMobile.Pages.Orders;
 
@@ -16,8 +15,9 @@ public partial class OrdersIndexPage : BasePage
     {
         base.OnNavigatedTo(args);
         var vm = (OrderViewModel)BindingContext;
-        if (!(vm.Orders?.Any() ?? false))
-            Task.Run(vm.GetOrders);
+        vm.PageNumberStack = PageNumberStack;
+        vm.ScrollView = ScrollView;
+        vm.GetOrders();
     }
 
     private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)

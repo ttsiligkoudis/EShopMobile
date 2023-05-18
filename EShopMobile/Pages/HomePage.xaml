@@ -5,6 +5,7 @@
                 xmlns:helpers="clr-namespace:EShopMobile.Helpers"
                 xmlns:models="clr-namespace:DataModels.Dtos;assembly=DataModels"
                 xmlns:pages="clr-namespace:EShopMobile.Pages"
+                xmlns:rating="clr-namespace:EShopMobile.Controls.Rating"
                 x:Class="EShopMobile.Pages.HomePage"
                 x:DataType="viewmodel:HomeViewModel"
                 Title="Home">
@@ -18,7 +19,7 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="15" />
                     </Border.StrokeShape>
-                    <ImageButton x:Name="Laptops" Source="real_laptop_icon.webp" Aspect="AspectFit" Clicked="ProductsNavBtn"/>
+                        <ImageButton x:Name="Laptops" Source="real_laptop_icon.webp" Aspect="AspectFit" Clicked="ProductsNavBtn"/>
                 </Border>
 
                 <Border Grid.Column="1" Padding="10" Margin="1" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
@@ -45,16 +46,35 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:ProductDto">
-                        <Border Padding="5" HeightRequest="150" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                        <Border Padding="5" Stroke="{StaticResource LightGrey}" StrokeThickness="2" MinimumHeightRequest="150">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroupList>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="#2B2B2B" />
+                                                <Setter Property="StrokeThickness" Value="4" />
+                                                <Setter Property="BackgroundColor" Value="#FFF" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                                <Setter Property="StrokeThickness" Value="2" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateGroupList>
+                            </VisualStateManager.VisualStateGroups>
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="15" />
                             </Border.StrokeShape>
-                            <Grid Padding="10" ColumnSpacing="10" ColumnDefinitions="*,*" RowDefinitions="*">
-                                <Image Grid.Column="0" Source="{Binding Image}" Aspect="AspectFit" MaximumWidthRequest="200" />
+                            <Grid Padding="0" ColumnSpacing="5" ColumnDefinitions="150,150" RowDefinitions="*">
+                                <Image Grid.Column="0" Source="{Binding Image}" Aspect="AspectFit" MaximumWidthRequest="150" MaximumHeightRequest="135" />
                                 <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="5">
                                     <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
                                     <Label Text="{Binding Price, StringFormat='Price: {0:N2}€'}" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding Rate, StringFormat='Rating: {0:N1}'}" FontSize="Small" TextColor="{StaticResource PrimaryColor}" />
+                                    <rating:RatingView Value="{Binding Rate}" RatedFillColor="#e8a41f" ItemSize="20" HorizontalOptions="Start" />
                                 </StackLayout>
                             </Grid>
                         </Border>
@@ -71,16 +91,35 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:ProductDto">
-                        <Border Padding="5" HeightRequest="150" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                        <Border Padding="5" Stroke="{StaticResource LightGrey}" StrokeThickness="2" MinimumHeightRequest="150">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroupList>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="#2B2B2B" />
+                                                <Setter Property="StrokeThickness" Value="4" />
+                                                <Setter Property="BackgroundColor" Value="#FFF" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                                <Setter Property="StrokeThickness" Value="2" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateGroupList>
+                            </VisualStateManager.VisualStateGroups>
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="15" />
                             </Border.StrokeShape>
-                            <Grid Padding="10" ColumnSpacing="10" ColumnDefinitions="*,*" RowDefinitions="*">
-                                <Image Grid.Column="0" Source="{Binding Image}" Aspect="AspectFit" MaximumWidthRequest="200" />
+                            <Grid Padding="0" ColumnSpacing="5" ColumnDefinitions="150,150" RowDefinitions="*">
+                                <Image Grid.Column="0" Source="{Binding Image}" Aspect="AspectFit" MaximumWidthRequest="150" MaximumHeightRequest="135" />
                                 <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="5">
                                     <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
                                     <Label Text="{Binding Price, StringFormat='Price: {0:N2}€'}" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding Rate, StringFormat='Rating: {0:N1}'}" FontSize="Small" TextColor="{StaticResource PrimaryColor}" />
+                                    <rating:RatingView Value="{Binding Rate}" RatedFillColor="#e8a41f" ItemSize="20" HorizontalOptions="Start" />
                                 </StackLayout>
                             </Grid>
                         </Border>

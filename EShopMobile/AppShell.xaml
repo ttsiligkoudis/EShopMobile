@@ -48,50 +48,50 @@
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FontSolid" Glyph="&#xf015;" Size="Small" />
         </FlyoutItem.Icon>
-        <Tab Title="Home" Route="Home">
+        <Tab Title="Home" Route="HomePage">
             <Tab.Icon>
                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf015;" Size="Small" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate pages:HomePage}" />
         </Tab>
-        <Tab Title="Wishlist" Route="Wishlist">
+        <Tab Title="Wishlist" Route="SavedPage">
             <Tab.Icon>
                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf004;" Size="Small" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate pages:SavedPage}" />
         </Tab>
-        <Tab Title="Profile" Route="MyProfile">
+        <Tab Title="Profile" Route="MyProfilePage">
             <Tab.Icon>
                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf007;" Size="Small" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate pages:MyProfilePage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem x:Name="Customers" Title="Customers" Route="Customers">
+    <FlyoutItem x:Name="Customers" Title="Customers" Route="CustomersIndexPage">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FontSolid" Glyph="&#xf0c0;" Size="Small" />
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate customers:CustomersIndexPage}" />
     </FlyoutItem>
-    <FlyoutItem x:Name="Orders" Title="Orders" Route="Orders">
+    <FlyoutItem x:Name="Orders" Title="Orders" Route="OrdersIndexPage">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FontSolid" Glyph="&#xf1b2;" Size="Small" />
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate orders:OrdersIndexPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Products" Route="Products">
+    <FlyoutItem Title="Products" Route="ProductsIndexPage">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FontSolid" Glyph="&#xf02c;" Size="Small" />
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate products:ProductsIndexPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="About" Route="About">
+    <FlyoutItem Title="About" Route="AboutPage">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FontSolid" Glyph="&#xf05a;" Size="Small" />
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate pages:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Contact" Route="Contact">
+    <FlyoutItem Title="Contact" Route="ContactPage">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" Size="Small" />
         </FlyoutItem.Icon>

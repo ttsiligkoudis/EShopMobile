@@ -8,25 +8,23 @@ namespace EShopMobile.Pages;
 
 public partial class HomePage : BasePage
 {
-    private Session _session;
 
     public HomePage(HomeViewModel vm)
     {
         InitializeComponent();
         BindingContext = vm;
-        _session = new Session();
         Task.Run(MauiProgram.CheckLocationPermission);
     }
 
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    protected override async void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
         var vm = (HomeViewModel)BindingContext;
-        vm.SavedProducts = _session.GetSavedProducts();
+        vm.SavedProducts = Session.GetSavedProducts();
         Wishlist.IsVisible = vm.SavedProducts?.Any() ?? false;
-        vm.GetRandomProducts();
-        vm.Customer = _session.GetCustomer();
-        vm.User = _session.GetUser();
+        await vm.GetRandomProducts().ConfigureAwait(false);
+        vm.Customer = Session.GetCustomer();
+        vm.User = Session.GetUser();
     }
 
     private void ProductsNavBtn(object sender, EventArgs e)

@@ -49,6 +49,12 @@
         <member name="P:EShopMobile.ViewModels.LoginViewModel.Navigation">
             <inheritdoc cref="F:EShopMobile.ViewModels.LoginViewModel.navigation"/>
         </member>
+        <member name="P:EShopMobile.ViewModels.LoginViewModel.UserID">
+            <inheritdoc cref="F:EShopMobile.ViewModels.LoginViewModel.userID"/>
+        </member>
+        <member name="P:EShopMobile.ViewModels.LoginViewModel.Token">
+            <inheritdoc cref="F:EShopMobile.ViewModels.LoginViewModel.token"/>
+        </member>
         <member name="F:EShopMobile.ViewModels.LoginViewModel.signInCommand">
             <summary>The backing field for <see cref="P:EShopMobile.ViewModels.LoginViewModel.SignInCommand"/>.</summary>
         </member>
@@ -66,6 +72,24 @@
         </member>
         <member name="P:EShopMobile.ViewModels.LoginViewModel.SignUpResultCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EShopMobile.ViewModels.LoginViewModel.SignUpResult"/>.</summary>
+        </member>
+        <member name="F:EShopMobile.ViewModels.LoginViewModel.forgotPasswordCommand">
+            <summary>The backing field for <see cref="P:EShopMobile.ViewModels.LoginViewModel.ForgotPasswordCommand"/>.</summary>
+        </member>
+        <member name="P:EShopMobile.ViewModels.LoginViewModel.ForgotPasswordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EShopMobile.ViewModels.LoginViewModel.ForgotPassword"/>.</summary>
+        </member>
+        <member name="F:EShopMobile.ViewModels.LoginViewModel.forgotPasswordResultCommand">
+            <summary>The backing field for <see cref="P:EShopMobile.ViewModels.LoginViewModel.ForgotPasswordResultCommand"/>.</summary>
+        </member>
+        <member name="P:EShopMobile.ViewModels.LoginViewModel.ForgotPasswordResultCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EShopMobile.ViewModels.LoginViewModel.ForgotPasswordResult"/>.</summary>
+        </member>
+        <member name="F:EShopMobile.ViewModels.LoginViewModel.resetPasswordResultCommand">
+            <summary>The backing field for <see cref="P:EShopMobile.ViewModels.LoginViewModel.ResetPasswordResultCommand"/>.</summary>
+        </member>
+        <member name="P:EShopMobile.ViewModels.LoginViewModel.ResetPasswordResultCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EShopMobile.ViewModels.LoginViewModel.ResetPasswordResult"/>.</summary>
         </member>
         <member name="P:EShopMobile.ViewModels.Orders.OrderViewModel.IsLoading">
             <inheritdoc cref="F:EShopMobile.ViewModels.Orders.OrderViewModel.isLoading"/>

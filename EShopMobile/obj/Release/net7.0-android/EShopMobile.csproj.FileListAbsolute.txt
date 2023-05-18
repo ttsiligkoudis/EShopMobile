@@ -477,3 +477,9 @@ C:\github\EShopMobile\EShopMobile\obj\Release\net7.0-android\stamp\_GeneratePack
 C:\github\EShopMobile\EShopMobile\obj\Release\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\github\EShopMobile\EShopMobile\bin\Release\net7.0-android\Client.dll
 C:\github\EShopMobile\EShopMobile\bin\Release\net7.0-android\Client.pdb
+C:\github\EShopMobile\EShopMobile\bin\Release\net7.0-android\Helpers.dll
+C:\github\EShopMobile\EShopMobile\bin\Release\net7.0-android\Helpers.pdb
+C:\github\EShopMobile\EShopMobile\obj\Release\net7.0-android\libraryprojectimports.cache
+C:\github\EShopMobile\EShopMobile\obj\Release\net7.0-android\android\src\crc64338477404e88479c\GenericGlobalLayoutListenerImproved.java
+C:\github\EShopMobile\EShopMobile\obj\Release\net7.0-android\android\src\mono\com\google\android\material\checkbox\MaterialCheckBox_OnCheckedStateChangedListenerImplementor.java
+C:\github\EShopMobile\EShopMobile\obj\Release\net7.0-android\android\src\mono\com\google\android\material\checkbox\MaterialCheckBox_OnErrorChangedListenerImplementor.java

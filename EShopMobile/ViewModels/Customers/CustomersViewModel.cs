@@ -1,6 +1,7 @@
 ﻿using Client;
 using CommunityToolkit.Mvvm.ComponentModel;
 using DataModels.Dtos;
+using Enums;
 using EShopMobile.Helpers;
 
 namespace EShopMobile.ViewModels.Customers
@@ -15,16 +16,60 @@ namespace EShopMobile.ViewModels.Customers
         [ObservableProperty]
         public bool isLoading;
 
-        public CustomersViewModel(IAlertService alert)
+        [ObservableProperty]
+        private StackLayout pageNumberStack;
+
+        [ObservableProperty]
+        private ScrollView scrollView;
+
+        public CustomersViewModel()
         {
             _client = new ClientHelper();
         }
 
-        public async Task GetCustomers()
+        public async void GetCustomers(int pageNumber = 1)
         {
-            IsLoading = true;
-            Customers = (await _client.CustomerClient.GetListAsync("Customers")).ToList();
-            IsLoading = false;
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                IsLoading = true;
+            });
+
+            var result = (await _client.CustomerClient.GetListAsync("Customers")).ToList();
+
+            pageNumber = pageNumber > 0 ? pageNumber - 1 : 0;
+            var pageSize = PageSize.Ten;
+            var skip = pageNumber * (short)pageSize;
+            var take = (short)pageSize;
+
+            var pages = (result.Count / (short)pageSize) + (result.Count % (short)pageSize > 0 ? 1 : 0);
+            Customers = result.Skip(skip).Take(take).ToList();
+
+            PageNumberStack.Clear();
+            for (int i = 1; i <= pages; i++)
+            {
+                var btn = new Button()
+                {
+                    Text = i.ToString(),
+                    TextColor = Colors.White,
+                    BackgroundColor = Color.FromHex("6c757d"),
+                    Padding = 10,
+                    HorizontalOptions = LayoutOptions.Center
+                };
+                btn.Clicked += PageChanged;
+                PageNumberStack.Children.Add(btn);
+            }
+
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                IsLoading = false;
+            });
+        }
+
+        private async void PageChanged(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            await ScrollView.ScrollToAsync(0, 0, true);
+            GetCustomers(Convert.ToInt32(btn.Text));
         }
     }
 }

@@ -5,58 +5,60 @@
              xmlns:pages="clr-namespace:EShopMobile.Pages"
              x:Class="EShopMobile.Pages.ContactPage"
              Title="Contact Us">
-    <ScrollView>
-        <StackLayout Margin="20" Spacing="30">
-            <Border Padding="20">
+    <!--<ScrollView x:Name="ScrollView">-->
+        <StackLayout Margin="15" Spacing="10">
+            <ActivityIndicator x:Name="Loader" Color="#2B2B2B" IsRunning="False" IsVisible="False" />
+            <Border Padding="15,10">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
                 <StackLayout Spacing="10">
-                    <Label Text="Get in touch" FontFamily="OpenSansRegular" FontSize="Title" Margin="0, 10" FontAttributes="Bold" TextColor="{StaticResource BtnBackground}" />
+                    <StackLayout Margin="0,5" Orientation="Horizontal">
+                        <Label Text="Get in touch" FontFamily="OpenSansRegular" FontSize="Title"  FontAttributes="Bold" TextColor="{StaticResource BtnBackground}" />
+                        <Button Text="Hide" BackgroundColor="Transparent" TextColor="#2B2B2B" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Clicked="BtnForm_Clicked"/>
+                    </StackLayout>
 
-                    <Label Text="Fill out the form below to contact us and we'll get back to you as soon as possible." FontFamily="OpenSansRegular" FontSize="Medium" />
+                    <Label x:Name="Text" Text="Fill out the form below to contact us and we'll get back to you as soon as possible." FontFamily="OpenSansRegular" FontSize="Medium" />
 
-                    <Entry Placeholder="Name" />
+                    <Entry x:Name="Name" Placeholder="Name" />
 
-                    <Entry Placeholder="Email address" Keyboard="Email" />
+                    <Entry x:Name="Email" Placeholder="Email address" Keyboard="Email" />
 
-                    <Editor Placeholder="Message" HeightRequest="100" AutoSize="TextChanges" />
+                    <Editor x:Name="Message" Placeholder="Message" HeightRequest="100" AutoSize="TextChanges" />
 
-                    <Button Text="Send Message" BackgroundColor="{StaticResource BtnBackground}" TextColor="White" FontAttributes="Bold" Margin="0,20"/>
+                    <Button x:Name="SendMessage" Text="Send Message" BackgroundColor="{StaticResource BtnBackground}" TextColor="White" FontAttributes="Bold" Margin="0,20" Clicked="BtnSendMessage_Clicked"/>
                 </StackLayout>
             </Border>
 
-            <Border Padding="20">
+            <Border Padding="15,10">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
-                <StackLayout Spacing="10" Padding="10">
+                <StackLayout Spacing="10">
                     <Label Text="Contact Information" FontFamily="OpenSansRegular" FontSize="Large" Margin="0,0,0,10" FontAttributes="Bold" TextColor="{StaticResource BtnBackground}" />
 
                     <Grid ColumnDefinitions="30,*" RowDefinitions="*,*" RowSpacing="10">
                         <Label Grid.Row="0" Grid.Column="0" Text="&#xf0e0;" FontAttributes="Bold" FontFamily="FontSolid" />
                         <Label Grid.Row="1" Grid.Column="0" Text="&#xf095;" FontAttributes="Bold" FontFamily="FontSolid" />
-                        <Label Grid.Row="0" Grid.Column="1" Text="themtsil@gmail.com" FontFamily="OpenSansRegular" />
-                        <Label Grid.Row="1" Grid.Column="1" Text="555-555-5555" FontFamily="OpenSansRegular" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="eshop.myportofolio@gmail.com" FontFamily="OpenSansRegular" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="6943444650" FontFamily="OpenSansRegular" />
                     </Grid>
                 </StackLayout>
             </Border>
 
-            <Border Padding="20" Margin="0,0,0,10">
+            <Border Padding="15,10">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
-                <StackLayout Spacing="10" Padding="10">
-                    <Label Text="Our Location" FontFamily="OpenSansRegular" FontSize="Large" Margin="0,0,0,10" FontAttributes="Bold" TextColor="{StaticResource BtnBackground}" />
-
-                    <Label Text="Damianou 10, Kavala, Greece" FontFamily="OpenSansRegular" Margin="0,0,0,5" />
-                    
+                <StackLayout Spacing="5" Margin="0,0,0,5">
+                    <Label Text="Our Location" FontFamily="OpenSansRegular" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource BtnBackground}" />
+                    <Label Text="Damianou 10, Kavala, Greece" FontFamily="OpenSansRegular" />
                     <maps:Map x:Name="MyMap" 
-                      InitialCameraUpdate="40.93909798857936, 24.40787526859458, 15, 0, 0"
-                      VerticalOptions="FillAndExpand" HeightRequest="300">
+                        InitialCameraUpdate="40.93909798857936, 24.40787526859458, 15, 0, 0"
+                        VerticalOptions="FillAndExpand" HeightRequest="300">
                     </maps:Map>
                 </StackLayout>
             </Border>
         </StackLayout>
-    </ScrollView>
+    <!--</ScrollView>-->
 </pages:BasePage>

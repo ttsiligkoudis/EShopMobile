@@ -8,12 +8,10 @@ namespace EShopMobile.Pages
     {
         public int CartCounter { get; set; }
         public Label CartCounterLabel { get; set; }
-        private Session _session;
 
         public BasePage()
         {
             CartCounterLabel = new();
-            _session = new();
         }
 
         protected override void OnAppearing()
@@ -92,7 +90,7 @@ namespace EShopMobile.Pages
             {
                 HeightRequest = 20,
                 CornerRadius = 20,
-                BackgroundColor = Color.FromHex("#418deb"),
+                BackgroundColor = Color.FromHex("418deb"),
                 VerticalOptions = LayoutOptions.Center,
                 Padding = 0,
                 Margin = new Thickness(-10,-15,0,0),
@@ -124,7 +122,7 @@ namespace EShopMobile.Pages
 
         protected void SetCartCounter(bool changeLabel)
         {
-            var cartProducts = _session.GetCartProducts();
+            var cartProducts = Session.GetCartProducts();
             CartCounter = cartProducts?.Count ?? 0;
             if (changeLabel)
                 CartCounterLabel.Text = CartCounter.ToString();

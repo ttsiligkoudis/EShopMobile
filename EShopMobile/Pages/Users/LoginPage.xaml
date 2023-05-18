@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels"
+             x:Class="EShopMobile.Pages.LoginPage"        
+             x:Name="ContentPage"
+             x:DataType="viewmodel:LoginViewModel"
+             Title="Login" BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Padding="20">
+                <Label Text="Welcome to My EShop App" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalOptions="CenterAndExpand" Margin="0,60,0,40" />
+
+                <Border Padding="20" Margin="0,0,0,10" BackgroundColor="{StaticResource SecondaryColor}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontFamily="FontSolid" Text="&#xf0e0;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" Margin="10" />
+                        <Entry x:Name="Email" Placeholder="Email" Text="{Binding Email}" TextColor="{StaticResource PrimaryColor}" PlaceholderColor="Gray" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Keyboard="Email" />
+                    </StackLayout>
+                </Border>
+
+                <Border Padding="20" Margin="0,0,0,30" BackgroundColor="{StaticResource SecondaryColor}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontFamily="FontSolid" Text="&#xf023;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" Margin="10" />
+                        <Entry Placeholder="Password" Text="{Binding Password}" TextColor="{StaticResource PrimaryColor}" IsPassword="True" PlaceholderColor="Gray" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </Border>
+
+                <Button Text="Sign in" TextColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource BtnBackground}" CornerRadius="10" Command="{Binding SignInCommand}" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+                    <Label Text="Don't have an account? " TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="Sign up" TextColor="{StaticResource BtnBackground}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SignUpCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                    <Label Text="Forgot your password? " TextColor="{StaticResource PrimaryColor}" />
+                    <Label Text="Click here" TextColor="{StaticResource BtnBackground}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <Button Text="Continue with Google" TextColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource BtnBackground}" HorizontalOptions="Center" CornerRadius="10" Clicked="GoogleBtn_Clicked" />
+            </StackLayout>
+
+            <ActivityIndicator Grid.Row="1" Color="{StaticResource SecondaryColor}" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -7,26 +7,38 @@ namespace EShopMobile.Pages.Products;
 
 public partial class ProductFormPage : BasePage
 {
-    private readonly Session _session;
-
     public ProductFormPage(ProductsViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;
-        _session = new Session();
     }
 
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    protected override async void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
         var vm = (ProductsViewModel)BindingContext;
-        Task.Run(vm.GetProductRates);
+        if (vm.Product.Quantity == 0)
+        {
+            StockText.IsVisible = true;
+            StockText.Text = "Out of stock";
+            QuantityBorder.IsVisible = false;
+            minus.IsVisible = false;
+            plus.IsVisible = false;
+            ProductCartBtn.IsVisible = false;
+        } 
+        else if (vm.Product.Quantity <= 5)
+        {
+            StockText.IsVisible = true;
+            StockText.Text = "Almost out of stock";
+        }
+
+        await vm.GetProductRates();
         Quantity.TextChanged += Quantity_TextChanged;
-        var cartProducts = _session.GetCartProducts();
+        var cartProducts = Session.GetCartProducts();
         if (cartProducts != null && vm.Product != null)
             changeAddtoCartBtn(!cartProducts.Any(w => w.Id == vm.Product.Id));
 
-        var savedProducts = _session.GetSavedProducts();
+        var savedProducts = Session.GetSavedProducts();
         if (savedProducts != null && vm.Product != null)
             changeSaveProductBtn(savedProducts.Any(w => w.Id == vm.Product.Id));
     }
@@ -40,10 +52,10 @@ public partial class ProductFormPage : BasePage
         var product = MauiProgram.Clone(vm.Product);
         product.Quantity = vm.Quantity;
 
-        var products = _session.GetCartProducts();
+        var products = Session.GetCartProducts();
         if (products == null)
         {
-            _session.SetCartProducts(new List<ProductDto> { product });
+            Session.SetCartProducts(new List<ProductDto> { product });
             changeAddtoCartBtn(false);
             return;
         }
@@ -52,13 +64,13 @@ public partial class ProductFormPage : BasePage
         if (productInCart != null)
         {
             products.Remove(productInCart);
-            _session.SetCartProducts(products.Any() ? products : null);
+            Session.SetCartProducts(products.Any() ? products : null);
             changeAddtoCartBtn(true);
         }
         else
         {
             products.Add(product);
-            _session.SetCartProducts(products);
+            Session.SetCartProducts(products);
             changeAddtoCartBtn(false);
         }
     }
@@ -102,10 +114,10 @@ public partial class ProductFormPage : BasePage
         var btn = sender as Button;
         var add = btn.StyleId == "NotSaved";
         changeSaveProductBtn(add);
-        var products = _session.GetSavedProducts();
+        var products = Session.GetSavedProducts();
         if (products == null)
         {
-            _session.SetSavedProducts(new List<ProductDto> { vm.Product });
+            Session.SetSavedProducts(new List<ProductDto> { vm.Product });
             return;
         }
 
@@ -113,12 +125,12 @@ public partial class ProductFormPage : BasePage
         if (productInSaved != null)
         {
             products.Remove(productInSaved);
-            _session.SetSavedProducts(products.Any() ? products : null);
+            Session.SetSavedProducts(products.Any() ? products : null);
         }
         else
         {
             products.Add(vm.Product);
-            _session.SetSavedProducts(products);
+            Session.SetSavedProducts(products);
         }
     }
 

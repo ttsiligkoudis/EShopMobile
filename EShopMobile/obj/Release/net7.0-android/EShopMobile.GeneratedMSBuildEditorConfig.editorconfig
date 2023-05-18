@@ -26,6 +26,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/github/EShopMobile/EShopMobile/Controls/StarRatingControl.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Controls.StarRatingControl.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\StarRatingControl.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\StarRatingControl.xaml
+
 [C:/github/EShopMobile/EShopMobile/Pages/AboutPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.AboutPage.xaml
@@ -49,18 +55,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.HomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
-
-[C:/github/EShopMobile/EShopMobile/Pages/LoginPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.LoginPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
-
-[C:/github/EShopMobile/EShopMobile/Pages/MyProfilePage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.MyProfilePage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\MyProfilePage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\MyProfilePage.xaml
 
 [C:/github/EShopMobile/EShopMobile/Pages/Orders/CartPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -98,11 +92,35 @@ build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.SavedPag
 build_metadata.AdditionalFiles.TargetPath = Pages\SavedPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\SavedPage.xaml
 
-[C:/github/EShopMobile/EShopMobile/Pages/SignUpPage.xaml]
+[C:/github/EShopMobile/EShopMobile/Pages/Users/ForgotPasswordPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.SignUpPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\SignUpPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\SignUpPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.Users.ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Users\ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Users\ForgotPasswordPage.xaml
+
+[C:/github/EShopMobile/EShopMobile/Pages/Users/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.Users.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Users\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Users\LoginPage.xaml
+
+[C:/github/EShopMobile/EShopMobile/Pages/Users/MyProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.Users.MyProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Users\MyProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Users\MyProfilePage.xaml
+
+[C:/github/EShopMobile/EShopMobile/Pages/Users/ResetPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.Users.ResetPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Users\ResetPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Users\ResetPasswordPage.xaml
+
+[C:/github/EShopMobile/EShopMobile/Pages/Users/SignUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EShopMobile.Pages.Users.SignUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Users\SignUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Users\SignUpPage.xaml
 
 [C:/github/EShopMobile/EShopMobile/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

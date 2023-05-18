@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:pages="clr-namespace:EShopMobile.Pages"
+                xmlns:models="clr-namespace:DataModels.Dtos;assembly=DataModels"
+                xmlns:viewmodel="clr-namespace:EShopMobile.ViewModels.Orders"
+                xmlns:rating="clr-namespace:EShopMobile.Controls.Rating"
+                x:DataType="viewmodel:OrderViewModel"
+                x:Class="EShopMobile.Pages.Orders.RatePage"
+                Title="Product Rate">
+    <StackLayout Margin="15" Spacing="10">
+        <Border Padding="20" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </Border.StrokeShape>
+            <StackLayout Spacing="10">
+                <Label Text="{Binding Rate.ProductName}" FontFamily="OpenSansRegular" FontSize="Title"  FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}" />
+                <StackLayout Spacing="5" Orientation="Horizontal">
+                    <Label Text="{Binding Value, Source={x:Reference NumberStepper}, StringFormat='Rate: {0:N1}'}" FontFamily="OpenSansRegular" FontSize="Medium" TextColor="{DynamicResource PrimaryColor}" VerticalOptions="Center" />
+                    <Stepper x:Name="NumberStepper" Value="{Binding Rate.Rate}" Minimum="0" Maximum="5" Increment="0.5" BackgroundColor="White" HeightRequest="40" WidthRequest="80" />
+                </StackLayout>
+                <Editor Text="{Binding Rate.Comment}" Placeholder="Comment" HeightRequest="100" AutoSize="TextChanges" />
+                <Button Text="Save" BackgroundColor="{StaticResource BtnBackground}" TextColor="White" FontAttributes="Bold" Command="{Binding SaveRateCommand}" WidthRequest="100" Margin="0,20" HorizontalOptions="Center"/>
+            </StackLayout>
+        </Border>
+    </StackLayout>
+</pages:BasePage>

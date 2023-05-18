@@ -64,6 +64,7 @@ public class MonoPackageManager_Resources {
 		"Client.dll",
 		"DataModels.dll",
 		"Enums.dll",
+		"Helpers.dll",
 		"Microsoft.Maui.dll",
 		"Microsoft.Maui.Controls.Compatibility.dll",
 		"Microsoft.Maui.Controls.Xaml.dll",

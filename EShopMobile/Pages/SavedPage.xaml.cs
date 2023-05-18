@@ -6,22 +6,19 @@ namespace EShopMobile.Pages;
 
 public partial class SavedPage : ContentPage
 {
-	private readonly Session _session;
-
 	public SavedPage(HomeViewModel vm)
 	{
 		InitializeComponent();
-		_session = new Session();
 		BindingContext = vm;
 	}
 
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    protected override async void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
 		var vm = (HomeViewModel)BindingContext;
-		vm.SavedProducts = _session.GetSavedProducts();
+		vm.SavedProducts = Session.GetSavedProducts();
         Wishlist.IsVisible = vm.SavedProducts?.Any() ?? false;
-        Task.Run(vm.GetRandomProducts);
+        await vm.GetRandomProducts().ConfigureAwait(false);
     }
 
     private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)

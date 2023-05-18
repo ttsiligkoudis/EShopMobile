@@ -5,17 +5,16 @@ using EShopMobile.Pages.Products;
 using EShopMobile.Helpers;
 using DataModels.Dtos;
 using Enums;
+using EShopMobile.Pages.Users;
+using System.Runtime.CompilerServices;
 
 namespace EShopMobile;
 
 public partial class AppShell : Shell
 {
-    private Session _session;
     public AppShell()
 	{
         InitializeComponent();
-
-        _session = new Session();
 
         Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
         Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
@@ -30,12 +29,38 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(CartPage), typeof(CartPage));
         Routing.RegisterRoute(nameof(SavedPage), typeof(SavedPage));
         Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
+        Routing.RegisterRoute(nameof(ForgotPasswordPage), typeof(ForgotPasswordPage));
+        Routing.RegisterRoute(nameof(ResetPasswordPage), typeof(ResetPasswordPage));
+        Routing.RegisterRoute(nameof(RatePage), typeof(RatePage));
+        Routing.RegisterRoute(nameof(AuthenticationPage), typeof(AuthenticationPage));
+    }
+
+    protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        base.OnPropertyChanged(propertyName);
+        if (propertyName == "CurrentItem" && CurrentItem.Route.Contains("Page"))
+        {
+            var routes = new List<string>
+            {
+                nameof(CustomersIndexPage),
+                nameof(OrdersIndexPage),
+                nameof(ProductsIndexPage)
+            };
+
+            if (routes.Contains(CurrentItem.Route))
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    await Current.GoToAsync("//" + CurrentItem.Route);
+                });
+            }
+        }
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        var user = _session.GetUser();
+        var user = Session.GetUser();
         ChangeMenu(user?.UserType);
     }
 
@@ -46,7 +71,7 @@ public partial class AppShell : Shell
         {
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                await Current.GoToAsync("//Home");
+                await Current.GoToAsync("//" + nameof(HomePage));
             });
             return true;
         }
@@ -55,8 +80,8 @@ public partial class AppShell : Shell
 
     private async void LogBtn_Clicked(object sender, EventArgs e)
     {
-        Preferences.Remove(nameof(CustomerDto));
-        Preferences.Remove(nameof(UserDto));
+        Session.SetCustomer(null);
+        Session.SetUser(null);
         await Current.GoToAsync(nameof(LoginPage));
         Current.FlyoutIsPresented = false;
     }
