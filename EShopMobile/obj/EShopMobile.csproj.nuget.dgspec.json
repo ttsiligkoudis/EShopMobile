@@ -28,11 +28,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Consumer/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Identity/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Packages/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -48,6 +44,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -107,11 +108,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Consumer/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Identity/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Packages/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -127,6 +124,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -154,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -182,11 +184,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Consumer/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Identity/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Packages/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -198,6 +196,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -219,7 +222,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -248,11 +251,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Consumer/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Identity/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Packages/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-android33.0": {
@@ -277,6 +276,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -292,6 +296,14 @@
               "version": "[7.0.0, )",
               "autoReferenced": true
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -302,14 +314,21 @@
               "version": "[7.0.0, )",
               "autoReferenced": true
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.81, )",
+              "version": "[7.0.101, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23401.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23401.1, )",
               "autoReferenced": true
             },
             "Newtonsoft.Json": {
@@ -399,6 +418,52 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Android.Ref.33",
+              "version": "[33.0.95, 33.0.95]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.33.android-arm",
+              "version": "[33.0.95, 33.0.95]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.33.android-arm64",
+              "version": "[33.0.95, 33.0.95]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.33.android-x64",
+              "version": "[33.0.95, 33.0.95]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.33.android-x86",
+              "version": "[33.0.95, 33.0.95]"
+            },
+            {
+              "name": "Microsoft.Maui.Controls.Ref.android",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Controls.Runtime.android",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Core.Ref.android",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Core.Runtime.android",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Essentials.Ref.android",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Essentials.Runtime.android",
+              "version": "[7.0.101, 7.0.101]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.Android": {
               "privateAssets": "all"
@@ -416,7 +481,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -458,11 +523,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Consumer/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Identity/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Packages/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -481,6 +542,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -508,7 +574,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,59 +8,66 @@
              x:DataType="viewmodel:CustomersViewModel" 
              Title="Customers">
     <ScrollView x:Name="ScrollView">
-        <StackLayout>
-            <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+        <Grid>
+            <StackLayout>
+                <CollectionView ItemsSource="{Binding Customers}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:CustomerDto">
+                            <Border Margin="10" Padding="20" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="#2B2B2B" />
+                                                    <Setter Property="StrokeThickness" Value="4" />
+                                                    <Setter Property="BackgroundColor" Value="#FFF" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                                    <Setter Property="StrokeThickness" Value="2" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="15" />
+                                </Border.StrokeShape>
+                                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="15">
+                                    <StackLayout Grid.Column="0" Spacing="5">
+                                        <Label Text="Name:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="City:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="Address:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="Email:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="Registration Date:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1" Spacing="5">
+                                        <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="{Binding City}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="{Binding Address}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="{Binding Email}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="{Binding RegDate, StringFormat='{0:dd/MM/yyy}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                    </StackLayout>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout x:Name="PageNumberStack" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" Margin="10" Spacing="10"></StackLayout>
+            </StackLayout>
 
-            <CollectionView ItemsSource="{Binding Customers}">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:CustomerDto">
-                        <Border Margin="10" Padding="20" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroupList>
-                                    <VisualStateGroup x:Name="CommonStates">
-                                        <VisualState x:Name="Selected">
-                                            <VisualState.Setters>
-                                                <Setter Property="Stroke" Value="#2B2B2B" />
-                                                <Setter Property="StrokeThickness" Value="4" />
-                                                <Setter Property="BackgroundColor" Value="#FFF" />
-                                            </VisualState.Setters>
-                                        </VisualState>
-                                        <VisualState x:Name="Normal">
-                                            <VisualState.Setters>
-                                                <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
-                                                <Setter Property="StrokeThickness" Value="2" />
-                                            </VisualState.Setters>
-                                        </VisualState>
-                                    </VisualStateGroup>
-                                </VisualStateGroupList>
-                            </VisualStateManager.VisualStateGroups>
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="15" />
-                            </Border.StrokeShape>
-                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="15">
-                                <StackLayout Grid.Column="0" Spacing="5">
-                                    <Label Text="Name:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="City:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="Address:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="Email:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="Registration Date:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                </StackLayout>
-                                <StackLayout Grid.Column="1" Spacing="5">
-                                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding City}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding Address}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding Email}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding RegDate, StringFormat='{0:dd/MM/yyy}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                </StackLayout>
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-            <StackLayout x:Name="PageNumberStack" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" Margin="10" Spacing="10"></StackLayout>
-        </StackLayout>
+            <Frame BackgroundColor="#2B2B2B" Opacity="0.2"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+               IsVisible="{Binding IsLoading}" />
+
+            <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}"
+                           HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
     </ScrollView>
 </pages:BasePage>

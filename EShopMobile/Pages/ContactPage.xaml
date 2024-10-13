@@ -6,8 +6,8 @@
              x:Class="EShopMobile.Pages.ContactPage"
              Title="Contact Us">
     <!--<ScrollView x:Name="ScrollView">-->
+    <Grid>
         <StackLayout Margin="15" Spacing="10">
-            <ActivityIndicator x:Name="Loader" Color="#2B2B2B" IsRunning="False" IsVisible="False" />
             <Border Padding="15,10">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
@@ -40,8 +40,8 @@
                     <Grid ColumnDefinitions="30,*" RowDefinitions="*,*" RowSpacing="10">
                         <Label Grid.Row="0" Grid.Column="0" Text="&#xf0e0;" FontAttributes="Bold" FontFamily="FontSolid" />
                         <Label Grid.Row="1" Grid.Column="0" Text="&#xf095;" FontAttributes="Bold" FontFamily="FontSolid" />
-                    <Label Grid.Row="0" Grid.Column="1" Text="eshop.myportofolio@gmail.com" FontFamily="OpenSansRegular" />
-                    <Label Grid.Row="1" Grid.Column="1" Text="6943444650" FontFamily="OpenSansRegular" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="eshop.myportofolio@gmail.com" FontFamily="OpenSansRegular" />
+                        <Label Grid.Row="1" Grid.Column="1" Text="6943444650" FontFamily="OpenSansRegular" />
                     </Grid>
                 </StackLayout>
             </Border>
@@ -54,11 +54,18 @@
                     <Label Text="Our Location" FontFamily="OpenSansRegular" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource BtnBackground}" />
                     <Label Text="Damianou 10, Kavala, Greece" FontFamily="OpenSansRegular" />
                     <maps:Map x:Name="MyMap" 
-                        InitialCameraUpdate="40.93909798857936, 24.40787526859458, 15, 0, 0"
-                        VerticalOptions="FillAndExpand" HeightRequest="300">
+                    InitialCameraUpdate="40.93909798857936, 24.40787526859458, 15, 0, 0"
+                    VerticalOptions="FillAndExpand" HeightRequest="300">
                     </maps:Map>
                 </StackLayout>
             </Border>
         </StackLayout>
+        <Frame x:Name="Frame" BackgroundColor="#2B2B2B" Opacity="0.2"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+               IsVisible="False" />
+
+        <ActivityIndicator x:Name="Loader" Color="#2B2B2B" IsRunning="False"
+                           HorizontalOptions="Center" VerticalOptions="Center" />
+    </Grid>
     <!--</ScrollView>-->
 </pages:BasePage>

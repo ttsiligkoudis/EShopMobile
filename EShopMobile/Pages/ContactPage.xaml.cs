@@ -8,7 +8,7 @@ namespace EShopMobile.Pages;
 
 public partial class ContactPage : BasePage
 {
-    private readonly ClientHelper _client;
+    private readonly IClient _client;
     private double _lastX, _lastY;
 
     readonly Pin _pinOffice = new()
@@ -19,10 +19,10 @@ public partial class ContactPage : BasePage
         Position = new Position(40.93909798857936d, 24.40787526859458d)
     };
 
-    public ContactPage()
+    public ContactPage(IClient client)
 	{
         InitializeComponent();
-        _client = new ClientHelper();
+        _client = client;
     }
 
     protected override void OnAppearing()
@@ -46,6 +46,7 @@ public partial class ContactPage : BasePage
     {
         Loader.IsRunning = true;
         Loader.IsVisible = true;
+        Frame.IsVisible = true;
 
         string errors;
 
@@ -67,10 +68,11 @@ public partial class ContactPage : BasePage
             Body = EmailHelper.ContactMessageHtml(Name.Text, Email.Text, Message.Text)
         };
 
-        await _client.MessagesClient.PostAsync(message, $"Messages/SendMessage");
+        await _client.PostAsync(message, $"Messages/SendMessage");
         var text = "We have successfully received your message and our team will get back to you as soon as possible.";
         Loader.IsRunning = false;
         Loader.IsVisible = false;
+        Frame.IsVisible = false;
         AlertService.DisplayAlert("Operation completed successfully", text, "Ok");
     }
 

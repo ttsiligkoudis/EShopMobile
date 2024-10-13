@@ -10,7 +10,7 @@ namespace Helpers
 {
     public static class GoogleHelper
     {
-        public static async Task<(CustomerDto,UserDto)> GetSSOResponse(ClaimsIdentity identity, string accessToken, Client<CustomerDto> customerClient, Client<UserDto> userClient, Client<MessageDto> messagesClient)
+        public static async Task<(CustomerDto,UserDto)> GetSSOResponse(ClaimsIdentity identity, string accessToken, IClient client)
         {
             UserDto user = null;
             CustomerDto customer = null;
@@ -27,7 +27,7 @@ namespace Helpers
             var customerEmail = claims.FirstOrDefault(w => w.Type == schema + "emailaddress")?.Value;
             var id = claims.FirstOrDefault(w => w.Type == schema + "nameidentifier")?.Value;
 
-            user = await userClient.GetAsync("Users/GetUserByEmail/?email=" + customerEmail);
+            user = await client.GetAsync<UserDto>("Users/GetUserByEmail/?email=" + customerEmail);
 
             if (user == null)
             {
@@ -43,7 +43,7 @@ namespace Helpers
 
                 (var city, var address) = await GetPersonFields(id, accessToken);
 
-                user = await userClient.PostAsync(user, "Users");
+                user = await client.PostAsync(user, "Users");
                 user.Password = password;
 
                 customer = new CustomerDto
@@ -56,7 +56,7 @@ namespace Helpers
                     City = city
                 };
 
-                customer = await customerClient.PostAsync(customer, "Customers");
+                customer = await client.PostAsync(customer, "Customers");
 
                 var message = new MessageDto
                 {
@@ -65,13 +65,13 @@ namespace Helpers
                     Body = EmailHelper.NewUserCreatedHtml(customer, user, "New User Created")
                 };
 
-                await messagesClient.PostAsync(message, $"Messages/SendMessage");
+                await client.PostAsync(message, $"Messages/SendMessage");
             }
             else
             {
                 user.LoginDate = DateTime.UtcNow;
-                await userClient.PutAsync(user, $"Users/{user.Id}");
-                customer = await customerClient.GetAsync($"Customers/User/{user.Id}");
+                await client.PutAsync(user, $"Users/{user.Id}");
+                customer = await client.GetAsync<CustomerDto>($"Customers/User/{user.Id}");
             }
 
             return (customer, user);

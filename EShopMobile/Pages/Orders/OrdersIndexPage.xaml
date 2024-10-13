@@ -8,55 +8,63 @@
                 x:Class="EShopMobile.Pages.Orders.OrdersIndexPage"
                 Title="Orders">
     <ScrollView x:Name="ScrollView">
-        <StackLayout>
-            <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
-            <Label x:Name="NoOrders" IsVisible="False" Text="You don't have any orders yet!" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="Center" />
-            <CollectionView ItemsSource="{Binding Orders}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" Margin="10">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:OrderDto">
-                        <Border Padding="5" HeightRequest="150" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroupList>
-                                    <VisualStateGroup x:Name="CommonStates">
-                                        <VisualState x:Name="Selected">
-                                            <VisualState.Setters>
-                                                <Setter Property="Stroke" Value="#2B2B2B" />
-                                                <Setter Property="StrokeThickness" Value="4" />
-                                                <Setter Property="BackgroundColor" Value="#FFF" />
-                                            </VisualState.Setters>
-                                        </VisualState>
-                                        <VisualState x:Name="Normal">
-                                            <VisualState.Setters>
-                                                <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
-                                                <Setter Property="StrokeThickness" Value="2" />
-                                            </VisualState.Setters>
-                                        </VisualState>
-                                    </VisualStateGroup>
-                                </VisualStateGroupList>
-                            </VisualStateManager.VisualStateGroups>
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="15" />
-                            </Border.StrokeShape>
-                            <Grid VerticalOptions="Center" HorizontalOptions="Center" ColumnDefinitions="*,*" ColumnSpacing="15">
-                                <StackLayout Grid.Column="0" Spacing="5">
-                                    <Label Text="Customer:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="Order Date:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="Final Price:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
-                                </StackLayout>
-                                <StackLayout Grid.Column="1" Spacing="5">
-                                    <Label Text="{Binding CustomerName}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding OrderDate, StringFormat='{0:dd/MM/yyy}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                    <Label Text="{Binding FinalPrice, StringFormat='{0:N2}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
-                                </StackLayout>
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-            <StackLayout x:Name="PageNumberStack" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" Margin="10" Spacing="10"></StackLayout>
-        </StackLayout>
+        <Grid>
+            <StackLayout>
+                <Label x:Name="NoOrders" IsVisible="False" Text="You don't have any orders yet!" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="Center" />
+                <CollectionView ItemsSource="{Binding Orders}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" Margin="10">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:OrderDto">
+                            <Border Padding="5" HeightRequest="150" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="#2B2B2B" />
+                                                    <Setter Property="StrokeThickness" Value="4" />
+                                                    <Setter Property="BackgroundColor" Value="#FFF" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="{StaticResource LightGrey}" />
+                                                    <Setter Property="StrokeThickness" Value="2" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="15" />
+                                </Border.StrokeShape>
+                                <Grid VerticalOptions="Center" HorizontalOptions="Center" ColumnDefinitions="*,*" ColumnSpacing="15">
+                                    <StackLayout Grid.Column="0" Spacing="5">
+                                        <Label Text="Customer:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="Order Date:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="Final Price:" FontSize="Medium" TextColor="{StaticResource PrimaryColor}" />
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1" Spacing="5">
+                                        <Label Text="{Binding CustomerName}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="{Binding OrderDate, StringFormat='{0:dd/MM/yyy}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                        <Label Text="{Binding FinalPrice, StringFormat='{0:N2}'}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}" />
+                                    </StackLayout>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout x:Name="PageNumberStack" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" Margin="10" Spacing="10"></StackLayout>
+            </StackLayout>
+
+            <Frame BackgroundColor="#2B2B2B" Opacity="0.2"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+               IsVisible="{Binding IsLoading}" />
+
+            <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}"
+                           HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
     </ScrollView>
 </pages:BasePage>

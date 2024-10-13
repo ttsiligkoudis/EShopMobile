@@ -5,30 +5,38 @@
              x:DataType="viewmodel:LoginViewModel"
              x:Class="EShopMobile.Pages.SignUpPage"
              Title="Sign Up" BackgroundColor="{StaticResource BackgroundColor}">
-    <StackLayout>
-        <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
-        <Border Padding="20" Margin="20" HeightRequest="470" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <StackLayout>
-                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="30, *" RowSpacing="10">
-                    <Label Grid.Row="0" Grid.Column="0" FontFamily="FontSolid" Text="&#xf5b7;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
-                    <Label Grid.Row="1" Grid.Column="0" FontFamily="FontSolid" Text="&#xf64f;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
-                    <Label Grid.Row="2" Grid.Column="0" FontFamily="FontSolid" Text="&#xf3c5;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
-                    <Label Grid.Row="3" Grid.Column="0" FontFamily="FontSolid" Text="&#xf0e0;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
-                    <Label Grid.Row="4" Grid.Column="0" FontFamily="FontSolid" Text="&#xf023;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
-                    <Entry Grid.Row="0" Grid.Column="1" x:Name="CustomerName" Placeholder="Name" Text="{Binding Customer.Name}" />
-                    <Entry Grid.Row="1" Grid.Column="1" x:Name="CustomerCity" Placeholder="City" Text="{Binding Customer.City}" />
-                    <Entry Grid.Row="2" Grid.Column="1" x:Name="CustomerAddress" Placeholder="Address" Text="{Binding Customer.Address}" />
-                    <Entry Grid.Row="3" Grid.Column="1" x:Name="CustomerEmail" Placeholder="Email" Keyboard="Email" Text="{Binding Customer.Email}" />
-                    <StackLayout Grid.Row="4" Grid.Column="1" x:Name="Passwords" Spacing="10">
-                        <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}" />
-                        <Entry Placeholder="Confirm Password" IsPassword="True" Text="{Binding Confirmpassword}" />
-                    </StackLayout>
-                </Grid>
-                <Button x:Name="SignUpBtn" Text="Sign Up" BackgroundColor="{StaticResource BtnBackground}" VerticalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" Margin="0,20,0,0" Command="{Binding SignUpResultCommand}"/>
-            </StackLayout>
-        </Border>
-    </StackLayout>
+    <Grid>
+        <StackLayout>
+            <Border Padding="20" Margin="20" HeightRequest="470" Stroke="{StaticResource LightGrey}" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <StackLayout>
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="30, *" RowSpacing="10">
+                        <Label Grid.Row="0" Grid.Column="0" FontFamily="FontSolid" Text="&#xf5b7;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
+                        <Label Grid.Row="1" Grid.Column="0" FontFamily="FontSolid" Text="&#xf64f;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
+                        <Label Grid.Row="2" Grid.Column="0" FontFamily="FontSolid" Text="&#xf3c5;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
+                        <Label Grid.Row="3" Grid.Column="0" FontFamily="FontSolid" Text="&#xf0e0;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
+                        <Label Grid.Row="4" Grid.Column="0" FontFamily="FontSolid" Text="&#xf023;" TextColor="{StaticResource PrimaryColor}" FontSize="Medium" VerticalOptions="Center" />
+                        <Entry Grid.Row="0" Grid.Column="1" x:Name="CustomerName" Placeholder="Name" Text="{Binding Customer.Name}" />
+                        <Entry Grid.Row="1" Grid.Column="1" x:Name="CustomerCity" Placeholder="City" Text="{Binding Customer.City}" />
+                        <Entry Grid.Row="2" Grid.Column="1" x:Name="CustomerAddress" Placeholder="Address" Text="{Binding Customer.Address}" />
+                        <Entry Grid.Row="3" Grid.Column="1" x:Name="CustomerEmail" Placeholder="Email" Keyboard="Email" Text="{Binding Customer.Email}" />
+                        <StackLayout Grid.Row="4" Grid.Column="1" x:Name="Passwords" Spacing="10">
+                            <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}" />
+                            <Entry Placeholder="Confirm Password" IsPassword="True" Text="{Binding Confirmpassword}" />
+                        </StackLayout>
+                    </Grid>
+                    <Button x:Name="SignUpBtn" Text="Sign Up" BackgroundColor="{StaticResource BtnBackground}" VerticalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" Margin="0,20,0,0" Command="{Binding SignUpResultCommand}"/>
+                </StackLayout>
+            </Border>
+        </StackLayout>
+
+        <Frame BackgroundColor="#2B2B2B" Opacity="0.2"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+               IsVisible="{Binding IsLoading}" />
+
+        <ActivityIndicator Color="#2B2B2B" IsRunning="{Binding IsLoading}"
+                           HorizontalOptions="Center" VerticalOptions="Center" />
+    </Grid>
 </ContentPage>

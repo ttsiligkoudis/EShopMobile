@@ -12,6 +12,7 @@ public class MainActivity
 		__md_methods = 
 			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onNewIntent:(Landroid/content/Intent;)V:GetOnNewIntent_Landroid_content_Intent_Handler\n" +
+			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"";
 		mono.android.Runtime.register ("EShopMobile.MainActivity, EShopMobile", MainActivity.class, __md_methods);
 	}
@@ -49,6 +50,14 @@ public class MainActivity
 	}
 
 	private native void n_onNewIntent (android.content.Intent p0);
+
+
+	public void onActivityResult (int p0, int p1, android.content.Intent p2)
+	{
+		n_onActivityResult (p0, p1, p2);
+	}
+
+	private native void n_onActivityResult (int p0, int p1, android.content.Intent p2);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

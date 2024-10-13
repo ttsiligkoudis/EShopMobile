@@ -610,8 +610,6 @@ C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc64124e
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc64124e178812aeed4c\LabelRenderer.java
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc6413a2ffd8f229512a\CarouselViewAdapter_2.java
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc6413a2ffd8f229512a\RecyclerViewScrollListener_2.java
-C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc641f85f965c1e0b3ac\MyConnectionCallbacks.java
-C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc641f85f965c1e0b3ac\MyConnectionFailedListener.java
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc642147416e06387bca\DroidAsyncTileLayer.java
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc642147416e06387bca\DroidSyncTileLayer.java
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\src\crc642147416e06387bca\DroidUrlTileLayer.java
@@ -1074,6 +1072,13 @@ C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\stamp\_ConvertResourc
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\Microsoft.Extensions.Configuration.Json.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\Microsoft.Extensions.FileProviders.Physical.dll
+C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\github\EShopMobile\EShopMobile\bin\Debug\net7.0-android\appsettings.json
+C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\Microsoft.Extensions.Configuration.Binder.dll
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\arm64-v8a\mscorlib.dll
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\arm64-v8a\System.Collections.Concurrent.dll
 C:\github\EShopMobile\EShopMobile\obj\Debug\net7.0-android\android\assets\arm64-v8a\System.Data.Common.dll

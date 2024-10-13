@@ -15,7 +15,7 @@ namespace EShopMobile.ViewModels.Products
     [QueryProperty(nameof(Product), nameof(Product))]
     public partial class ProductsViewModel : ObservableObject
     {
-        private readonly ClientHelper _client;
+        private readonly IClient _client;
 
         [ObservableProperty]
         private List<ProductDto> products;
@@ -77,9 +77,9 @@ namespace EShopMobile.ViewModels.Products
         [ObservableProperty]
         private ScrollView scrollView;
 
-        public ProductsViewModel()
+        public ProductsViewModel(IClient client)
         {
-            _client = new ClientHelper();
+            _client = client;
         }
 
         [RelayCommand]
@@ -108,10 +108,11 @@ namespace EShopMobile.ViewModels.Products
                 errors = Password != Confirmpassword
                 ? "Passwords must be identical."
                 : "The Password must be at least 6 characters long.";
-                IsLoading = false;
                 await AlertService.DisplayAlert("Registration Issue", errors, "Ok");
                 return;
             }
+
+            IsLoading = true;
 
             if (Createaccount)
             {
@@ -123,7 +124,7 @@ namespace EShopMobile.ViewModels.Products
                     RegDate = DateTime.Now,
                     LoginDate = DateTime.Now,
                 };
-                user = await _client.UserClient.PostAsync(user, "Users");
+                user = await _client.PostAsync(user, "Users");
                 Session.SetUser(user);
                 Customer.UserId = user.Id;
 
@@ -134,13 +135,13 @@ namespace EShopMobile.ViewModels.Products
                     Body = EmailHelper.NewUserCreatedHtml(Customer, user, "New User Created")
                 };
 
-                await _client.MessagesClient.PostAsync(message, $"Messages/SendMessage");
+                await _client.PostAsync(message, $"Messages/SendMessage");
             }
 
             if (Customer.Id == 0)
             {
                 Customer.RegDate = DateTime.Now;
-                Customer = await _client.CustomerClient.PostAsync(Customer, "Customers");
+                Customer = await _client.PostAsync(Customer, "Customers");
             }
 
             if (Createaccount)
@@ -154,7 +155,7 @@ namespace EShopMobile.ViewModels.Products
                 Completed = true
             };
 
-            order = await _client.OrderClient.PostAsync(order, "Orders");
+            order = await _client.PostAsync(order, "Orders");
 
             var orderProducts = Products.Select(s => new OrderProductsDto
             {
@@ -165,10 +166,10 @@ namespace EShopMobile.ViewModels.Products
                 OrderId = order.Id
             }).ToList();
 
-            orderProducts = (await _client.OrderProductClient.PostListAsync(orderProducts, $"Orders/{order.Id}/Products")).ToList();
+            orderProducts = (await _client.PostAsync(orderProducts, $"Orders/{order.Id}/Products")).ToList();
             Session.SetCartProducts(null);
 
-            await _client.ProductClient.PutListAsync(Products, "Products");
+            await _client.PutAsync(Products, "Products");
 
             message = new MessageDto
             {
@@ -177,7 +178,11 @@ namespace EShopMobile.ViewModels.Products
                 Body = EmailHelper.CreateOrderHtml(Customer, Products, order.Id, "Order Details")
             };
 
-            await _client.MessagesClient.PostAsync(message, $"Messages/SendMessage");
+            await _client.PostAsync(message, $"Messages/SendMessage");
+
+            IsLoading = false;
+
+            await AlertService.DisplayAlert("Operation completed successfully", "Your order was completed and you will receive a verification email", "Ok");
 
             await Shell.Current.GoToAsync($"//{nameof(HomePage)}/{nameof(OrderFormPage)}",
                 new Dictionary<string, object>
@@ -208,7 +213,7 @@ namespace EShopMobile.ViewModels.Products
             if (!(Products?.Any() ?? false) || Products.All(w => w.Category != Enum.Parse<Category>(Category)))
             {
                 var str = "Products" + (!string.IsNullOrEmpty(Category) ? "/?category=" + (short)Enum.Parse<Category>(Category) : "");
-                Products = await _client.ProductClient.GetListAsync(str);
+                Products = await _client.GetAsync<List<ProductDto>>(str);
             }
             var result = Products;
 
@@ -284,7 +289,7 @@ namespace EShopMobile.ViewModels.Products
         {
             if (Product == null)
                 return;
-            Rates = (await _client.ProductRatesClient.GetListAsync($"Products/Rates/{Product.Id}")).ToList();
+            Rates = (await _client.GetAsync<List<ProductRatesDto>>($"Products/Rates/{Product.Id}")).ToList();
         }
 
         private async void PageChanged(object sender, EventArgs e)

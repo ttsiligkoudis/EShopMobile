@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EShopMobile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ec9d0f37b5f88342615539f59ca97523fb78259b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EShopMobile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EShopMobile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

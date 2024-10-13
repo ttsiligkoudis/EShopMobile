@@ -1,6 +1,4 @@
-﻿//using CommunityToolkit.Maui;
-using EShopMobile.Helpers;
-using EShopMobile.Pages;
+﻿using EShopMobile.Pages;
 using EShopMobile.Pages.Customers;
 using EShopMobile.Pages.Orders;
 using EShopMobile.Pages.Products;
@@ -10,7 +8,9 @@ using EShopMobile.ViewModels.Customers;
 using EShopMobile.ViewModels.Orders;
 using EShopMobile.ViewModels.Products;
 using Maui.GoogleMaps.Hosting;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using System.Reflection;
 
 namespace EShopMobile;
 
@@ -18,7 +18,7 @@ public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
 	{
-		var builder = MauiApp.CreateBuilder();
+        var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
 #if ANDROID
@@ -26,7 +26,6 @@ public static class MauiProgram
 #elif IOS
             .UseGoogleMaps("AIzaSyBVFIHfFViJdjlWHxnds2M8de8DFbK0Zjg")
 #endif
-            //.UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -67,6 +66,17 @@ public static class MauiProgram
         builder.Services.AddTransient<CustomersViewModel>();
         builder.Services.AddTransient<ProductsViewModel>();
         builder.Services.AddTransient<OrderViewModel>();
+
+        builder.Services.AddScoped<Client.IClient, Client.Client>(provider =>
+        {
+            var httpClient = new HttpClient();
+            return new Client.Client(httpClient);
+        });
+
+        var assembly = Assembly.GetExecutingAssembly();
+        using var stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.appsettings.json");
+        var config = new ConfigurationBuilder().AddJsonStream(stream).Build();
+        builder.Configuration.AddConfiguration(config);
 
         return builder.Build();
 	}

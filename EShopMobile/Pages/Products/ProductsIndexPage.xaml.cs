@@ -52,7 +52,10 @@ public partial class ProductsIndexPage : BasePage
             vm.OrderTypePicker = OrderTypePicker;
         }
 
-        vm.GetProducts();
+        if (!(vm.Products?.Any() ?? false))
+        {
+            vm.GetProducts();
+        }
     }
 
     private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)

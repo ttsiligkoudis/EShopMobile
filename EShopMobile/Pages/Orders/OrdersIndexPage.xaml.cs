@@ -17,7 +17,10 @@ public partial class OrdersIndexPage : BasePage
         var vm = (OrderViewModel)BindingContext;
         vm.PageNumberStack = PageNumberStack;
         vm.ScrollView = ScrollView;
-        vm.GetOrders();
+        if (!(vm.Orders?.Any() ?? false))
+        {
+            vm.GetOrders();
+        }
     }
 
     private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)

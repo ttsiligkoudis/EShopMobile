@@ -3,7 +3,6 @@
     package="com.myportofolio.eshop">
 	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true" android:usesCleartextTraffic="true" android:forceDarkAllowed="false">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBVFIHfFViJdjlWHxnds2M8de8DFbK0Zjg"/>
-		<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="1026619004273-s5ahsma1t956lh92stiegc6eejs720ae.apps.googleusercontent.com" />
 		<activity
 			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
 			android:excludeFromRecents="true"

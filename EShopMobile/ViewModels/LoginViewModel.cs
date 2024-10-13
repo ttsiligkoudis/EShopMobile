@@ -1,4 +1,5 @@
-﻿using Android.Gms.Auth.Api.SignIn.Internal;
+﻿using Android.Gms.Auth.Api.SignIn;
+using Android.Gms.Common;
 using Client;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -7,6 +8,10 @@ using Enums;
 using EShopMobile.Helpers;
 using EShopMobile.Pages;
 using Helpers;
+using Android.Gms.Auth.Api;
+using Android.Gms.Common.Apis;
+using static Android.Gms.Common.Apis.GoogleApiClient;
+using Microsoft.Extensions.Configuration;
 
 namespace EShopMobile.ViewModels
 {
@@ -14,11 +19,13 @@ namespace EShopMobile.ViewModels
     [QueryProperty(nameof(Token), nameof(Token))]
     public partial class LoginViewModel : ObservableObject
     {
-        private readonly ClientHelper _client;
+        private readonly IClient _client;
+        private readonly IConfiguration _configuration;
 
-        public LoginViewModel()
+        public LoginViewModel(IClient client, IConfiguration configuration)
         {
-            _client = new ClientHelper();
+            _client = client;
+            _configuration = configuration;
         }
 
         [ObservableProperty]
@@ -63,7 +70,7 @@ namespace EShopMobile.ViewModels
                 return;
             }
 
-            User = await _client.UserClient.GetAsync("Users/GetUserByEmailAndPassword/?email=" + Email + "&password=" + Password);
+            User = await _client.GetAsync<UserDto>("Users/GetUserByEmailAndPassword/?email=" + Email + "&password=" + Password);
             if (User == null)
             {
                 IsLoading = false;
@@ -71,11 +78,11 @@ namespace EShopMobile.ViewModels
                 return;
             }
 
-            Customer = await _client.CustomerClient.GetAsync("Customers/User/" + User.Id);
+            Customer = await _client.GetAsync<CustomerDto>("Customers/User/" + User.Id);
             Session.SetCustomer(Customer);
             Session.SetUser(User);
             User.LoginDate = DateTime.Now;
-            await _client.UserClient.PutAsync(User, "Users/" + User.Id);
+            await _client.PutAsync(User, "Users/" + User.Id);
             (Shell.Current as AppShell).ChangeMenu(User?.UserType);
             await Shell.Current.GoToAsync("..");
             IsLoading = false;
@@ -117,7 +124,7 @@ namespace EShopMobile.ViewModels
             }
 
             IsLoading = true;
-            var user = await _client.UserClient.GetAsync("Users/GetUserByEmail/?email=" + Customer.Email);
+            var user = await _client.GetAsync<UserDto>("Users/GetUserByEmail/?email=" + Customer.Email);
             if (user != null)
             {
                 IsLoading = false;
@@ -134,11 +141,11 @@ namespace EShopMobile.ViewModels
                 RegDate = DateTime.Now,
                 LoginDate = DateTime.Now,
             };
-            User = await _client.UserClient.PostAsync(User, "Users");
+            User = await _client.PostAsync(User, "Users");
             Session.SetUser(User);
             Customer.UserId = User.Id;
             Customer.RegDate = DateTime.Now;
-            Customer = await _client.CustomerClient.PostAsync(Customer, "Customers");
+            Customer = await _client.PostAsync(Customer, "Customers");
             Session.SetCustomer(Customer);
 
             var message = new MessageDto
@@ -148,7 +155,7 @@ namespace EShopMobile.ViewModels
                 Body = EmailHelper.NewUserCreatedHtml(Customer, User, "New User Created")
             };
 
-            await _client.MessagesClient.PostAsync(message, $"Messages/SendMessage");
+            await _client.PostAsync(message, $"Messages/SendMessage");
 
             IsLoading = false;
             var page = Navigation.NavigationStack.LastOrDefault();
@@ -174,7 +181,7 @@ namespace EShopMobile.ViewModels
             }
 
             IsLoading = true;
-            var user = await _client.UserClient.GetAsync("Users/GetUserByEmail/?email=" + Email);
+            var user = await _client.GetAsync<UserDto>("Users/GetUserByEmail/?email=" + Email);
             if (user == null)
             {
                 msg = "Email does not exist";
@@ -184,7 +191,7 @@ namespace EShopMobile.ViewModels
 
             var token = Guid.NewGuid().ToString();
             user.PasswordResetToken = token;
-            await _client.UserClient.PutAsync(user, "Users/" + user.Id);
+            await _client.PutAsync(user, "Users/" + user.Id);
 
             var message = new MessageDto
             {
@@ -193,7 +200,7 @@ namespace EShopMobile.ViewModels
                 Body = EmailHelper.PasswordResetHtml(user, "Password Reset")
             };
 
-            await _client.MessagesClient.PostAsync(message, $"Messages/SendMessage");
+            await _client.PostAsync(message, $"Messages/SendMessage");
 
             IsLoading = false;
 
@@ -205,7 +212,7 @@ namespace EShopMobile.ViewModels
 
         public async Task<bool> CheckUsersToken()
         {
-            var user = await _client.UserClient.GetAsync("Users/" + UserID);
+            var user = await _client.GetAsync<UserDto>("Users/" + UserID);
             Email = user?.Email;
             Password = string.Empty;
             Confirmpassword = string.Empty;
@@ -226,7 +233,7 @@ namespace EShopMobile.ViewModels
             }
 
             IsLoading = true;
-            var user = await _client.UserClient.GetAsync("Users/GetUserByEmail/?email=" + Email);
+            var user = await _client.GetAsync<UserDto>("Users/GetUserByEmail/?email=" + Email);
 
             if (user == null || user.PasswordResetToken != Token)
             {
@@ -237,7 +244,7 @@ namespace EShopMobile.ViewModels
 
             user.Password = Password;
             user.PasswordResetToken = null;
-            await _client.UserClient.PutAsync(user, "Users/" + user.Id);
+            await _client.PutAsync(user, "Users/" + user.Id);
 
             Session.SetUser(null);
             Session.SetCustomer(null);
@@ -247,6 +254,33 @@ namespace EShopMobile.ViewModels
             Navigation.RemovePage(page);
             msg = "Password changed successfully, please procced with log in";
             await AlertService.DisplayAlert("Operation Completed Successfully", msg, "Ok");
+        }
+
+        [RelayCommand]
+        public async void GoogleLogin()
+        {
+            try
+            {
+                var googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
+                    .RequestIdToken(_configuration["Authentication:Google:ClientId"])
+                    .RequestEmail()
+                    .Build();
+
+                var googleApiClient = new Builder(MauiApplication.Current.ApplicationContext)
+                    .AddApi(Auth.GOOGLE_SIGN_IN_API, googleSignInOptions)
+                    .AddScope(new Scope(Scopes.Profile))
+                    .Build();
+
+                var signInIntent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
+
+                Platform.CurrentActivity.StartActivityForResult(signInIntent, 1);
+
+                googleApiClient.Connect();
+            }
+            catch (Exception ex)
+            {
+                await AlertService.DisplayAlert("Error", ex.Message, "OK");
+            }
         }
     }
 }

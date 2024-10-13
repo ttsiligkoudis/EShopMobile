@@ -394,6 +394,57 @@ com.google.android.material.appbar.AppBarLayout$OnOffsetChangedListener;com.goog
 Google.Android.Material.AppBar.AppBarLayout+IOnOffsetChangedListenerImplementor, Xamarin.Google.Android.Material;mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor
 Google.Android.Material.AppBar.AppBarLayout.IOnOffsetChangedListenerImplementor;mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor
 mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor;mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor
+Android.Gms.Auth.Api.SignIn.IGoogleSignInApi, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.signin.GoogleSignInApi
+Android.Gms.Auth.Api.SignIn.IGoogleSignInApi;com.google.android.gms.auth.api.signin.GoogleSignInApi
+com.google.android.gms.auth.api.signin.GoogleSignInApi;com.google.android.gms.auth.api.signin.GoogleSignInApi
+Android.Gms.Auth.Api.Credentials.ICredentialsApi, Xamarin.GooglePlayServices.Auth;com.google.android.gms.auth.api.credentials.CredentialsApi
+Android.Gms.Auth.Api.Credentials.ICredentialsApi;com.google.android.gms.auth.api.credentials.CredentialsApi
+com.google.android.gms.auth.api.credentials.CredentialsApi;com.google.android.gms.auth.api.credentials.CredentialsApi
+Android.Gms.Auth.Api.Proxy.IProxyApi, Xamarin.GooglePlayServices.Auth.Base;com.google.android.gms.auth.api.proxy.ProxyApi
+Android.Gms.Auth.Api.Proxy.IProxyApi;com.google.android.gms.auth.api.proxy.ProxyApi
+com.google.android.gms.auth.api.proxy.ProxyApi;com.google.android.gms.auth.api.proxy.ProxyApi
+Android.Gms.Auth.Api.SignIn.IGoogleSignInOptionsExtension, Xamarin.GooglePlayServices.Base;com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
+Android.Gms.Auth.Api.SignIn.IGoogleSignInOptionsExtension;com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
+com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension;com.google.android.gms.auth.api.signin.GoogleSignInOptionsExtension
+Android.Gms.Common.Api.Internal.IConnectionCallbacks, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.internal.ConnectionCallbacks
+Android.Gms.Common.Api.Internal.IConnectionCallbacks;com.google.android.gms.common.api.internal.ConnectionCallbacks
+com.google.android.gms.common.api.internal.ConnectionCallbacks;com.google.android.gms.common.api.internal.ConnectionCallbacks
+Android.Gms.Common.Api.Internal.IOnConnectionFailedListener, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.internal.OnConnectionFailedListener
+Android.Gms.Common.Api.Internal.IOnConnectionFailedListener;com.google.android.gms.common.api.internal.OnConnectionFailedListener
+com.google.android.gms.common.api.internal.OnConnectionFailedListener;com.google.android.gms.common.api.internal.OnConnectionFailedListener
+Android.Gms.Common.Api.Internal.ISignInConnectionListener, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.internal.SignInConnectionListener
+Android.Gms.Common.Api.Internal.ISignInConnectionListener;com.google.android.gms.common.api.internal.SignInConnectionListener
+com.google.android.gms.common.api.internal.SignInConnectionListener;com.google.android.gms.common.api.internal.SignInConnectionListener
+Android.Gms.Common.Api.Internal.ListenerHolder+INotifier, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.internal.ListenerHolder$Notifier
+Android.Gms.Common.Api.Internal.ListenerHolder.INotifier;com.google.android.gms.common.api.internal.ListenerHolder$Notifier
+com.google.android.gms.common.api.internal.ListenerHolder$Notifier;com.google.android.gms.common.api.internal.ListenerHolder$Notifier
+Android.Gms.Common.Apis.GoogleApiClient+IConnectionCallbacks, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks
+Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks;com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks
+com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks;com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks
+Android.Gms.Common.Apis.GoogleApiClient+IOnConnectionFailedListener, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener
+Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener;com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener
+com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener;com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener
+Android.Gms.Common.Apis.GoogleApiClientConnectionCallbacksImpl, Xamarin.GooglePlayServices.Base;crc6434af9c19aa01b597.GoogleApiClientConnectionCallbacksImpl
+Android.Gms.Common.Apis.GoogleApiClientConnectionCallbacksImpl;crc6434af9c19aa01b597.GoogleApiClientConnectionCallbacksImpl
+android.gms.common.apis.GoogleApiClientConnectionCallbacksImpl;crc6434af9c19aa01b597.GoogleApiClientConnectionCallbacksImpl
+Android.Gms.Common.Apis.GoogleApiClientOnConnectionFailedListenerImpl, Xamarin.GooglePlayServices.Base;crc6434af9c19aa01b597.GoogleApiClientOnConnectionFailedListenerImpl
+Android.Gms.Common.Apis.GoogleApiClientOnConnectionFailedListenerImpl;crc6434af9c19aa01b597.GoogleApiClientOnConnectionFailedListenerImpl
+android.gms.common.apis.GoogleApiClientOnConnectionFailedListenerImpl;crc6434af9c19aa01b597.GoogleApiClientOnConnectionFailedListenerImpl
+Android.Gms.Common.Apis.Api+IApiOptionsHasOptions, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.Api$ApiOptions$HasOptions
+Android.Gms.Common.Apis.Api.IApiOptionsHasOptions;com.google.android.gms.common.api.Api$ApiOptions$HasOptions
+com.google.android.gms.common.api.Api$ApiOptions$HasOptions;com.google.android.gms.common.api.Api$ApiOptions$HasOptions
+Android.Gms.Common.Apis.Api+IApiOptions, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.Api$ApiOptions
+Android.Gms.Common.Apis.Api.IApiOptions;com.google.android.gms.common.api.Api$ApiOptions
+com.google.android.gms.common.api.Api$ApiOptions;com.google.android.gms.common.api.Api$ApiOptions
+Android.Gms.Common.Apis.PendingResult+IStatusListener, Xamarin.GooglePlayServices.Base;com.google.android.gms.common.api.PendingResult$StatusListener
+Android.Gms.Common.Apis.PendingResult.IStatusListener;com.google.android.gms.common.api.PendingResult$StatusListener
+com.google.android.gms.common.api.PendingResult$StatusListener;com.google.android.gms.common.api.PendingResult$StatusListener
+Android.Gms.Common.Apis.PendingResult+IStatusListenerImplementor, Xamarin.GooglePlayServices.Base;mono.com.google.android.gms.common.api.PendingResult_StatusListenerImplementor
+Android.Gms.Common.Apis.PendingResult.IStatusListenerImplementor;mono.com.google.android.gms.common.api.PendingResult_StatusListenerImplementor
+mono.com.google.android.gms.common.api.PendingResult_StatusListenerImplementor;mono.com.google.android.gms.common.api.PendingResult_StatusListenerImplementor
+Android.Gms.Common.Apis.IResultCallback, Xamarin.GooglePlayServices.Basement;com.google.android.gms.common.api.ResultCallback
+Android.Gms.Common.Apis.IResultCallback;com.google.android.gms.common.api.ResultCallback
+com.google.android.gms.common.api.ResultCallback;com.google.android.gms.common.api.ResultCallback
 Android.Gms.Maps.GoogleMap+ICancelableCallback, Xamarin.GooglePlayServices.Maps;com.google.android.gms.maps.GoogleMap$CancelableCallback
 Android.Gms.Maps.GoogleMap.ICancelableCallback;com.google.android.gms.maps.GoogleMap$CancelableCallback
 com.google.android.gms.maps.GoogleMap$CancelableCallback;com.google.android.gms.maps.GoogleMap$CancelableCallback
@@ -580,12 +631,18 @@ kotlinx.coroutines.flow.SharedFlow;kotlinx.coroutines.flow.SharedFlow
 Xamarin.KotlinX.Coroutines.Flow.IStateFlow, Xamarin.KotlinX.Coroutines.Core.Jvm;kotlinx.coroutines.flow.StateFlow
 Xamarin.KotlinX.Coroutines.Flow.IStateFlow;kotlinx.coroutines.flow.StateFlow
 kotlinx.coroutines.flow.StateFlow;kotlinx.coroutines.flow.StateFlow
+EShopMobile.WebAuthenticationCallbackActivity, EShopMobile;crc64e3f57c980cf75190.WebAuthenticationCallbackActivity
+EShopMobile.WebAuthenticationCallbackActivity;crc64e3f57c980cf75190.WebAuthenticationCallbackActivity
+eshopmobile.WebAuthenticationCallbackActivity;crc64e3f57c980cf75190.WebAuthenticationCallbackActivity
 EShopMobile.MainActivity, EShopMobile;crc64e3f57c980cf75190.MainActivity
 EShopMobile.MainActivity;crc64e3f57c980cf75190.MainActivity
 eshopmobile.MainActivity;crc64e3f57c980cf75190.MainActivity
 EShopMobile.MainApplication, EShopMobile;crc64e3f57c980cf75190.MainApplication
 EShopMobile.MainApplication;crc64e3f57c980cf75190.MainApplication
 eshopmobile.MainApplication;crc64e3f57c980cf75190.MainApplication
+EShopMobile.Controls.CustomWebViewRenderer, EShopMobile;crc64681127e6b84e2abf.CustomWebViewRenderer
+EShopMobile.Controls.CustomWebViewRenderer;crc64681127e6b84e2abf.CustomWebViewRenderer
+eshopmobile.controls.CustomWebViewRenderer;crc64681127e6b84e2abf.CustomWebViewRenderer
 Microsoft.Maui.ImageLoaderResultCallback, Microsoft.Maui;crc6488302ad6e9e4df1a.ImageLoaderResultCallback
 Microsoft.Maui.ImageLoaderResultCallback;crc6488302ad6e9e4df1a.ImageLoaderResultCallback
 microsoft.maui.ImageLoaderResultCallback;crc6488302ad6e9e4df1a.ImageLoaderResultCallback
@@ -763,6 +820,18 @@ microsoft.maui.controls.compatibility.platform.android.NativeViewWrapperRenderer
 Microsoft.Maui.Controls.Compatibility.Platform.Android.PlatformRenderer, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.PlatformRenderer
 Microsoft.Maui.Controls.Compatibility.Platform.Android.PlatformRenderer;crc6477f0d89a9cfd64b1.PlatformRenderer
 microsoft.maui.controls.compatibility.platform.android.PlatformRenderer;crc6477f0d89a9cfd64b1.PlatformRenderer
+Microsoft.Maui.Controls.Compatibility.Platform.Android.FormsWebChromeClient, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.FormsWebChromeClient
+Microsoft.Maui.Controls.Compatibility.Platform.Android.FormsWebChromeClient;crc6477f0d89a9cfd64b1.FormsWebChromeClient
+microsoft.maui.controls.compatibility.platform.android.FormsWebChromeClient;crc6477f0d89a9cfd64b1.FormsWebChromeClient
+Microsoft.Maui.Controls.Compatibility.Platform.Android.FormsWebViewClient, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.FormsWebViewClient
+Microsoft.Maui.Controls.Compatibility.Platform.Android.FormsWebViewClient;crc6477f0d89a9cfd64b1.FormsWebViewClient
+microsoft.maui.controls.compatibility.platform.android.FormsWebViewClient;crc6477f0d89a9cfd64b1.FormsWebViewClient
+Microsoft.Maui.Controls.Compatibility.Platform.Android.WebViewRenderer, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.WebViewRenderer
+Microsoft.Maui.Controls.Compatibility.Platform.Android.WebViewRenderer;crc6477f0d89a9cfd64b1.WebViewRenderer
+microsoft.maui.controls.compatibility.platform.android.WebViewRenderer;crc6477f0d89a9cfd64b1.WebViewRenderer
+Microsoft.Maui.Controls.Compatibility.Platform.Android.WebViewRenderer+JavascriptResult, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.WebViewRenderer_JavascriptResult
+Microsoft.Maui.Controls.Compatibility.Platform.Android.WebViewRenderer.JavascriptResult;crc6477f0d89a9cfd64b1.WebViewRenderer_JavascriptResult
+microsoft.maui.controls.compatibility.platform.android.WebViewRenderer_JavascriptResult;crc6477f0d89a9cfd64b1.WebViewRenderer_JavascriptResult
 Microsoft.Maui.Controls.Compatibility.Platform.Android.ViewRenderer, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.ViewRenderer
 Microsoft.Maui.Controls.Compatibility.Platform.Android.ViewRenderer;crc6477f0d89a9cfd64b1.ViewRenderer
 microsoft.maui.controls.compatibility.platform.android.ViewRenderer;crc6477f0d89a9cfd64b1.ViewRenderer
@@ -1105,6 +1174,12 @@ microsoft.maui.controls.handlers.compatibility.TableViewModelRenderer;crc64e1fb3
 Microsoft.Maui.Controls.Handlers.Compatibility.TableViewRenderer, Microsoft.Maui.Controls;crc64e1fb321c08285b90.TableViewRenderer
 Microsoft.Maui.Controls.Handlers.Compatibility.TableViewRenderer;crc64e1fb321c08285b90.TableViewRenderer
 microsoft.maui.controls.handlers.compatibility.TableViewRenderer;crc64e1fb321c08285b90.TableViewRenderer
+Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity, Microsoft.Maui.Essentials;crc6468b6408a11370c2f.WebAuthenticatorCallbackActivity
+Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity;crc6468b6408a11370c2f.WebAuthenticatorCallbackActivity
+microsoft.maui.authentication.WebAuthenticatorCallbackActivity;crc6468b6408a11370c2f.WebAuthenticatorCallbackActivity
+Microsoft.Maui.Authentication.WebAuthenticatorIntermediateActivity, Microsoft.Maui.Essentials;crc6468b6408a11370c2f.WebAuthenticatorIntermediateActivity
+Microsoft.Maui.Authentication.WebAuthenticatorIntermediateActivity;crc6468b6408a11370c2f.WebAuthenticatorIntermediateActivity
+microsoft.maui.authentication.WebAuthenticatorIntermediateActivity;crc6468b6408a11370c2f.WebAuthenticatorIntermediateActivity
 Microsoft.Maui.ApplicationModel.ActivityLifecycleContextListener, Microsoft.Maui.Essentials;crc64ba438d8f48cf7e75.ActivityLifecycleContextListener
 Microsoft.Maui.ApplicationModel.ActivityLifecycleContextListener;crc64ba438d8f48cf7e75.ActivityLifecycleContextListener
 microsoft.maui.applicationmodel.ActivityLifecycleContextListener;crc64ba438d8f48cf7e75.ActivityLifecycleContextListener

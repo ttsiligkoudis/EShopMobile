@@ -2,13 +2,12 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using DataModels.Dtos;
 using Enums;
-using EShopMobile.Helpers;
 
 namespace EShopMobile.ViewModels.Customers
 {
     public partial class CustomersViewModel : ObservableObject
     {
-        private readonly ClientHelper _client;
+        private readonly IClient _client;
 
         [ObservableProperty]
         private List<CustomerDto> customers;
@@ -22,9 +21,9 @@ namespace EShopMobile.ViewModels.Customers
         [ObservableProperty]
         private ScrollView scrollView;
 
-        public CustomersViewModel()
+        public CustomersViewModel(IClient client)
         {
-            _client = new ClientHelper();
+            _client = client;
         }
 
         public async void GetCustomers(int pageNumber = 1)
@@ -34,7 +33,7 @@ namespace EShopMobile.ViewModels.Customers
                 IsLoading = true;
             });
 
-            var result = (await _client.CustomerClient.GetListAsync("Customers")).ToList();
+            var result = (await _client.GetAsync<List<CustomerDto>>("Customers")).ToList();
 
             pageNumber = pageNumber > 0 ? pageNumber - 1 : 0;
             var pageSize = PageSize.Ten;

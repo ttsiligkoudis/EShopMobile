@@ -12,8 +12,9 @@ C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.GeneratedMSBuildEditorCon
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.AssemblyInfoInputs.cache
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.AssemblyInfo.cs
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.csproj.CoreCompileInputs.cache
-C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.csproj.CopyComplete
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.dll
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\refint\Helpers.dll
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.pdb
 C:\github\EShopMobile\Helpers\obj\Debug\net7.0\ref\Helpers.dll
+C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.sourcelink.json
+C:\github\EShopMobile\Helpers\obj\Debug\net7.0\Helpers.csproj.Up2Date

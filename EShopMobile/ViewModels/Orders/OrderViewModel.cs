@@ -6,7 +6,6 @@ using EShopMobile.Pages.Orders;
 using Client;
 using Enums;
 using CommunityToolkit.Mvvm.Input;
-using System.Text;
 
 namespace EShopMobile.ViewModels.Orders
 {
@@ -16,7 +15,7 @@ namespace EShopMobile.ViewModels.Orders
     [QueryProperty(nameof(Rate), nameof(Rate))]
     public partial class OrderViewModel : ObservableObject
     {
-        private readonly ClientHelper _client;
+        private readonly IClient _client;
 
         [ObservableProperty]
         private bool isLoading;
@@ -42,9 +41,9 @@ namespace EShopMobile.ViewModels.Orders
         [ObservableProperty]
         private ProductRatesDto rate;
 
-        public OrderViewModel()
+        public OrderViewModel(IClient client)
         {
-            _client = new ClientHelper();
+            _client = client;
         }
 
         [RelayCommand]
@@ -52,11 +51,11 @@ namespace EShopMobile.ViewModels.Orders
         {
             if (Rate.Id == 0)
             {
-                Rate = await _client.ProductRatesClient.PostAsync(Rate, "Products/Rate");
+                Rate = await _client.PostAsync(Rate, "Products/Rate");
             }
             else
             {
-                await _client.ProductRatesClient.PutAsync(Rate, $"Products/Rate/{Rate.Id}");
+                await _client.PutAsync(Rate, $"Products/Rate/{Rate.Id}");
             }
 
             await Shell.Current.GoToAsync("..");
@@ -76,7 +75,7 @@ namespace EShopMobile.ViewModels.Orders
                 return;
 
             var str = "Orders" + (user.UserType == UserType.User ? $"/Customer/{customer.Id}" : string.Empty);
-            var result = await _client.OrderClient.GetListAsync(str);
+            var result = await _client.GetAsync<List<OrderDto>>(str);
 
             pageNumber = pageNumber > 0 ? pageNumber - 1 : 0;
             var pageSize = PageSize.Ten;
@@ -112,7 +111,7 @@ namespace EShopMobile.ViewModels.Orders
             if (Order == null)
                 return;
 
-            var orderProducts = await _client.OrderProductClient.GetListAsync($"Orders/{Order.Id}/Products");
+            var orderProducts = await _client.GetAsync<List<OrderProductsDto>>($"Orders/{Order.Id}/Products");
             Products = orderProducts.Select(s => new ProductDto
             {
                 Id = s.ProductId,
@@ -144,7 +143,7 @@ namespace EShopMobile.ViewModels.Orders
 
         public async void RateNavigation(string productID)
         {
-            Rate = await _client.ProductRatesClient.GetAsync($"Products/Rate/?productId={productID}&customerId={Order.CustomerId}");
+            Rate = await _client.GetAsync<ProductRatesDto>($"Products/Rate/?productId={productID}&customerId={Order.CustomerId}");
             Rate ??= new ProductRatesDto
             {
                 CustomerId = Order.CustomerId,

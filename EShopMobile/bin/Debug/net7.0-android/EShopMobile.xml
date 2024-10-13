@@ -48,6 +48,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:EShopMobile.ViewModels.LoginViewModel.Email">
             <inheritdoc cref="F:EShopMobile.ViewModels.LoginViewModel.email"/>
@@ -111,6 +112,12 @@
         </member>
         <member name="P:EShopMobile.ViewModels.LoginViewModel.ResetPasswordResultCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EShopMobile.ViewModels.LoginViewModel.ResetPasswordResult"/>.</summary>
+        </member>
+        <member name="F:EShopMobile.ViewModels.LoginViewModel.googleLoginCommand">
+            <summary>The backing field for <see cref="P:EShopMobile.ViewModels.LoginViewModel.GoogleLoginCommand"/>.</summary>
+        </member>
+        <member name="P:EShopMobile.ViewModels.LoginViewModel.GoogleLoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EShopMobile.ViewModels.LoginViewModel.GoogleLogin"/>.</summary>
         </member>
         <member name="T:EShopMobile.ViewModels.Orders.OrderViewModel">
             <inheritdoc/>

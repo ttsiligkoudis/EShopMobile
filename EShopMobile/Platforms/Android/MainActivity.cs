@@ -5,7 +5,7 @@ using EShopMobile.Pages;
 using EShopMobile.Pages.Users;
 using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Auth.Api;
-//using Firebase.Auth;
+using Android.OS;
 
 namespace EShopMobile;
 
@@ -93,13 +93,21 @@ public class MainActivity : MauiAppCompatActivity
             GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(data);
             if (result.IsSuccess)
             {
-                LoginWithFireBase(result.SignInAccount);
+
             }
         }
     }
 
-    private void LoginWithFireBase(GoogleSignInAccount account)
+    protected override void OnCreate(Bundle savedInstanceState)
     {
-        //var credentials = GoogleAuthProvider.GetCredential(account.IdToken, null);
+        base.OnCreate(savedInstanceState);
+
+        //PackageManager.SetComponentEnabledSetting(
+        //    new ComponentName(this, Class),
+        //    ComponentEnabledState.Enabled,
+        //    );
+        //    ApplicationInfo.LabelRes = Resources.GetIdentifier(
+        //        AppSettings.AppName, "string", PackageName
+        //    );
     }
 }
