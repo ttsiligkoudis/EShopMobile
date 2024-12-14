@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\github\\EShop-Core\\Helpers\\Client.csproj",
         "projectName": "Client",
         "projectPath": "C:\\github\\EShop-Core\\Helpers\\Client.csproj",
-        "packagesPath": "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ThemistoklisTsiligko\\.nuget\\packages\\",
         "outputPath": "C:\\github\\EShop-Core\\Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThemisTsiligkoudis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThemistoklisTsiligko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,8 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -49,7 +48,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -75,12 +75,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -90,14 +104,14 @@
         "projectUniqueName": "C:\\github\\EShopAPI\\DataModels\\DataModels.csproj",
         "projectName": "DataModels",
         "projectPath": "C:\\github\\EShopAPI\\DataModels\\DataModels.csproj",
-        "packagesPath": "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ThemistoklisTsiligko\\.nuget\\packages\\",
         "outputPath": "C:\\github\\EShopAPI\\DataModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThemisTsiligkoudis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThemistoklisTsiligko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -107,8 +121,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -129,7 +142,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -151,12 +165,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -166,14 +194,14 @@
         "projectUniqueName": "C:\\github\\EShopAPI\\Enums\\Enums.csproj",
         "projectName": "Enums",
         "projectPath": "C:\\github\\EShopAPI\\Enums\\Enums.csproj",
-        "packagesPath": "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ThemistoklisTsiligko\\.nuget\\packages\\",
         "outputPath": "C:\\github\\EShopAPI\\Enums\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThemisTsiligkoudis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThemistoklisTsiligko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -183,8 +211,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -201,7 +228,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -217,12 +245,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -232,7 +274,7 @@
         "projectUniqueName": "C:\\github\\EShopMobile\\EShopMobile\\EShopMobile.csproj",
         "projectName": "EShopMobile",
         "projectPath": "C:\\github\\EShopMobile\\EShopMobile\\EShopMobile.csproj",
-        "packagesPath": "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ThemistoklisTsiligko\\.nuget\\packages\\",
         "outputPath": "C:\\github\\EShopMobile\\EShopMobile\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
@@ -240,7 +282,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThemisTsiligkoudis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThemistoklisTsiligko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -250,11 +292,10 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-android33.0": {
+          "net7.0-android21.0": {
             "targetAlias": "net7.0-android",
             "projectReferences": {
               "C:\\github\\EShop-Core\\Helpers\\Client.csproj": {
@@ -281,20 +322,16 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net7.0-android33.0": {
+        "net7.0-android21.0": {
           "targetAlias": "net7.0-android",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.0, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
             },
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
@@ -304,33 +341,6 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Maui.Graphics": {
-              "target": "Package",
-              "version": "[7.0.101, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NET.ILLink.Analyzers": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.100-1.23401.1, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.100-1.23401.1, )",
-              "autoReferenced": true
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -338,61 +348,6 @@
             "Onion.Maui.GoogleMaps": {
               "target": "Package",
               "version": "[5.0.1, )"
-            },
-            "Xamarin.Android.Glide": {
-              "target": "Package",
-              "version": "[4.13.2.2, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Browser": {
-              "target": "Package",
-              "version": "[1.4.0.3, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Legacy.Support.V4": {
-              "target": "Package",
-              "version": "[1.0.0.15, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Lifecycle.LiveData": {
-              "target": "Package",
-              "version": "[2.5.1.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.Common": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.Fragment": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.Runtime": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Navigation.UI": {
-              "target": "Package",
-              "version": "[2.5.2.1, )",
-              "autoReferenced": true
-            },
-            "Xamarin.AndroidX.Security.SecurityCrypto": {
-              "target": "Package",
-              "version": "[1.1.0-alpha03, )",
-              "autoReferenced": true
-            },
-            "Xamarin.Google.Android.Material": {
-              "target": "Package",
-              "version": "[1.7.0, )",
-              "autoReferenced": true
-            },
-            "Xamarin.Google.Crypto.Tink.Android": {
-              "target": "Package",
-              "version": "[1.7.0.1, )",
-              "autoReferenced": true
             },
             "Xamarin.Google.iOS.SignIn": {
               "target": "Package",
@@ -420,82 +375,28 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.Android.Ref.33",
-              "version": "[33.0.95, 33.0.95]"
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
             },
             {
-              "name": "Microsoft.Android.Runtime.33.android-arm",
-              "version": "[33.0.95, 33.0.95]"
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.20, 7.0.20]"
             },
             {
-              "name": "Microsoft.Android.Runtime.33.android-arm64",
-              "version": "[33.0.95, 33.0.95]"
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
             },
             {
-              "name": "Microsoft.Android.Runtime.33.android-x64",
-              "version": "[33.0.95, 33.0.95]"
-            },
-            {
-              "name": "Microsoft.Android.Runtime.33.android-x86",
-              "version": "[33.0.95, 33.0.95]"
-            },
-            {
-              "name": "Microsoft.Maui.Controls.Ref.android",
-              "version": "[7.0.101, 7.0.101]"
-            },
-            {
-              "name": "Microsoft.Maui.Controls.Runtime.android",
-              "version": "[7.0.101, 7.0.101]"
-            },
-            {
-              "name": "Microsoft.Maui.Core.Ref.android",
-              "version": "[7.0.101, 7.0.101]"
-            },
-            {
-              "name": "Microsoft.Maui.Core.Runtime.android",
-              "version": "[7.0.101, 7.0.101]"
-            },
-            {
-              "name": "Microsoft.Maui.Essentials.Ref.android",
-              "version": "[7.0.101, 7.0.101]"
-            },
-            {
-              "name": "Microsoft.Maui.Essentials.Runtime.android",
-              "version": "[7.0.101, 7.0.101]"
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
             }
           ],
           "frameworkReferences": {
-            "Microsoft.Android": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Controls": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Core": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Maui.Essentials": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "android-arm": {
-          "#import": []
-        },
-        "android-arm64": {
-          "#import": []
-        },
-        "android-x64": {
-          "#import": []
-        },
-        "android-x86": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -505,14 +406,14 @@
         "projectUniqueName": "C:\\github\\EShopMobile\\Helpers\\Helpers.csproj",
         "projectName": "Helpers",
         "projectPath": "C:\\github\\EShopMobile\\Helpers\\Helpers.csproj",
-        "packagesPath": "C:\\Users\\ThemisTsiligkoudis\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ThemistoklisTsiligko\\.nuget\\packages\\",
         "outputPath": "C:\\github\\EShopMobile\\Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThemisTsiligkoudis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThemistoklisTsiligko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -522,8 +423,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vertitech-tfs/_packaging/Classter.Repos/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -547,7 +447,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -569,12 +470,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

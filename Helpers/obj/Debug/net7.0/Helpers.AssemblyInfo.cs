@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Helpers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e947f5a7296e9f9feed3806bfad3acba2dc28fc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cbea079eed4b7e5ba38d1c7ec840d21a69c65dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Helpers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Helpers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
