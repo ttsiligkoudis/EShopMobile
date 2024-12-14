@@ -5,3 +5,10 @@
 .vs/EShopMobile/Platforms/AndroidManifest.xml
 .EShopMobile/EShopMobile/Platforms/AndroidManifest.xml
 .EShopMobile/Platforms/AndroidManifest.xml
+
+# Build directories
+bin/
+obj/
+
+# Visual Studio project files
+.vs/
